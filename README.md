@@ -83,8 +83,7 @@ TODO: Howto publish the HTML / sphinx report
 Dependencies
 ------------
 
-Using pip
-~~~~~~~~~
+### Using pip
 
 - Some dependencies use [llvmpy](http://www.llvmpy.org/) that require to have
   llvm built with the `REQUIRES_RTTI=1` environment variable. Under OSX you
@@ -102,10 +101,10 @@ compiler and a large C++ code base. It is recommended to install a binary
 package for SciPy (see http://scipy.org/install.html for instructions).
 
 
-Using conda / Anaconda
-~~~~~~~~~~~~~~~~~~~~~~
+### Using conda / Anaconda
 
 TODO
 
+### Non CPython dependencies
 
-- Optionally install PyPy from http://pypy.org
+You can also install PyPy from http://pypy.org
