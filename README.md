@@ -3,6 +3,15 @@ python-benchmarks
 
 A set of benchmark problems and implementations for Python.
 
+
+Results
+-------
+
+TODO
+
+Result will be published at http://numfocus.github.io/python-benchmarks
+
+
 Motivation
 ----------
 
@@ -51,14 +60,6 @@ For each benchmark, we would like to gather:
   bindings to serve as speed reference.
 
 
-Results
--------
-
-# TODO
-
-Result will be published at http://numfocus.github.io/python-benchmarks
-
-
 Running
 -------
 
@@ -75,7 +76,7 @@ To run only the benchmarks with specific platforms:
     python run_benchmarks.py --with=numba,parakeet,cython
 
 
-TODO: HTML reporting
+TODO: Howto publish the HTML / sphinx report
 
 
 Dependencies
@@ -106,4 +107,4 @@ Using conda / Anaconda
 TODO
 
 
-- Optionally install
+- Optionally install PyPy from http://pypy.org
