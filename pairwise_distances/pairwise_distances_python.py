@@ -1,7 +1,10 @@
+# Authors: Jake Vanderplas, Alex Rubinsteyn, Olivier Grisel
+# License: MIT
+
 import numpy as np
 
 
-def pairwise_distances_python_for_loops(data):
+def pairwise_distances_python_nested_for_loops(data):
     n_samples, n_features = data.shape
     distances = np.empty((n_samples, n_samples), dtype=data.dtype)
     for i in range(n_samples):
@@ -14,7 +17,7 @@ def pairwise_distances_python_for_loops(data):
     return distances
 
 
-def pairwise_distances_python_broadcasting(data):
+def pairwise_distances_python_inner_broadcasting(data):
     n_samples = data.shape[0]
     result = np.empty((n_samples, n_samples), dtype=data.dtype)
     for i in xrange(n_samples):
@@ -24,6 +27,6 @@ def pairwise_distances_python_broadcasting(data):
 
 
 benchmarks = (
-    pairwise_distances_python_for_loops,
-    pairwise_distances_python_broadcasting,
+    pairwise_distances_python_nested_for_loops,
+    pairwise_distances_python_inner_broadcasting,
 )
