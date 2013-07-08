@@ -4,6 +4,7 @@
 import numpy as np
 
 
-def make_env(shape=(1000, 100), seed=0, dtype=np.float):
+def make_env(shape=(200, 100), seed=0, dtype=np.float):
     rng = np.random.RandomState(seed)
-    return dict(data=np.asarray(rng.random(shape), dtype=dtype))
+    data = np.asarray(rng.normal(size=shape), dtype=dtype)
+    return (data,), {}
