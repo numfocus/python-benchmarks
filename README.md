@@ -1,6 +1,9 @@
 python-benchmarks
 =================
 
+Motivation
+----------
+
 A set of benchmark problems and implementations for Python.
 
 This repository is the result of a discussion of started by @aterrel at SciPy
@@ -46,3 +49,58 @@ For each benchmark, we would like to gather:
 
 - alternative language implementations in Cython, C or Fortran with Python
   bindings to serve as speed reference.
+
+Results
+-------
+
+# TODO
+
+Result will be published at http://numfocus.github.io/python-benchmarks
+
+
+Running
+-------
+
+To run all the benchmarks:
+
+    python run_benchmarks.py
+
+To run the benchmarks of a specific folder:
+
+    python run_benchmarks.py pairwise_distances
+
+To run only the benchmarks with specific platforms:
+
+    python run_benchmarks.py --with=numba,parakeet,cython
+
+TODO: reporting
+
+Dependencies
+------------
+
+Using pip
+~~~~~~~~~
+
+- Some dependencies use [llvmpy](http://www.llvmpy.org/) that require to have
+  llvm built with the `REQUIRES_RTTI=1` environment variable. Under OSX you
+  can install llvm with HomeBrew:
+
+    brew install llvm --rtti
+
+- Install the dependencies from the `requirements.txt` file:
+
+    pip install -r requirements.txt
+
+Note: some packages (pythran and ply) have a depency on SciPy which is
+complicated and slow to install from source because of the need of a gfortran
+compiler and a large C++ code base. It is recommended to install a binary
+package for SciPy (see http://scipy.org/install.html for instructions).
+
+
+Using conda / Anaconda
+~~~~~~~~~~~~~~~~~~~~~~
+
+TODO
+
+
+- Optionally install

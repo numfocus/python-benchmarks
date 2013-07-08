@@ -1,0 +1,9 @@
+numpy
+numba
+parakeet
+Theano
+networkx
+ply
+pythran
+cython
+
