@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div class="container">
+
+<ul class="nav nav-pills">
+  <li><a href="https://github.com/numfocus/python-benchmarks">Github repo</a></li>
+  <li><a href="https://github.com/numfocus/python-benchmarks/blob/master/README.md#motivation">About</a></li>
+</ul>
+
+<h2>Python Benchmark Results</h2>
+
+
+
+<h3><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise" title="View source">
+    pairwise</a></h3>
+
+<table class="table">
+<thead>
+<tr>
+    <th>Function name</th>
+    <th>Cold time (s)</th>
+    <th>Warm time (s)</th>
+    <th>Runtime Error</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <td><i class="icon-tasks"></i> pairwise_numba_nested_for_loops</td>
+    <td>
+        0.291
+        
+    </td>
+    <td>
+        0.004
+        
+    </td>
+    <td>
+        N/A
+        
+    </td>
+</tr>
+
+<tr>
+    <td><i class="icon-tasks"></i> pairwise_parakeet_nested_for_loops</td>
+    <td>
+        0.103
+        
+    </td>
+    <td>
+        0.005
+        
+    </td>
+    <td>
+        N/A
+        
+    </td>
+</tr>
+
+<tr>
+    <td><i class="icon-tasks"></i> pairwise_parakeet_inner_broadcasting</td>
+    <td>
+        0.137
+        
+    </td>
+    <td>
+        0.005
+        
+    </td>
+    <td>
+        N/A
+        
+    </td>
+</tr>
+
+<tr>
+    <td><i class="icon-tasks"></i> pairwise_python_nested_for_loops</td>
+    <td>
+        6.071
+        
+    </td>
+    <td>
+        6.051
+        
+    </td>
+    <td>
+        N/A
+        
+    </td>
+</tr>
+
+<tr>
+    <td><i class="icon-tasks"></i> pairwise_python_inner_broadcasting</td>
+    <td>
+        0.758
+        
+    </td>
+    <td>
+        0.742
+        
+    </td>
+    <td>
+        N/A
+        
+    </td>
+</tr>
+
+</tbody>
+</table>
+
+<p>TODO: log import error summary here</p>
+
+
+
+<h2>Runtime Environment</h2>
+
+<h3>Hardware</h3>
+
+TODO: describe host machine (CPU, RAM, ...) with psutil
+
+<h3>Software</h3>
+
+
+TODO: list version numbers for all the libraries and compilers.
+
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
