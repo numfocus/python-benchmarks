@@ -8,4 +8,5 @@ pythran
 cython
 memory_profiler
 jinja2
+ghp-import
 
