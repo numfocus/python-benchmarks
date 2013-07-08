@@ -7,9 +7,9 @@ A set of benchmark problems and implementations for Python.
 Results
 -------
 
-TODO
+The latest results are available at:
 
-Result will be published at http://numfocus.github.io/python-benchmarks
+http://numfocus.github.io/python-benchmarks
 
 
 Motivation
@@ -68,16 +68,22 @@ To run all the benchmarks:
 
     python run_benchmarks.py
 
-To run the benchmarks of a specific folder:
+To run the benchmarks of a specific folder (TODO):
 
     python run_benchmarks.py pairwise
 
-To run only the benchmarks with specific platforms:
+To run only the benchmarks with specific platforms (TODO):
 
     python run_benchmarks.py --with=numba,parakeet,cython
 
+To publish the generated report to github (assuming you want to push to
+origin):
 
-TODO: Howto publish the HTML / sphinx report
+    make github
+
+Or to another remote alias:
+
+    WEB_ALIAS_REPO=upstream make github
 
 
 Dependencies
