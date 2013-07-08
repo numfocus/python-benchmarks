@@ -6,4 +6,5 @@ networkx
 ply
 pythran
 cython
+memory_profiler
 
