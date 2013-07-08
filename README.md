@@ -1,10 +1,10 @@
 python-benchmarks
 =================
 
+A set of benchmark problems and implementations for Python.
+
 Motivation
 ----------
-
-A set of benchmark problems and implementations for Python.
 
 This repository is the result of a discussion of started by @aterrel at SciPy
 2013 where people interested in the development of compiler technologies for
