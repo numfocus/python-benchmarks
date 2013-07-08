@@ -19,7 +19,7 @@ cases where:
 - an implementation of the algorithm cannot be efficiently vectorized using
   NumPy primitives (for instance by involving nested `for`-loops)
 
-Initial use case focus on **data processing** tasks such as **machine
+Initial use cases focus on **data processing** tasks such as **machine
 learning** and **signal processing**.
 
 For each benchmark, we would like to gather:
