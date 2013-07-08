@@ -1,8 +1,53 @@
 # Authors: Olivier Grisel
 # License: MIT
 from __future__ import print_function
+
+from collections import OrderedDict
 import os
 from time import time
+import logging
+
+from jinja2 import Template
+
+log = logging.getLogger(__name__)
+
+
+MAIN_REPORT_TEMPLATE = """
+Benchmark Results
+=================
+
+{% for result in bench_results %}
+
+{{ result.group_name }}
+-----------------------
+
+TODO: add link to the sources code on github
+
+===================== ============= ============= ===============
+Function name         Cold time (s) Warm time (s) Error
+===================== ============= ============= ===============
+
+{% for record in records %}
+
+
+
+{% endfor %}
+
+
+Runtime Environment
+===================
+
+Hardware
+--------
+
+TODO: describe host machine (CPU, RAM, ...) with psutil
+
+Software
+--------
+
+TODO: list version numbers for all the libraries and compilers.
+
+"""
 
 
 def find_benchmarks(folders=None, platforms=None):
@@ -63,30 +108,52 @@ def run_benchmark(func, args, kwargs, memory=False):
 def run_benchmarks(folders=None, platforms=None, catch_errors=True,
                    memory=True):
     collected = find_benchmarks(folders=folders, platforms=platforms)
-    for group_name, make_env, benchmarks, errors in collected:
+
+    bench_results = []
+
+    for group_name, make_env, benchmarks, import_errors in collected:
+        logging.info("Running benchmark group %s", group_name)
         args, kwargs = make_env() if make_env is not None else {}
         print(group_name)
         print('-' * len(group_name) + '\n')
         print("Benchmarks:")
+
+        records = []
         for name, func in benchmarks:
+            logging.info("Benchmarking %s", name)
             try:
                 cold_time = run_benchmark(func, args, kwargs, memory)
                 warm_time = run_benchmark(func, args, kwargs, memory)
-                print("- %s:\t cold: %0.3fs\t| warm: %0.3fs" %
-                      (name, cold_time, warm_time))
+                runtime_error = None
             except Exception as e:
+                cold_time, warm_time = None, None
                 if catch_errors:
-                    print("- %s: %r" % (name, e))
+                    runtime_error = e
                 else:
                     raise
-        print()
-        if len(errors) > 0:
-            print("Import errors:")
-            for name, error in errors:
-                print("- %s: %s" % (name, error))
-            print()
+            records.append(OrderedDict(
+                name=name,
+                source_url=None,  # TODO
+                cold_time=cold_time,
+                warm_time=warm_time,
+                runtime_error=runtime_error))
+            # TODO: add special support for PyPy with a sub-process
+
+        bench_results.append(OrderedDict(
+            group_name=group_name,
+            source_url=None,  # TODO
+            records=records,
+            import_errors=import_errors,
+        ))
+
+    return bench_results
 
 
 if __name__ == "__main__":
     # TODO: use argparse
-    run_benchmarks(catch_errors=True, memory=True)
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
+    bench_results = run_benchmarks(catch_errors=True, memory=True)
+    print(Template(MAIN_REPORT_TEMPLATE).render(
+        bench_results=bench_results,
+        runtime_environment=None,
+    ))

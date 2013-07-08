@@ -7,4 +7,5 @@ ply
 pythran
 cython
 memory_profiler
+jinja2
 
