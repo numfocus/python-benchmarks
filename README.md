@@ -50,6 +50,7 @@ For each benchmark, we would like to gather:
 - alternative language implementations in Cython, C or Fortran with Python
   bindings to serve as speed reference.
 
+
 Results
 -------
 
@@ -73,7 +74,9 @@ To run only the benchmarks with specific platforms:
 
     python run_benchmarks.py --with=numba,parakeet,cython
 
-TODO: reporting
+
+TODO: HTML reporting
+
 
 Dependencies
 ------------
