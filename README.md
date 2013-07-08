@@ -68,7 +68,7 @@ To run all the benchmarks:
 
 To run the benchmarks of a specific folder:
 
-    python run_benchmarks.py pairwise_distances
+    python run_benchmarks.py pairwise
 
 To run only the benchmarks with specific platforms:
 
