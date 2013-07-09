@@ -97,7 +97,7 @@
     
   </td>
   <td>
-    4.042
+    3.973
     
   </td>
 </tr>
@@ -110,7 +110,7 @@
     
   </td>
   <td>
-    0.169
+    0.167
     
   </td>
 </tr>
@@ -175,7 +175,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
   <td>
-    0.332
+    0.297
     
   </td>
   <td>
@@ -188,7 +188,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.118
+    0.103
     
   </td>
   <td>
@@ -201,7 +201,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.150
+    0.139
     
   </td>
   <td>
@@ -218,7 +218,7 @@ while running this benchmark.
     
   </td>
   <td>
-    5.770
+    5.801
     
   </td>
 </tr>
@@ -231,7 +231,7 @@ while running this benchmark.
     
   </td>
   <td>
-    0.765
+    0.779
     
   </td>
 </tr>
@@ -333,11 +333,11 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 156, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 104, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 100, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
@@ -376,11 +376,11 @@ Error 22:8: Only a single target iteration variable is supported at the moment
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 156, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 104, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 100, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -431,11 +431,11 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 156, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 104, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 100, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
