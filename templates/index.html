@@ -14,7 +14,10 @@
   <li><a href="{{ about_url }}">About</a></li>
 </ul>
 
-<h2>Python Benchmark Results</h2>
+<h2 id="benchmark-results">Python Benchmark Results
+  <a title="Permalink to this headline"
+     href="#benchmark-results"
+     class="headerlink">&para;</a></h2>
 
 {% for result in bench_results %}
 
@@ -63,10 +66,44 @@
 {% endfor %}
 </tbody>
 </table>
+
+{%if result.import_errors or result.runtime_errors  %}
+<p class="errors-summary">
+There were
+
+{%if result.import_errors %}
+<a href="#import-errors-{{ result.group_name }}">
+{{ result.import_errors|length }} import error(s)
+</a>
+{% endif %}
+
+{%if result.import_errors and result.runtime_errors  %}
+and
+{% endif %}
+
+{%if result.runtime_errors  %}
+<a href="#runtime-errors-{{ result.group_name }}">
+{{ result.runtime_errors|length }} execution error(s)
+</a>
+{% endif %}
+
+while running this benchmark.
+</p>
+{% else %}
+
+<p class="errors-summary">
+  All methods were benchmarked without any error.
+</p>
+
+{% endif %}
+
 </section>
 {% endfor %}
 
-<h2>Runtime Environment</h2>
+<h2 id="runtime-environment">Runtime Environment
+  <a title="Permalink to this headline"
+     href="#runtime-environment"
+     class="headerlink">&para;</a></h2>
 
 <h3>Hardware</h3>
 
@@ -76,7 +113,10 @@ TODO: describe host machine (CPU, RAM, ...) with psutil
 
 TODO: list version numbers for all the libraries and compilers.
 
-<h2>Errors</h2>
+<h2 id="error-summary">Error Summary
+  <a title="Permalink to this headline"
+     href="#error-summary"
+     class="headerlink">&para;</a></h2>
 
 {% for result in bench_results %}
 {%if result.import_errors or result.runtime_errors %}
