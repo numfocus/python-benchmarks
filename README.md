@@ -7,9 +7,8 @@ A set of benchmark problems and implementations for Python.
 Results
 -------
 
-The latest results are available at:
-
-http://numfocus.github.io/python-benchmarks
+[numfocus.github.io/python-benchmarks](
+  http://numfocus.github.io/python-benchmarks)
 
 
 Motivation
