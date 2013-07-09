@@ -156,7 +156,8 @@ while running this benchmark.
        class="headerlink">&para;</a></h4>
   {% for import_error in result.import_errors %}
     <div id="import-errors-{{ result.group_name }}-{{ import_error.name }}">
-    <h5>{{ import_error.name }}: {{ import_error.error_type }}
+    <h5><a href="{{ import_error.source_url }}">{{ import_error.name }}</a>:
+         {{ import_error.error_type }}
     <a title="Permalink to this headline"
        href="#import-errors-{{ result.group_name }}-{{ import_error.name }}"
        class="headerlink">&para;</a></h5>
@@ -174,7 +175,8 @@ while running this benchmark.
        class="headerlink">&para;</a></h4>
   {% for runtime_error in result.runtime_errors %}
     <div id="runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}">
-    <h5>{{ runtime_error.name }}: {{ runtime_error.error_type }}
+    <h5><a href="{{ runtime_error.source_url }}">{{ runtime_error.name }}</a>:
+        {{ runtime_error.error_type }}
     <a title="Permalink to this headline"
        href="#runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}"
        class="headerlink">&para;</a></h5>
