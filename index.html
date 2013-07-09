@@ -48,11 +48,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_for_loops</td>
   <td>
-    4.097
+    3.905
     
   </td>
   <td>
-    4.098
+    3.909
     
   </td>
 </tr>
@@ -61,11 +61,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_numpy</td>
   <td>
-    0.179
+    0.173
     
   </td>
   <td>
-    0.173
+    0.167
     
   </td>
 </tr>
@@ -74,11 +74,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_for_loops</td>
   <td>
-    4.131
+    3.933
     
   </td>
   <td>
-    4.251
+    3.941
     
   </td>
 </tr>
@@ -87,11 +87,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_numpy</td>
   <td>
-    0.174
+    0.172
     
   </td>
   <td>
-    0.181
+    0.167
     
   </td>
 </tr>
@@ -131,7 +131,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_numba_nested_for_loops</td>
   <td>
-    0.318
+    0.303
     
   </td>
   <td>
@@ -144,11 +144,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_nested_for_loops</td>
   <td>
-    0.113
+    0.105
     
   </td>
   <td>
-    0.006
+    0.005
     
   </td>
 </tr>
@@ -157,37 +157,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_inner_broadcasting</td>
   <td>
-    0.167
+    0.143
     
   </td>
   <td>
-    0.006
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_nested_for_loops</td>
-  <td>
-    6.579
-    
-  </td>
-  <td>
-    6.602
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_inner_broadcasting</td>
-  <td>
-    0.760
-    
-  </td>
-  <td>
-    0.747
+    0.005
     
   </td>
 </tr>
@@ -196,11 +170,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_nested_for_loops</td>
   <td>
-    6.400
+    5.986
     
   </td>
   <td>
-    6.637
+    5.988
     
   </td>
 </tr>
@@ -209,11 +183,37 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_inner_broadcasting</td>
   <td>
-    0.756
+    0.770
     
   </td>
   <td>
-    0.748
+    0.902
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_nested_for_loops</td>
+  <td>
+    6.119
+    
+  </td>
+  <td>
+    6.235
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_inner_broadcasting</td>
+  <td>
+    0.850
+    
+  </td>
+  <td>
+    0.986
     
   </td>
 </tr>
@@ -255,7 +255,7 @@ TODO: list version numbers for all the libraries and compilers.
     <dt>julia.julia_pythran: EnvironmentError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 197, in find_benchmarks
+  File "run_benchmarks.py", line 197, in find_benchmarks
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
     '\n'.join([imports, exports, source]))
@@ -298,9 +298,9 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
     <dt>julia_numba_for_loops: NumbaError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+  File "run_benchmarks.py", line 245, in run_benchmarks
     cold_time = run_benchmark(func, args, kwargs, memory)
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+  File "run_benchmarks.py", line 225, in run_benchmark
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
@@ -335,9 +335,9 @@ Error 22:8: Only a single target iteration variable is supported at the moment
     <dt>julia_parakeet_for_loops: AssertionError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+  File "run_benchmarks.py", line 245, in run_benchmarks
     cold_time = run_benchmark(func, args, kwargs, memory)
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+  File "run_benchmarks.py", line 225, in run_benchmark
     func(*args, **kwargs)
   File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -384,9 +384,9 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
     <dt>julia_parakeet_numpy: AssertionError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+  File "run_benchmarks.py", line 245, in run_benchmarks
     cold_time = run_benchmark(func, args, kwargs, memory)
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+  File "run_benchmarks.py", line 225, in run_benchmark
     func(*args, **kwargs)
   File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -476,7 +476,7 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
     <dt>pairwise.pairwise_pythran: EnvironmentError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 197, in find_benchmarks
+  File "run_benchmarks.py", line 197, in find_benchmarks
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
     '\n'.join([imports, exports, source]))
