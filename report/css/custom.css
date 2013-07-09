@@ -1,0 +1,11 @@
+.bench_icon {
+    width: 2em;
+}
+
+.bench_name {
+    min-width: 30%;
+}
+
+.bench_time {
+    width: 8em;
+}

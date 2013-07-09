@@ -1,6 +1,10 @@
 WEB_REPO_ALIAS  ?= origin
 
-all: run github
+all: clean run github
+
+clean:
+	rm -f report/*.json
+	rm -f report/*.html
 
 run:
 	python run_benchmarks.py

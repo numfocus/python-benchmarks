@@ -3,7 +3,9 @@
 from __future__ import print_function
 
 from collections import OrderedDict
+import json
 import os
+import traceback
 from time import time
 import logging
 
@@ -26,12 +28,14 @@ MAIN_REPORT_TEMPLATE = """\
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
 <div class="container">
 
 <ul class="nav nav-pills">
   <li><a href="{{ github_repo_url }}">Github repo</a></li>
+  <li><a href="{{ json_data_url }}">JSON data</a></li>
   <li><a href="{{ about_url }}">About</a></li>
 </ul>
 
@@ -39,46 +43,46 @@ MAIN_REPORT_TEMPLATE = """\
 
 {% for result in bench_results %}
 
-<h3><a href="{{ result.source_url }}" title="View source">
-    {{ result.group_name }}</a></h3>
+<h3>{{ result.group_name }}
+    (<a href="{{ result.source_url }}"
+     title="Source code for {{ result.group_name }}">source code</a>)</h3>
 
-<table class="table">
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
 <thead>
 <tr>
-    <th>Function name</th>
-    <th>Cold time (s)</th>
-    <th>Warm time (s)</th>
-    <th>Runtime Error</th>
+  <th></th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s)</th>
 </tr>
 </thead>
 <tbody>
 {% for record in result.records %}
 <tr>
-    <td><i class="icon-tasks"></i> {{ record.name }}</td>
-    <td>{% if record.cold_time %}
-        {{ "{:0.3f}".format(record.cold_time) }}
-        {% else %}
-        N/A
-        {% endif %}
-    </td>
-    <td>{% if record.warm_time %}
-        {{ "{:0.3f}".format(record.warm_time) }}
-        {% else %}
-        N/A
-        {% endif %}
-    </td>
-    <td>{% if record.runtime_error %}
-        {{ record.runtime_error }}
-        {% else %}
-        N/A
-        {% endif %}
-    </td>
+  <td><i class="icon-tasks"></i></td>
+  <td>{{ record.name }}</td>
+  <td>{% if record.cold_time %}
+    {{ "{:0.3f}".format(record.cold_time) }}
+    {% else %}
+    N/A
+    {% endif %}
+  </td>
+  <td>{% if record.warm_time %}
+    {{ "{:0.3f}".format(record.warm_time) }}
+    {% else %}
+    N/A
+    {% endif %}
+  </td>
 </tr>
 {% endfor %}
 </tbody>
 </table>
-
-<p>TODO: log import error summary here</p>
 
 {% endfor %}
 
@@ -90,13 +94,53 @@ TODO: describe host machine (CPU, RAM, ...) with psutil
 
 <h3>Software</h3>
 
-
 TODO: list version numbers for all the libraries and compilers.
+
+<h2>Errors<h2>
+
+{% for result in bench_results %}
+
+<h3>{{ result.group_name }}
+    (<a href="{{ result.source_url }}"
+     title="Source code for {{ result.group_name }}">source code</a>)</h3>
+
+{%if result.import_errors  %}
+<h4>Benchmark loading errors</h4>
+<dl>
+  {% for import_error in result.import_errors %}
+    <dt>{{ import_error.name }}</dt>
+    <dd>
+      <p>{{ import_error.error_type }}: {{ import_error.error }}</p>
+      <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
+    </dd>
+  {% endfor %}
+</dl>
+{% endif %}
+
+{%if result.runtime_errors  %}
+<h4>Benchmark execution errors</h4>
+<dl>
+  {% for runtime_error in result.runtime_errors %}
+    <dt>{{ runtime_error.name }}</dt>
+    <dd>
+      <p>{{ runtime_error.error_type }}: {{ runtime_error.error }}</p>
+      <pre class="pre-scrollable">{{ runtime_error.traceback }}</pre>
+    </dd>
+  {% endfor %}
+</dl>
+{% endif %}
+
+{% endfor %}
 
 </div>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+"""
+
+ERROR_REPORT_TEMPLATE = """\
+
+
 """
 
 
@@ -129,10 +173,22 @@ def find_benchmarks(folders=None, platforms=None):
 
         for module_filename in sorted(os.listdir(folder)):
             module_name, ext = os.path.splitext(module_filename)
-            if ext not in ('.py', '.so', '.dll'):
+            if ext not in ('.py', '.so', '.dll', '.pyx'):
                 continue
             module_name = "%s.%s" % (group_name, module_name)
-            module = __import__(module_name, fromlist="dummy")
+
+            try:
+                module = __import__(module_name, fromlist="dummy")
+            except Exception as e:
+                log.error("Failed to load %s: %s", module_name, e)
+                tb = traceback.format_exc()
+                loading_error = OrderedDict([
+                    ('name', module_name),
+                    ('error_type', type(e).__name__),
+                    ('error', str(e)),
+                    ('traceback', tb),
+                ])
+                modules_in_error.append(loading_error)
 
             for benchmark in getattr(module, 'benchmarks', ()):
                 if callable(benchmark):
@@ -166,27 +222,34 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
         args, kwargs = make_env() if make_env is not None else {}
 
         records = []
+        runtime_errors = []
         for name, func in benchmarks:
             log.info("Benchmarking %s", name)
             try:
                 cold_time = run_benchmark(func, args, kwargs, memory)
                 warm_time = run_benchmark(func, args, kwargs, memory)
-                runtime_error = None
+                record = OrderedDict([
+                    ('name', name),
+                    ('cold_time', cold_time),
+                    ('warm_time', warm_time),
+                ])
+                records.append(record)
+                log.info("%s: cold: %0.3fs, warm: %0.3fs",
+                         name, cold_time, warm_time)
             except Exception as e:
-                cold_time, warm_time = None, None
                 if catch_errors:
-                    runtime_error = e
+                    tb = traceback.format_exc()
+                    runtime_error = OrderedDict([
+                        ('name', name),
+                        ('error_type', type(e).__name__),
+                        ('error', str(e)),
+                        ('traceback', tb),
+                    ])
+                    runtime_errors.append(runtime_error)
+                    log.warn("Could not run %s: %s", name, e)
+                    log.debug(tb)
                 else:
                     raise
-
-            record = OrderedDict([
-                ('name', name),
-                ('cold_time', cold_time),
-                ('warm_time', warm_time),
-                ('runtime_error', runtime_error),
-            ])
-            records.append(record)
-            log.info(", ".join("%s: %r" % (k, v) for k, v in record.items()))
 
             # TODO: add special support for PyPy with a sub-process
 
@@ -194,6 +257,7 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
             ('group_name', group_name),
             ('source_url', GROUP_URL_PATTERN % group_name),
             ('records', records),
+            ('runtime_errors', runtime_errors),
             ('import_errors', import_errors),
         ]))
     return bench_results
@@ -201,13 +265,25 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
 
 if __name__ == "__main__":
     # TODO: use argparse
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
-    bench_results = run_benchmarks(catch_errors=True, memory=True)
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s %(levelname)-8s %(message)s')
+    bench_data_filename = 'report/benchmark_results.json'
+    if os.path.exists(bench_data_filename):
+        log.info("Loading bench data from: %s", bench_data_filename)
+        with open(bench_data_filename, 'rb') as f:
+            bench_results = json.load(f)
+    else:
+        bench_results = run_benchmarks(catch_errors=True, memory=True)
+        log.info("Writing bench data to: %s", bench_data_filename)
+        with open(bench_data_filename, 'wb') as f:
+            json.dump(bench_results, f, indent=2)
+
     rendered = Template(MAIN_REPORT_TEMPLATE).render(
         bench_results=bench_results,
         runtime_environment=None,
         about_url=ABOUT_URL,
         github_repo_url=GITHUB_REPO_URL,
+        json_data_url=os.path.basename(bench_data_filename),
     )
     report_filename = 'report/index.html'
     log.info("Writing report to: %s", report_filename)
