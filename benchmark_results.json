@@ -5,23 +5,23 @@
     "records": [
       {
         "name": "julia_python_for_loops", 
-        "cold_time": 4.219748020172119, 
-        "warm_time": 4.204819917678833
+        "cold_time": 8.937978029251099, 
+        "warm_time": 8.7689208984375
       }, 
       {
         "name": "julia_python_numpy", 
-        "cold_time": 0.1733109951019287, 
-        "warm_time": 0.16827797889709473
+        "cold_time": 0.3522069454193115, 
+        "warm_time": 0.33577704429626465
       }, 
       {
         "name": "julia_python_for_loops", 
-        "cold_time": 4.1977691650390625, 
-        "warm_time": 4.223984956741333
+        "cold_time": 8.888965845108032, 
+        "warm_time": 9.168017864227295
       }, 
       {
         "name": "julia_python_numpy", 
-        "cold_time": 0.17683792114257812, 
-        "warm_time": 0.17131996154785156
+        "cold_time": 0.3643150329589844, 
+        "warm_time": 0.3254249095916748
       }
     ], 
     "runtime_errors": [
@@ -59,38 +59,38 @@
     "records": [
       {
         "name": "pairwise_numba_nested_for_loops", 
-        "cold_time": 0.2991158962249756, 
-        "warm_time": 0.0037641525268554688
+        "cold_time": 0.7065780162811279, 
+        "warm_time": 0.005943775177001953
       }, 
       {
         "name": "pairwise_parakeet_nested_for_loops", 
-        "cold_time": 0.10540890693664551, 
-        "warm_time": 0.004884004592895508
+        "cold_time": 0.2448258399963379, 
+        "warm_time": 0.008738040924072266
       }, 
       {
         "name": "pairwise_parakeet_inner_broadcasting", 
-        "cold_time": 0.14476895332336426, 
-        "warm_time": 0.004868984222412109
+        "cold_time": 0.310107946395874, 
+        "warm_time": 0.008646011352539062
       }, 
       {
         "name": "pairwise_python_nested_for_loops", 
-        "cold_time": 6.51577091217041, 
-        "warm_time": 6.710594177246094
+        "cold_time": 12.688491821289062, 
+        "warm_time": 13.118649959564209
       }, 
       {
         "name": "pairwise_python_inner_broadcasting", 
-        "cold_time": 0.7927730083465576, 
-        "warm_time": 0.7755050659179688
+        "cold_time": 1.758558988571167, 
+        "warm_time": 1.9488930702209473
       }, 
       {
         "name": "pairwise_python_nested_for_loops", 
-        "cold_time": 6.543009042739868, 
-        "warm_time": 6.6614861488342285
+        "cold_time": 13.356043100357056, 
+        "warm_time": 13.121691226959229
       }, 
       {
         "name": "pairwise_python_inner_broadcasting", 
-        "cold_time": 0.8532390594482422, 
-        "warm_time": 0.8061659336090088
+        "cold_time": 1.7793529033660889, 
+        "warm_time": 1.807743787765503
       }
     ], 
     "runtime_errors": [], 
