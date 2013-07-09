@@ -89,58 +89,6 @@
 </thead>
 <tbody>
 
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>julia_python_for_loops</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    3.901
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>julia_python_numpy</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    0.165
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>julia_python_for_loops</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    3.888
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>julia_python_numpy</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    0.165
-    
-  </td>
-</tr>
-
 </tbody>
 </table>
 
@@ -160,7 +108,7 @@ and
 
 
 <a href="#runtime-errors-julia">
-3 execution error(s)
+5 execution error(s)
 </a>
 
 
@@ -197,97 +145,6 @@ while running this benchmark.
 </thead>
 <tbody>
 
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_numba_nested_for_loops</td>
-  <td>
-    0.318
-    
-  </td>
-  <td>
-    0.004
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_parakeet_nested_for_loops</td>
-  <td>
-    0.123
-    
-  </td>
-  <td>
-    0.005
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_parakeet_inner_broadcasting</td>
-  <td>
-    0.162
-    
-  </td>
-  <td>
-    0.005
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_nested_for_loops</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    5.779
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_inner_broadcasting</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    0.730
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_nested_for_loops</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    5.749
-    
-  </td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>pairwise_python_inner_broadcasting</td>
-  <td>
-    N/A
-    
-  </td>
-  <td>
-    0.734
-    
-  </td>
-</tr>
-
 </tbody>
 </table>
 
@@ -302,7 +159,13 @@ There were
 
 
 
+and
 
+
+
+<a href="#runtime-errors-pairwise">
+5 execution error(s)
+</a>
 
 
 while running this benchmark.
@@ -333,14 +196,14 @@ while running this benchmark.
        href="#import-errors-julia"
        class="headerlink">&para;</a></h4>
   
-    <div id="import-errors-julia-julia.julia_pythran">
-    <h5>julia.julia_pythran: EnvironmentError
+    <div id="import-errors-julia-julia_pythran">
+    <h5>julia_pythran: EnvironmentError
     <a title="Permalink to this headline"
-       href="#import-errors-julia-julia.julia_pythran"
+       href="#import-errors-julia-julia_pythran"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 65, in find_benchmarks
-    module = __import__(module_name, fromlist="dummy")
+  File "run_benchmarks.py", line 68, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
     '\n'.join([imports, exports, source]))
   File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
@@ -378,44 +241,25 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
        class="headerlink">&para;</a></h4>
   
     <div id="runtime-errors-julia-julia_numba_for_loops">
-    <h5>julia_numba_for_loops: NumbaError
+    <h5>julia_numba_for_loops: TypeError
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 149, in run_benchmarks
+  File "run_benchmarks.py", line 160, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 99, in run_benchmark
+  File "run_benchmarks.py", line 109, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 95, in time_once
+  File "run_benchmarks.py", line 105, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
-  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
-    return self.compile(signature)
-  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 83, in compile
-    compiled_function = dec(self.py_func)
-  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 222, in _jit_decorator
-    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)
-  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 133, in compile_function
-    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 134, in compile2
-    post_ast = pipeline(func_ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 181, in __call__
-    ast = self.transform(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 602, in transform
-    ast = stage(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 587, in _stage
-    return _check_stage_object(stage_obj)(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 192, in __call__
-    reporting.report(env, exc=e)
-  File "/usr/local/lib/python2.7/site-packages/numba/reporting.py", line 181, in report
-    raise exc
-NumbaError: (see below)
---------------------- Numba Encountered Errors or Warnings ---------------------
-    for i, x in enumerate(grid_x):
---------^
-Error 22:8: Only a single target iteration variable is supported at the moment
---------------------------------------------------------------------------------
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 67, in compile_from_args
+    signature = self.resolve_argtypes(args, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 63, in resolve_argtypes
+    args, kwargs, self.flags)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 30, in resolve_argtypes
+    arguments, len(args)))
+TypeError: julia_python_for_loops() takes exactly 6 arguments (2 given)
 </pre>
     </div>
   
@@ -425,11 +269,11 @@ Error 22:8: Only a single target iteration variable is supported at the moment
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 149, in run_benchmarks
+  File "run_benchmarks.py", line 160, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 99, in run_benchmark
+  File "run_benchmarks.py", line 109, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 95, in time_once
+  File "run_benchmarks.py", line 105, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -479,11 +323,11 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 149, in run_benchmarks
+  File "run_benchmarks.py", line 160, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 99, in run_benchmark
+  File "run_benchmarks.py", line 109, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 95, in time_once
+  File "run_benchmarks.py", line 105, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -547,6 +391,38 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
 </pre>
     </div>
   
+    <div id="runtime-errors-julia-julia_python_for_loops">
+    <h5>julia_python_for_loops: TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia-julia_python_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+TypeError: julia_python_for_loops() takes at least 3 arguments (2 given)
+</pre>
+    </div>
+  
+    <div id="runtime-errors-julia-julia_python_numpy">
+    <h5>julia_python_numpy: TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia-julia_python_numpy"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+TypeError: julia_python_numpy() takes at least 3 arguments (2 given)
+</pre>
+    </div>
+  
 </div>
 
 
@@ -568,14 +444,14 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
        href="#import-errors-pairwise"
        class="headerlink">&para;</a></h4>
   
-    <div id="import-errors-pairwise-pairwise.pairwise_pythran">
-    <h5>pairwise.pairwise_pythran: EnvironmentError
+    <div id="import-errors-pairwise-pairwise_pythran">
+    <h5>pairwise_pythran: EnvironmentError
     <a title="Permalink to this headline"
-       href="#import-errors-pairwise-pairwise.pairwise_pythran"
+       href="#import-errors-pairwise-pairwise_pythran"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 65, in find_benchmarks
-    module = __import__(module_name, fromlist="dummy")
+  File "run_benchmarks.py", line 68, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
     '\n'.join([imports, exports, source]))
   File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
@@ -605,6 +481,125 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
 </div>
 
 
+
+<div id="runtime-errors-pairwise">
+<h4>Benchmark execution errors
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="runtime-errors-pairwise-pairwise_numba_nested_for_loops">
+    <h5>pairwise_numba_nested_for_loops: TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_numba_nested_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+  File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 67, in compile_from_args
+    signature = self.resolve_argtypes(args, kwargs)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 63, in resolve_argtypes
+    args, kwargs, self.flags)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 30, in resolve_argtypes
+    arguments, len(args)))
+TypeError: pairwise_python_nested_for_loops() takes exactly 1 argument (2 given)
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_parakeet_nested_for_loops">
+    <h5>pairwise_parakeet_nested_for_loops: AssertionError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_parakeet_nested_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+    return run_function.run(self.f, *args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 104, in prepare_args
+    arg_types = arg_values.transform(type_conv.typeof)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/args.py", line 72, in transform
+    new_pos = [fn(pos_arg) for pos_arg in self.positional]
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/type_conv.py", line 32, in typeof
+    "Don't know how to convert value %s : %s" % (python_value, python_type)
+AssertionError: Don't know how to convert value {} : <type 'dict'>
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_parakeet_inner_broadcasting">
+    <h5>pairwise_parakeet_inner_broadcasting: AssertionError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_parakeet_inner_broadcasting"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+    return run_function.run(self.f, *args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 104, in prepare_args
+    arg_types = arg_values.transform(type_conv.typeof)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/args.py", line 72, in transform
+    new_pos = [fn(pos_arg) for pos_arg in self.positional]
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/type_conv.py", line 32, in typeof
+    "Don't know how to convert value %s : %s" % (python_value, python_type)
+AssertionError: Don't know how to convert value {} : <type 'dict'>
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_python_nested_for_loops">
+    <h5>pairwise_python_nested_for_loops: TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_python_nested_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+TypeError: pairwise_python_nested_for_loops() takes exactly 1 argument (2 given)
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_python_inner_broadcasting">
+    <h5>pairwise_python_inner_broadcasting: TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_python_inner_broadcasting"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 160, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 109, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 105, in time_once
+    func(*args, **kwargs)
+TypeError: pairwise_python_inner_broadcasting() takes exactly 1 argument (2 given)
+</pre>
+    </div>
+  
+</div>
 
 
 </section>
