@@ -93,14 +93,15 @@ TODO: list version numbers for all the libraries and compilers.
     <a title="Permalink to this headline"
        href="#import-errors-{{ result.group_name }}"
        class="headerlink">&para;</a></h4>
-<dl>
   {% for import_error in result.import_errors %}
-    <dt>{{ import_error.name }}: {{ import_error.error_type }}</dt>
-    <dd>
-      <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
-    </dd>
+    <div id="import-errors-{{ result.group_name }}-{{ import_error.name }}">
+    <h5>{{ import_error.name }}: {{ import_error.error_type }}
+    <a title="Permalink to this headline"
+       href="#import-errors-{{ result.group_name }}-{{ import_error.name }}"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
+    </div>
   {% endfor %}
-</dl>
 </div>
 {% endif %}
 
@@ -110,14 +111,15 @@ TODO: list version numbers for all the libraries and compilers.
     <a title="Permalink to this headline"
        href="#runtime-errors-{{ result.group_name }}"
        class="headerlink">&para;</a></h4>
-<dl>
   {% for runtime_error in result.runtime_errors %}
-    <dt>{{ runtime_error.name }}: {{ runtime_error.error_type }}</dt>
-    <dd>
-      <pre class="pre-scrollable">{{ runtime_error.traceback }}</pre>
-    </dd>
+    <div id="runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}">
+    <h5>{{ runtime_error.name }}: {{ runtime_error.error_type }}
+    <a title="Permalink to this headline"
+       href="#runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">{{ runtime_error.traceback }}</pre>
+    </div>
   {% endfor %}
-</dl>
 </div>
 {% endif %}
 
