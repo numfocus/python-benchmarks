@@ -7,21 +7,21 @@
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 3.909278154373169, 
+          "warm_time": 4.071027040481567, 
           "all_times": [
-            3.909278154373169
+            4.071027040481567
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.16759181022644043, 
+          "warm_time": 0.16927695274353027, 
           "all_times": [
             [
-              0.17293095588684082, 
-              0.1713099479675293, 
-              0.16759181022644043
+              0.17346715927124023, 
+              0.17836403846740723, 
+              0.16927695274353027
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
@@ -66,51 +66,51 @@
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0036699771881103516, 
+          "warm_time": 0.0036771297454833984, 
           "all_times": [
             [
-              0.005727052688598633, 
-              0.0037360191345214844, 
-              0.0036699771881103516
+              0.0037479400634765625, 
+              0.0036771297454833984, 
+              0.003832101821899414
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx"
         }, 
         {
           "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.3794291019439697, 
-          "warm_time": 0.003676891326904297, 
+          "cold_time": 0.2863039970397949, 
+          "warm_time": 0.0036890506744384766, 
           "all_times": [
             [
-              0.3794291019439697, 
-              0.003676891326904297, 
-              0.0037260055541992188
+              0.2863039970397949, 
+              0.003728151321411133, 
+              0.0036890506744384766
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py"
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.10223102569580078, 
-          "warm_time": 0.005012035369873047, 
+          "cold_time": 0.10284781455993652, 
+          "warm_time": 0.004862070083618164, 
           "all_times": [
             [
-              0.10223102569580078, 
-              0.0050661563873291016, 
-              0.005012035369873047
+              0.10284781455993652, 
+              0.004943132400512695, 
+              0.004862070083618164
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
         }, 
         {
           "name": "pairwise_parakeet_inner_broadcasting", 
-          "cold_time": 0.137861967086792, 
-          "warm_time": 0.00497889518737793, 
+          "cold_time": 0.14419198036193848, 
+          "warm_time": 0.004985809326171875, 
           "all_times": [
             [
-              0.137861967086792, 
-              0.005110025405883789, 
-              0.00497889518737793
+              0.14419198036193848, 
+              0.00510096549987793, 
+              0.004985809326171875
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
@@ -118,21 +118,21 @@
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 7.74835991859436, 
+          "warm_time": 6.107674837112427, 
           "all_times": [
-            7.74835991859436
+            6.107674837112427
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
         }, 
         {
           "name": "pairwise_python_inner_broadcasting", 
           "cold_time": null, 
-          "warm_time": 0.79146409034729, 
+          "warm_time": 0.800678014755249, 
           "all_times": [
             [
-              0.79146409034729, 
-              0.8170590400695801, 
-              0.8167588710784912
+              0.806859016418457, 
+              0.800678014755249, 
+              0.8041388988494873
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
