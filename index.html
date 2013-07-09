@@ -48,11 +48,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_for_loops</td>
   <td>
-    4.220
+    N/A
     
   </td>
   <td>
-    4.205
+    3.830
     
   </td>
 </tr>
@@ -61,11 +61,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_numpy</td>
   <td>
-    0.173
+    N/A
     
   </td>
   <td>
-    0.168
+    0.166
     
   </td>
 </tr>
@@ -74,11 +74,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_for_loops</td>
   <td>
-    4.198
+    N/A
     
   </td>
   <td>
-    4.224
+    3.926
     
   </td>
 </tr>
@@ -87,11 +87,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>julia_python_numpy</td>
   <td>
-    0.177
+    N/A
     
   </td>
   <td>
-    0.171
+    0.166
     
   </td>
 </tr>
@@ -131,7 +131,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_numba_nested_for_loops</td>
   <td>
-    0.299
+    0.288
     
   </td>
   <td>
@@ -144,7 +144,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_nested_for_loops</td>
   <td>
-    0.105
+    0.113
     
   </td>
   <td>
@@ -157,7 +157,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_inner_broadcasting</td>
   <td>
-    0.145
+    0.141
     
   </td>
   <td>
@@ -170,11 +170,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_nested_for_loops</td>
   <td>
-    6.516
+    N/A
     
   </td>
   <td>
-    6.711
+    5.895
     
   </td>
 </tr>
@@ -183,11 +183,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_inner_broadcasting</td>
   <td>
-    0.793
+    N/A
     
   </td>
   <td>
-    0.776
+    0.755
     
   </td>
 </tr>
@@ -196,11 +196,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_nested_for_loops</td>
   <td>
-    6.543
+    N/A
     
   </td>
   <td>
-    6.661
+    5.856
     
   </td>
 </tr>
@@ -209,11 +209,11 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_python_inner_broadcasting</td>
   <td>
-    0.853
+    N/A
     
   </td>
   <td>
-    0.806
+    0.767
     
   </td>
 </tr>
@@ -259,11 +259,11 @@ TODO: list version numbers for all the libraries and compilers.
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
     '\n'.join([imports, exports, source]))
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 276, in compile_pythrancode
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
     module = generate_cxx(module_name, pythrancode, specs, opts)
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 138, in generate_cxx
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 149, in generate_cxx
     refine(pm, ir, optimizations)
-  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 44, in refine
+  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 45, in refine
     pm.apply(optimization, node)
   File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
     return a.apply(node, ctx)
@@ -273,7 +273,7 @@ TODO: list version numbers for all the libraries and compilers.
     n = super(Transformation, self).run(node, ctx)
   File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
     self.prepare(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 53, in prepare
+  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
     self.env[module_name] = __import__(import_name)
   File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
     sys.modules[__name__] = omp()
@@ -298,11 +298,11 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
     <dt>julia_numba_for_loops: NumbaError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 126, in run_benchmarks
-    cold_time = run_benchmark(func, args, kwargs, memory, n_runs=1)
-  File "run_benchmarks.py", line 98, in run_benchmark
-    first_time = time_once()
-  File "run_benchmarks.py", line 94, in time_once
+  File "run_benchmarks.py", line 149, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 99, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 95, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
@@ -337,49 +337,49 @@ Error 22:8: Only a single target iteration variable is supported at the moment
     <dt>julia_parakeet_for_loops: AssertionError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 126, in run_benchmarks
-    cold_time = run_benchmark(func, args, kwargs, memory, n_runs=1)
-  File "run_benchmarks.py", line 98, in run_benchmark
-    first_time = time_once()
-  File "run_benchmarks.py", line 94, in time_once
+  File "run_benchmarks.py", line 149, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 99, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 95, in time_once
     func(*args, **kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 134, in run
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
     untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 116, in specialize_and_compile
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
     untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 98, in prepare_args
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
     untyped = ast_conversion.translate_function_value(fn)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 517, in visit_Call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 517, in visit_Call
     keywords_dict[kwd.arg] = self.visit(kwd.value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 631, in visit_Attribute
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 631, in visit_Attribute
     return value_to_syntax(value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 135, in value_to_syntax
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
     return translate_function_value(v)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 855, in translate_function_value
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
     "Unsupported primitive: %s" % (fn,)
 AssertionError: Unsupported primitive: <type 'numpy.uint32'>
 </pre>
@@ -388,69 +388,69 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
     <dt>julia_parakeet_numpy: AssertionError</dt>
     <dd>
       <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 126, in run_benchmarks
-    cold_time = run_benchmark(func, args, kwargs, memory, n_runs=1)
-  File "run_benchmarks.py", line 98, in run_benchmark
-    first_time = time_once()
-  File "run_benchmarks.py", line 94, in time_once
+  File "run_benchmarks.py", line 149, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 99, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 95, in time_once
     func(*args, **kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 134, in run
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
     untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 116, in specialize_and_compile
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
     untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
-  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 98, in prepare_args
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
     untyped = ast_conversion.translate_function_value(fn)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 553, in visit_Call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
     positional, keywords_dict, starargs_expr)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 497, in translate_value_call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 497, in translate_value_call
     return syntax.Call(translate_function_value(value),
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
     filename = filename)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 553, in visit_Call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
     positional, keywords_dict, starargs_expr)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 500, in translate_value_call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 500, in translate_value_call
     return self.translate_builtin_call(value, positional, keywords_dict)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 482, in translate_builtin_call
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 482, in translate_builtin_call
     fn = value_to_syntax(value)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 135, in value_to_syntax
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
     return translate_function_value(v)
-  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 855, in translate_function_value
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
     "Unsupported primitive: %s" % (fn,)
 AssertionError: Unsupported primitive: <built-in function geterrobj>
 </pre>
@@ -486,11 +486,11 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
     '\n'.join([imports, exports, source]))
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 276, in compile_pythrancode
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
     module = generate_cxx(module_name, pythrancode, specs, opts)
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 138, in generate_cxx
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 149, in generate_cxx
     refine(pm, ir, optimizations)
-  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 44, in refine
+  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 45, in refine
     pm.apply(optimization, node)
   File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
     return a.apply(node, ctx)
@@ -500,7 +500,7 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
     n = super(Transformation, self).run(node, ctx)
   File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
     self.prepare(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 53, in prepare
+  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
     self.env[module_name] = __import__(import_name)
   File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
     sys.modules[__name__] = omp()
