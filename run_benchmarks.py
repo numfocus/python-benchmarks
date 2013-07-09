@@ -192,11 +192,12 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
     return bench_results
 
 
-def build_report(report_filename=REPORT_FILENAME, data_filename=DATA_FILENAME):
+def build_report(bench_data, report_filename=REPORT_FILENAME,
+                 data_filename=DATA_FILENAME):
     with open(MAIN_REPORT_TEMPLATE_FILENAME, 'rb') as f:
         rendered = Template(f.read()).render(
-            bench_results=bench_results,
-            runtime_environment=None,
+            bench_results=bench_data['benchmark_results'],
+            bech_env=bench_data['benchmark_environment'],
             about_url=ABOUT_URL,
             github_repo_url=GITHUB_REPO_URL,
             json_data_url=os.path.basename(bench_data_filename),
@@ -215,10 +216,15 @@ if __name__ == "__main__":
     if os.path.exists(bench_data_filename):
         log.info("Loading bench data from: %s", bench_data_filename)
         with open(bench_data_filename, 'rb') as f:
-            bench_results = json.load(f)
+            bench_data = json.load(f)
     else:
         bench_results = run_benchmarks(catch_errors=True, memory=True)
+        bench_environment = {}  # TODO
+        bench_data = OrderedDict([
+            ('benchmark_results', bench_results),
+            ('benchmark_environment', bench_environment),
+        ])
         log.info("Writing bench data to: %s", bench_data_filename)
         with open(bench_data_filename, 'wb') as f:
-            json.dump(bench_results, f, indent=2)
-    build_report(data_filename=bench_data_filename)
+            json.dump(bench_data, f, indent=2)
+    build_report(bench_data, data_filename=bench_data_filename)
