@@ -2,18 +2,52 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<div class="container">
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" id="brand" href="./index.html">Python Benchmarks</a>
+      <ul class="nav">
+        <li><a href="{{ github_repo_url }}">Github repo</a></li>
+        <li><a href="{{ json_data_url }}">JSON data</a></li>
+        <li><a href="{{ about_url }}">About</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<ul class="nav nav-pills">
-  <li><a href="{{ github_repo_url }}">Github repo</a></li>
-  <li><a href="{{ json_data_url }}">JSON data</a></li>
-  <li><a href="{{ about_url }}">About</a></li>
+<div class="container-fluid">
+<div class="row-fluid">
+ <div class="span2 side-panel">
+<!--Sidebar content-->
+<ul class="nav nav-list affix">
+  <li><a href="#top">Python Benchmark</a></li>
+  <li><a href="#benchmark-results">Results</a></li>
+  <li><ul class="nav nav-list">
+    {% for result in bench_results %}
+    <li><a href="#results-{{ result.group_name }}">
+        {{ result.group_name }}</a></li>
+    {% endfor %}
+  </ul></li>
+  <li><a href="#error-summary">Error Summary</a></li>
+  <li><ul class="nav nav-list">
+    {% for result in bench_results %}
+    {%if result.import_errors or result.runtime_errors %}
+    <li><a href="#errors-{{ result.group_name }}">
+        {{ result.group_name }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul></li>
+  <li><a href="#runtime-environment">Runtime Environment</a></li>
 </ul>
 
+</div>
+<div class="span10 body-container">
+<!--Body content-->
 <h2 id="benchmark-results">Python Benchmark Results
   <a title="Permalink to this headline"
      href="#benchmark-results"
@@ -100,19 +134,6 @@ while running this benchmark.
 </section>
 {% endfor %}
 
-<h2 id="runtime-environment">Runtime Environment
-  <a title="Permalink to this headline"
-     href="#runtime-environment"
-     class="headerlink">&para;</a></h2>
-
-<h3>Hardware</h3>
-
-TODO: describe host machine (CPU, RAM, ...) with psutil
-
-<h3>Software</h3>
-
-TODO: list version numbers for all the libraries and compilers.
-
 <h2 id="error-summary">Error Summary
   <a title="Permalink to this headline"
      href="#error-summary"
@@ -167,6 +188,20 @@ TODO: list version numbers for all the libraries and compilers.
 {% endif %}
 {% endfor %}
 
+<h2 id="runtime-environment">Runtime Environment
+  <a title="Permalink to this headline"
+     href="#runtime-environment"
+     class="headerlink">&para;</a></h2>
+
+<h3>Hardware</h3>
+
+TODO: describe host machine (CPU, RAM, ...) with psutil
+
+<h3>Software</h3>
+
+TODO: list version numbers for all the libraries and compilers.
+</div>
+</div>
 </div>
 <script src="js/bootstrap.min.js"></script>
 </body>
