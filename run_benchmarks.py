@@ -8,8 +8,14 @@ import os
 import traceback
 from time import time
 import logging
-
 from jinja2 import Template
+
+try:
+    # Use automated Cython support when available
+    import pyximport
+    pyximport.install()
+except ImportError:
+    pass
 
 log = logging.getLogger(__name__)
 
