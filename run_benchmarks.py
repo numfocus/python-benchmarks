@@ -43,9 +43,14 @@ MAIN_REPORT_TEMPLATE = """\
 
 {% for result in bench_results %}
 
+<section id="results-{{ result.group_name }}">
 <h3>{{ result.group_name }}
     (<a href="{{ result.source_url }}"
-     title="Source code for {{ result.group_name }}">source code</a>)</h3>
+     title="Source code for {{ result.group_name }}">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-{{ result.group_name }}"
+       class="headerlink">&para;</a>
+</h3>
 
 <table class="table table-striped table-hover">
 <colgroup>
@@ -83,7 +88,7 @@ MAIN_REPORT_TEMPLATE = """\
 {% endfor %}
 </tbody>
 </table>
-
+</section>
 {% endfor %}
 
 <h2>Runtime Environment</h2>
@@ -99,6 +104,7 @@ TODO: list version numbers for all the libraries and compilers.
 <h2>Errors<h2>
 
 {% for result in bench_results %}
+{%if result.import_errors or result.runtime_errors %}
 
 <h3>{{ result.group_name }}
     (<a href="{{ result.source_url }}"
@@ -108,9 +114,9 @@ TODO: list version numbers for all the libraries and compilers.
 <h4>Benchmark loading errors</h4>
 <dl>
   {% for import_error in result.import_errors %}
-    <dt>{{ import_error.name }}</dt>
+    <dt>{{ import_error.name }}: {{ import_error.error_type }}</dt>
     <dd>
-      <p>{{ import_error.error_type }}: {{ import_error.error }}</p>
+      <pre>{{ import_error.error_type }}: {{ import_error.error }}</pre>
       <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
     </dd>
   {% endfor %}
@@ -121,26 +127,21 @@ TODO: list version numbers for all the libraries and compilers.
 <h4>Benchmark execution errors</h4>
 <dl>
   {% for runtime_error in result.runtime_errors %}
-    <dt>{{ runtime_error.name }}</dt>
+    <dt>{{ runtime_error.name }}: {{ runtime_error.error_type }}</dt>
     <dd>
-      <p>{{ runtime_error.error_type }}: {{ runtime_error.error }}</p>
       <pre class="pre-scrollable">{{ runtime_error.traceback }}</pre>
     </dd>
   {% endfor %}
 </dl>
 {% endif %}
 
+{% endif %}
 {% endfor %}
 
 </div>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
-"""
-
-ERROR_REPORT_TEMPLATE = """\
-
-
 """
 
 
