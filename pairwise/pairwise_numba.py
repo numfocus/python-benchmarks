@@ -1,3 +1,6 @@
+# Authors: Olivier Grisel
+# License: MIT
+
 from pairwise import pairwise_python
 from numba import autojit
 

@@ -1,4 +1,4 @@
-# Authors: Serge Sans Paille
+# Authors: Serge "Sans Paille" Guelton
 # License: MIT
 
 from pairwise import pairwise_python
