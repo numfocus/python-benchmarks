@@ -86,13 +86,26 @@ def find_benchmarks(folders=None, platforms=None):
     return benchmark_groups
 
 
-def run_benchmark(func, args, kwargs, memory=False):
+def run_benchmark(func, args, kwargs, memory=False, n_runs=3):
     """Call a function with the provided arguments"""
     # TODO: find a way to use memory_profiler on non-python, builtin functions
-    tic = time()
-    func(*args, **kwargs)
-    toc = time()
-    return toc - tic
+    def time_once():
+        tic = time()
+        func(*args, **kwargs)
+        toc = time()
+        return toc - tic
+
+    first_time = time_once()
+    if first_time > 1 or n_runs <= 1:
+        # Slow executions are not repeated as we assume that they are less
+        # prone to variation
+        return first_time
+
+    # Take the best time of several runs for fast executions
+    timings = [first_time]
+    for i in range(n_runs - 1):
+        timings.append(time_once())
+    return min(timings)
 
 
 def run_benchmarks(folders=None, platforms=None, catch_errors=True,
@@ -110,7 +123,7 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
         for name, func in benchmarks:
             log.info("Benchmarking %s", name)
             try:
-                cold_time = run_benchmark(func, args, kwargs, memory)
+                cold_time = run_benchmark(func, args, kwargs, memory, n_runs=1)
                 warm_time = run_benchmark(func, args, kwargs, memory)
                 record = OrderedDict([
                     ('name', name),
