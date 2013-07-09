@@ -19,6 +19,9 @@ DATA_FILENAME = 'report/benchmark_results.json'
 GROUP_URL_PATTERN = ("https://github.com/numfocus/python-benchmarks/"
                      "tree/master/%s")
 
+MODULE_URL_PATTERN = ("https://github.com/numfocus/python-benchmarks/"
+                      "tree/master/%s")
+
 ABOUT_URL = ("https://github.com/numfocus/python-benchmarks/blob/master/"
              "README.md#motivation")
 
@@ -48,23 +51,23 @@ def find_benchmarks(folders=None, platforms=None):
 
         pkg = __import__(group_name, fromlist="dummy")
 
-        benchmark_groups.append((
-            group_name,
-            getattr(pkg, 'make_env', None),
-            collected_benchmarks,
-            modules_in_error,
-        ))
+        benchmark_groups.append(OrderedDict([
+            ('name', group_name),
+            ('make_env', getattr(pkg, 'make_env', None)),
+            ('benchmarks', collected_benchmarks),
+            ('import_errors', modules_in_error),
+        ]))
 
         for module_filename in sorted(os.listdir(folder)):
             module_name, ext = os.path.splitext(module_filename)
             if ext not in ('.py', '.so', '.dll', '.pyx'):
                 continue
-            module_name = "%s.%s" % (group_name, module_name)
+            abs_module_name = "%s.%s" % (group_name, module_name)
 
             try:
-                module = __import__(module_name, fromlist="dummy")
+                module = __import__(abs_module_name, fromlist="dummy")
             except Exception as e:
-                log.error("Failed to load %s: %s", module_name, e)
+                log.error("Failed to load %s: %s", abs_module_name, e)
                 tb = traceback.format_exc()
                 loading_error = OrderedDict([
                     ('name', module_name),
@@ -73,13 +76,21 @@ def find_benchmarks(folders=None, platforms=None):
                     ('traceback', tb),
                 ])
                 modules_in_error.append(loading_error)
+                module = None
 
+            module_source = getattr(module, '__file__', None)
+            if module_source is None:
+                # Try to default Python source that might have generated it
+                module_source = "%s/%s.py" % (group_name, module_name)
+            else:
+                module_source = os.path.abspath(module_source)[len(here) + 1:]
+                module_source = module_source.replace('.pyc', '.py')
             for benchmark in getattr(module, 'benchmarks', ()):
                 if callable(benchmark):
                     collected_benchmarks.append(
-                        (benchmark.__name__, benchmark))
+                        (module_source, benchmark.__name__, benchmark))
                 elif isinstance(benchmark, tuple) and len(benchmark) == 2:
-                    collected_benchmarks.append(benchmark)
+                    collected_benchmarks.append((module_source,) + benchmark)
                 else:
                     raise ValueError("Found invalid benchmark %r in %s" %
                                      benchmark, module_name)
@@ -137,16 +148,19 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
 
     bench_results = []
 
-    for group_name, make_env, benchmarks, import_errors in collected:
-        log.info("Running benchmark group %s", group_name)
-        args, kwargs = make_env() if make_env is not None else {}
+    for group in collected:
+        log.info("Running benchmark group %s", group['name'])
+        make_env = group.get('make_env')
+        args, kwargs = make_env() if make_env is not None else ((), {})
 
         records = []
         runtime_errors = []
-        for name, func in benchmarks:
+        for module_source, name, func in group['benchmarks']:
             log.info("Benchmarking %s", name)
+            module_source_url = MODULE_URL_PATTERN % module_source
             try:
                 record = run_benchmark(name, func, args, kwargs, memory=memory)
+                record['source_url'] = module_source_url
                 records.append(record)
                 log.info("%s: cold: %s, warm: %s",
                          name, record['cold_time'], record['warm_time'])
@@ -155,6 +169,7 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
                     tb = traceback.format_exc()
                     runtime_error = OrderedDict([
                         ('name', name),
+                        ('source_url', module_source_url),
                         ('error_type', type(e).__name__),
                         ('error', str(e)),
                         ('traceback', tb),
@@ -168,11 +183,11 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
             # TODO: add special support for PyPy with a sub-process
 
         bench_results.append(OrderedDict([
-            ('group_name', group_name),
-            ('source_url', GROUP_URL_PATTERN % group_name),
+            ('group_name', group['name']),
+            ('source_url', GROUP_URL_PATTERN % group['name']),
             ('records', records),
             ('runtime_errors', runtime_errors),
-            ('import_errors', import_errors),
+            ('import_errors', group['import_errors']),
         ]))
     return bench_results
 

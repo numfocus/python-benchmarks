@@ -83,7 +83,7 @@
 {% for record in result.records %}
 <tr>
   <td><i class="icon-tasks"></i></td>
-  <td>{{ record.name }}</td>
+  <td><a href="{{ record.source_url }}">{{ record.name }}</a></td>
   <td>{% if record.cold_time %}
     {{ "{:0.3f}".format(record.cold_time) }}
     {% else %}
