@@ -78,13 +78,7 @@ def find_benchmarks(folders=None, platforms=None):
                 modules_in_error.append(loading_error)
                 module = None
 
-            module_source = getattr(module, '__file__', None)
-            if module_source is None:
-                # Try to default Python source that might have generated it
-                module_source = "%s/%s.py" % (group_name, module_name)
-            else:
-                module_source = os.path.abspath(module_source)[len(here) + 1:]
-                module_source = module_source.replace('.pyc', '.py')
+            module_source = "%s/%s" % (group_name, module_filename)
             for benchmark in getattr(module, 'benchmarks', ()):
                 if callable(benchmark):
                     collected_benchmarks.append(
