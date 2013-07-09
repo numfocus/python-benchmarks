@@ -19,6 +19,7 @@ def julia_python_for_loops(cr, ci, N, bound=1.5, lim=1000., cutoff=1e6):
     '''
     julia = np.empty((N, N), dtype=np.uint32)
     grid_x = np.linspace(-bound, bound, N)
+    #"omp parallel for private(i, x, j, y)"
     for i, x in enumerate(grid_x):
         for j, y in enumerate(grid_x):
             julia[i,j] = kernel(x, y, cr, ci, lim, cutoff=cutoff)
