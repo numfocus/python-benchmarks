@@ -1,0 +1,26 @@
+.bench_icon {
+    width: 2em;
+}
+
+.bench_name {
+    min-width: 30%;
+}
+
+.bench_time {
+    width: 8em;
+}
+
+.headerlink {
+    visibility: hidden;
+    color: gray;
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink
+ {
+    visibility: visible;
+}

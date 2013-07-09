@@ -3,12 +3,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
 </head>
 <body>
 <div class="container">
 
 <ul class="nav nav-pills">
   <li><a href="https://github.com/numfocus/python-benchmarks">Github repo</a></li>
+  <li><a href="benchmark_results.json">JSON data</a></li>
   <li><a href="https://github.com/numfocus/python-benchmarks/blob/master/README.md#motivation">About</a></li>
 </ul>
 
@@ -16,105 +18,209 @@
 
 
 
-<h3><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise" title="View source">
-    pairwise</a></h3>
+<section id="results-julia">
+<h3>julia
+    (<a href="https://github.com/numfocus/python-benchmarks/tree/master/julia"
+     title="Source code for julia">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-julia"
+       class="headerlink">&para;</a>
+</h3>
 
-<table class="table">
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
 <thead>
 <tr>
-    <th>Function name</th>
-    <th>Cold time (s)</th>
-    <th>Warm time (s)</th>
-    <th>Runtime Error</th>
+  <th></th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s)</th>
 </tr>
 </thead>
 <tbody>
 
 <tr>
-    <td><i class="icon-tasks"></i> pairwise_numba_nested_for_loops</td>
-    <td>
-        0.291
-        
-    </td>
-    <td>
-        0.004
-        
-    </td>
-    <td>
-        N/A
-        
-    </td>
+  <td><i class="icon-tasks"></i></td>
+  <td>julia_python_for_loops</td>
+  <td>
+    4.097
+    
+  </td>
+  <td>
+    4.098
+    
+  </td>
 </tr>
 
 <tr>
-    <td><i class="icon-tasks"></i> pairwise_parakeet_nested_for_loops</td>
-    <td>
-        0.103
-        
-    </td>
-    <td>
-        0.005
-        
-    </td>
-    <td>
-        N/A
-        
-    </td>
+  <td><i class="icon-tasks"></i></td>
+  <td>julia_python_numpy</td>
+  <td>
+    0.179
+    
+  </td>
+  <td>
+    0.173
+    
+  </td>
 </tr>
 
 <tr>
-    <td><i class="icon-tasks"></i> pairwise_parakeet_inner_broadcasting</td>
-    <td>
-        0.137
-        
-    </td>
-    <td>
-        0.005
-        
-    </td>
-    <td>
-        N/A
-        
-    </td>
+  <td><i class="icon-tasks"></i></td>
+  <td>julia_python_for_loops</td>
+  <td>
+    4.131
+    
+  </td>
+  <td>
+    4.251
+    
+  </td>
 </tr>
 
 <tr>
-    <td><i class="icon-tasks"></i> pairwise_python_nested_for_loops</td>
-    <td>
-        6.071
-        
-    </td>
-    <td>
-        6.051
-        
-    </td>
-    <td>
-        N/A
-        
-    </td>
-</tr>
-
-<tr>
-    <td><i class="icon-tasks"></i> pairwise_python_inner_broadcasting</td>
-    <td>
-        0.758
-        
-    </td>
-    <td>
-        0.742
-        
-    </td>
-    <td>
-        N/A
-        
-    </td>
+  <td><i class="icon-tasks"></i></td>
+  <td>julia_python_numpy</td>
+  <td>
+    0.174
+    
+  </td>
+  <td>
+    0.181
+    
+  </td>
 </tr>
 
 </tbody>
 </table>
+</section>
 
-<p>TODO: log import error summary here</p>
 
+<section id="results-pairwise">
+<h3>pairwise
+    (<a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise"
+     title="Source code for pairwise">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-pairwise"
+       class="headerlink">&para;</a>
+</h3>
+
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
+<thead>
+<tr>
+  <th></th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s)</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_numba_nested_for_loops</td>
+  <td>
+    0.318
+    
+  </td>
+  <td>
+    0.004
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_parakeet_nested_for_loops</td>
+  <td>
+    0.113
+    
+  </td>
+  <td>
+    0.006
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_parakeet_inner_broadcasting</td>
+  <td>
+    0.167
+    
+  </td>
+  <td>
+    0.006
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_nested_for_loops</td>
+  <td>
+    6.579
+    
+  </td>
+  <td>
+    6.602
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_inner_broadcasting</td>
+  <td>
+    0.760
+    
+  </td>
+  <td>
+    0.747
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_nested_for_loops</td>
+  <td>
+    6.400
+    
+  </td>
+  <td>
+    6.637
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>pairwise_python_inner_broadcasting</td>
+  <td>
+    0.756
+    
+  </td>
+  <td>
+    0.748
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+</section>
 
 
 <h2>Runtime Environment</h2>
@@ -125,8 +231,288 @@ TODO: describe host machine (CPU, RAM, ...) with psutil
 
 <h3>Software</h3>
 
-
 TODO: list version numbers for all the libraries and compilers.
+
+<h2>Errors</h2>
+
+
+
+
+<section id="errors-julia">
+<h3>julia
+    <a title="Permalink to this headline"
+       href="#errors-julia"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-julia">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-julia"
+       class="headerlink">&para;</a></h4>
+<dl>
+  
+    <dt>julia.julia_pythran: EnvironmentError</dt>
+    <dd>
+      <pre class="pre-scrollable">Traceback (most recent call last):
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 197, in find_benchmarks
+    module = __import__(module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
+    '\n'.join([imports, exports, source]))
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 276, in compile_pythrancode
+    module = generate_cxx(module_name, pythrancode, specs, opts)
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 138, in generate_cxx
+    refine(pm, ir, optimizations)
+  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 44, in refine
+    pm.apply(optimization, node)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
+    return a.apply(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 132, in apply
+    return self.run(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 127, in run
+    n = super(Transformation, self).run(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
+    self.prepare(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 53, in prepare
+    self.env[module_name] = __import__(import_name)
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
+    sys.modules[__name__] = omp()
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 30, in __init__
+    raise EnvironmentError("I can't find a shared library for libgomp,"
+EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
+</pre>
+    </dd>
+  
+</dl>
+</div>
+
+
+
+<div id="runtime-errors-julia">
+<h4>Benchmark execution errors
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia"
+       class="headerlink">&para;</a></h4>
+<dl>
+  
+    <dt>julia_numba_for_loops: NumbaError</dt>
+    <dd>
+      <pre class="pre-scrollable">Traceback (most recent call last):
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+    cold_time = run_benchmark(func, args, kwargs, memory)
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+    func(*args, **kwargs)
+  File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
+    return self.compile(signature)
+  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 83, in compile
+    compiled_function = dec(self.py_func)
+  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 222, in _jit_decorator
+    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)
+  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 133, in compile_function
+    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)
+  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 134, in compile2
+    post_ast = pipeline(func_ast, env)
+  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 181, in __call__
+    ast = self.transform(ast, env)
+  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 602, in transform
+    ast = stage(ast, env)
+  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 587, in _stage
+    return _check_stage_object(stage_obj)(ast, env)
+  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 192, in __call__
+    reporting.report(env, exc=e)
+  File "/usr/local/lib/python2.7/site-packages/numba/reporting.py", line 181, in report
+    raise exc
+NumbaError: (see below)
+--------------------- Numba Encountered Errors or Warnings ---------------------
+    for i, x in enumerate(grid_x):
+--------^
+Error 22:8: Only a single target iteration variable is supported at the moment
+--------------------------------------------------------------------------------
+</pre>
+    </dd>
+  
+    <dt>julia_parakeet_for_loops: AssertionError</dt>
+    <dd>
+      <pre class="pre-scrollable">Traceback (most recent call last):
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+    cold_time = run_benchmark(func, args, kwargs, memory)
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+    func(*args, **kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
+    return run_function.run(self.f, *args, **kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 134, in run
+    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 116, in specialize_and_compile
+    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 98, in prepare_args
+    untyped = ast_conversion.translate_function_value(fn)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+    _, body = translator.visit_block(body)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+    ssa_rhs = self.visit(stmt.value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 517, in visit_Call
+    keywords_dict[kwd.arg] = self.visit(kwd.value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 631, in visit_Attribute
+    return value_to_syntax(value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 135, in value_to_syntax
+    return translate_function_value(v)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 855, in translate_function_value
+    "Unsupported primitive: %s" % (fn,)
+AssertionError: Unsupported primitive: <type 'numpy.uint32'>
+</pre>
+    </dd>
+  
+    <dt>julia_parakeet_numpy: AssertionError</dt>
+    <dd>
+      <pre class="pre-scrollable">Traceback (most recent call last):
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 245, in run_benchmarks
+    cold_time = run_benchmark(func, args, kwargs, memory)
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 225, in run_benchmark
+    func(*args, **kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/decorators.py", line 115, in __call__
+    return run_function.run(self.f, *args, **kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 134, in run
+    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 116, in specialize_and_compile
+    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
+  File "/Users/ogrisel/code/parakeet/parakeet/run_function.py", line 98, in prepare_args
+    untyped = ast_conversion.translate_function_value(fn)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+    _, body = translator.visit_block(body)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+    ssa_rhs = self.visit(stmt.value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 553, in visit_Call
+    positional, keywords_dict, starargs_expr)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 497, in translate_value_call
+    return syntax.Call(translate_function_value(value),
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 893, in translate_function_value
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 840, in translate_function_source
+    filename = filename)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 784, in translate_function_ast
+    _, body = translator.visit_block(body)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 677, in visit_Assign
+    ssa_rhs = self.visit(stmt.value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 553, in visit_Call
+    positional, keywords_dict, starargs_expr)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 500, in translate_value_call
+    return self.translate_builtin_call(value, positional, keywords_dict)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 482, in translate_builtin_call
+    fn = value_to_syntax(value)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 135, in value_to_syntax
+    return translate_function_value(v)
+  File "/Users/ogrisel/code/parakeet/parakeet/ast_conversion.py", line 855, in translate_function_value
+    "Unsupported primitive: %s" % (fn,)
+AssertionError: Unsupported primitive: <built-in function geterrobj>
+</pre>
+    </dd>
+  
+</dl>
+</div>
+
+
+</section>
+
+
+
+
+<section id="errors-pairwise">
+<h3>pairwise
+    <a title="Permalink to this headline"
+       href="#errors-pairwise"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-pairwise">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-pairwise"
+       class="headerlink">&para;</a></h4>
+<dl>
+  
+    <dt>pairwise.pairwise_pythran: EnvironmentError</dt>
+    <dd>
+      <pre class="pre-scrollable">Traceback (most recent call last):
+  File "/Users/ogrisel/code/python-benchmarks/run_benchmarks.py", line 197, in find_benchmarks
+    module = __import__(module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
+    '\n'.join([imports, exports, source]))
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 276, in compile_pythrancode
+    module = generate_cxx(module_name, pythrancode, specs, opts)
+  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 138, in generate_cxx
+    refine(pm, ir, optimizations)
+  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 44, in refine
+    pm.apply(optimization, node)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
+    return a.apply(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 132, in apply
+    return self.run(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 127, in run
+    n = super(Transformation, self).run(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
+    self.prepare(node, ctx)
+  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 53, in prepare
+    self.env[module_name] = __import__(import_name)
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
+    sys.modules[__name__] = omp()
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 30, in __init__
+    raise EnvironmentError("I can't find a shared library for libgomp,"
+EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
+</pre>
+    </dd>
+  
+</dl>
+</div>
+
+
+
+
+</section>
+
+
 
 </div>
 <script src="js/bootstrap.min.js"></script>
