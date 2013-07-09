@@ -101,30 +101,40 @@ TODO: describe host machine (CPU, RAM, ...) with psutil
 
 TODO: list version numbers for all the libraries and compilers.
 
-<h2>Errors<h2>
+<h2>Errors</h2>
 
 {% for result in bench_results %}
 {%if result.import_errors or result.runtime_errors %}
 
+<section id="errors-{{ result.group_name }}">
 <h3>{{ result.group_name }}
-    (<a href="{{ result.source_url }}"
-     title="Source code for {{ result.group_name }}">source code</a>)</h3>
+    <a title="Permalink to this headline"
+       href="#errors-{{ result.group_name }}"
+       class="headerlink">&para;</a></h3>
 
 {%if result.import_errors  %}
-<h4>Benchmark loading errors</h4>
+<div id="import-errors-{{ result.group_name }}">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-{{ result.group_name }}"
+       class="headerlink">&para;</a></h4>
 <dl>
   {% for import_error in result.import_errors %}
     <dt>{{ import_error.name }}: {{ import_error.error_type }}</dt>
     <dd>
-      <pre>{{ import_error.error_type }}: {{ import_error.error }}</pre>
       <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
     </dd>
   {% endfor %}
 </dl>
+</div>
 {% endif %}
 
 {%if result.runtime_errors  %}
-<h4>Benchmark execution errors</h4>
+<div id="runtime-errors-{{ result.group_name }}">
+<h4>Benchmark execution errors
+    <a title="Permalink to this headline"
+       href="#runtime-errors-{{ result.group_name }}"
+       class="headerlink">&para;</a></h4>
 <dl>
   {% for runtime_error in result.runtime_errors %}
     <dt>{{ runtime_error.name }}: {{ runtime_error.error_type }}</dt>
@@ -133,8 +143,10 @@ TODO: list version numbers for all the libraries and compilers.
     </dd>
   {% endfor %}
 </dl>
+</div>
 {% endif %}
 
+</section>
 {% endif %}
 {% endfor %}
 
