@@ -86,7 +86,8 @@ def find_benchmarks(folders=None, platforms=None):
     return benchmark_groups
 
 
-def run_benchmark(func, args, kwargs, memory=False, n_runs=3):
+def run_benchmark(name, func, args, kwargs, memory=False, n_runs=3,
+                  slow_threshold=1):
     """Call a function with the provided arguments"""
     # TODO: find a way to use memory_profiler on non-python, builtin functions
     def time_once():
@@ -95,17 +96,39 @@ def run_benchmark(func, args, kwargs, memory=False, n_runs=3):
         toc = time()
         return toc - tic
 
-    first_time = time_once()
-    if first_time > 1 or n_runs <= 1:
+    first_timing = time_once()
+    if first_timing > slow_threshold or n_runs <= 1:
         # Slow executions are not repeated as we assume that they are less
-        # prone to variation
-        return first_time
+        # prone to variation (probably a slow naive Python variant)
+        # XXX: how to deal with slow JIT compiler if any?
+        cold = None
+        warm = first_timing
+        all_ = [first_timing]
+    else:
+        # Take the best time of several runs for fast executions
+        other_timings = []
+        for i in range(n_runs - 1):
+            other_timings.append(time_once())
 
-    # Take the best time of several runs for fast executions
-    timings = [first_time]
-    for i in range(n_runs - 1):
-        timings.append(time_once())
-    return min(timings)
+        all_timings = [first_timing] + other_timings
+        best_timing = min(all_timings)
+        if first_timing > 10 * best_timing:
+            # The cold time is much slower, let's report it as cold time
+            cold = first_timing
+            warm = best_timing
+            all_ = [all_timings]
+        else:
+            # The first run is not significantly slower, their is no warm-up
+            # for this execution
+            cold = None
+            warm = best_timing
+            all_ = [all_timings]
+    return OrderedDict([
+        ('name', name),
+        ('cold_time', cold),
+        ('warm_time', warm),
+        ('all_times', all_),
+    ])
 
 
 def run_benchmarks(folders=None, platforms=None, catch_errors=True,
@@ -123,16 +146,10 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
         for name, func in benchmarks:
             log.info("Benchmarking %s", name)
             try:
-                cold_time = run_benchmark(func, args, kwargs, memory, n_runs=1)
-                warm_time = run_benchmark(func, args, kwargs, memory)
-                record = OrderedDict([
-                    ('name', name),
-                    ('cold_time', cold_time),
-                    ('warm_time', warm_time),
-                ])
+                record = run_benchmark(name, func, args, kwargs, memory=memory)
                 records.append(record)
-                log.info("%s: cold: %0.3fs, warm: %0.3fs",
-                         name, cold_time, warm_time)
+                log.info("%s: cold: %s, warm: %s",
+                         name, record['cold_time'], record['warm_time'])
             except Exception as e:
                 if catch_errors:
                     tb = traceback.format_exc()
