@@ -14,7 +14,10 @@
   <li><a href="https://github.com/numfocus/python-benchmarks/blob/master/README.md#motivation">About</a></li>
 </ul>
 
-<h2>Python Benchmark Results</h2>
+<h2 id="benchmark-results">Python Benchmark Results
+  <a title="Permalink to this headline"
+     href="#benchmark-results"
+     class="headerlink">&para;</a></h2>
 
 
 
@@ -52,7 +55,7 @@
     
   </td>
   <td>
-    3.830
+    3.901
     
   </td>
 </tr>
@@ -65,7 +68,7 @@
     
   </td>
   <td>
-    0.166
+    0.165
     
   </td>
 </tr>
@@ -78,7 +81,7 @@
     
   </td>
   <td>
-    3.926
+    3.888
     
   </td>
 </tr>
@@ -91,13 +94,38 @@
     
   </td>
   <td>
-    0.166
+    0.165
     
   </td>
 </tr>
 
 </tbody>
 </table>
+
+
+<p class="errors-summary">
+There were
+
+
+<a href="#import-errors-julia">
+1 import error(s)
+</a>
+
+
+
+and
+
+
+
+<a href="#runtime-errors-julia">
+3 execution error(s)
+</a>
+
+
+while running this benchmark.
+</p>
+
+
 </section>
 
 
@@ -131,7 +159,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_numba_nested_for_loops</td>
   <td>
-    0.288
+    0.318
     
   </td>
   <td>
@@ -144,7 +172,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_nested_for_loops</td>
   <td>
-    0.113
+    0.123
     
   </td>
   <td>
@@ -157,7 +185,7 @@
   <td><i class="icon-tasks"></i></td>
   <td>pairwise_parakeet_inner_broadcasting</td>
   <td>
-    0.141
+    0.162
     
   </td>
   <td>
@@ -174,7 +202,7 @@
     
   </td>
   <td>
-    5.895
+    5.779
     
   </td>
 </tr>
@@ -187,7 +215,7 @@
     
   </td>
   <td>
-    0.755
+    0.730
     
   </td>
 </tr>
@@ -200,7 +228,7 @@
     
   </td>
   <td>
-    5.856
+    5.749
     
   </td>
 </tr>
@@ -213,17 +241,39 @@
     
   </td>
   <td>
-    0.767
+    0.734
     
   </td>
 </tr>
 
 </tbody>
 </table>
+
+
+<p class="errors-summary">
+There were
+
+
+<a href="#import-errors-pairwise">
+1 import error(s)
+</a>
+
+
+
+
+
+
+while running this benchmark.
+</p>
+
+
 </section>
 
 
-<h2>Runtime Environment</h2>
+<h2 id="runtime-environment">Runtime Environment
+  <a title="Permalink to this headline"
+     href="#runtime-environment"
+     class="headerlink">&para;</a></h2>
 
 <h3>Hardware</h3>
 
@@ -233,7 +283,10 @@ TODO: describe host machine (CPU, RAM, ...) with psutil
 
 TODO: list version numbers for all the libraries and compilers.
 
-<h2>Errors</h2>
+<h2 id="error-summary">Error Summary
+  <a title="Permalink to this headline"
+     href="#error-summary"
+     class="headerlink">&para;</a></h2>
 
 
 
@@ -250,11 +303,13 @@ TODO: list version numbers for all the libraries and compilers.
     <a title="Permalink to this headline"
        href="#import-errors-julia"
        class="headerlink">&para;</a></h4>
-<dl>
   
-    <dt>julia.julia_pythran: EnvironmentError</dt>
-    <dd>
-      <pre class="pre-scrollable">Traceback (most recent call last):
+    <div id="import-errors-julia-julia.julia_pythran">
+    <h5>julia.julia_pythran: EnvironmentError
+    <a title="Permalink to this headline"
+       href="#import-errors-julia-julia.julia_pythran"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
   File "run_benchmarks.py", line 65, in find_benchmarks
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
@@ -275,15 +330,14 @@ TODO: list version numbers for all the libraries and compilers.
     self.prepare(node, ctx)
   File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
     self.env[module_name] = __import__(import_name)
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 49, in <module>
     sys.modules[__name__] = omp()
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 30, in __init__
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 35, in __init__
     raise EnvironmentError("I can't find a shared library for libgomp,"
 EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
 </pre>
-    </dd>
+    </div>
   
-</dl>
 </div>
 
 
@@ -293,11 +347,13 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
     <a title="Permalink to this headline"
        href="#runtime-errors-julia"
        class="headerlink">&para;</a></h4>
-<dl>
   
-    <dt>julia_numba_for_loops: NumbaError</dt>
-    <dd>
-      <pre class="pre-scrollable">Traceback (most recent call last):
+    <div id="runtime-errors-julia-julia_numba_for_loops">
+    <h5>julia_numba_for_loops: NumbaError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia-julia_numba_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
   File "run_benchmarks.py", line 149, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 99, in run_benchmark
@@ -332,11 +388,14 @@ NumbaError: (see below)
 Error 22:8: Only a single target iteration variable is supported at the moment
 --------------------------------------------------------------------------------
 </pre>
-    </dd>
+    </div>
   
-    <dt>julia_parakeet_for_loops: AssertionError</dt>
-    <dd>
-      <pre class="pre-scrollable">Traceback (most recent call last):
+    <div id="runtime-errors-julia-julia_parakeet_for_loops">
+    <h5>julia_parakeet_for_loops: AssertionError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia-julia_parakeet_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
   File "run_benchmarks.py", line 149, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 99, in run_benchmark
@@ -383,11 +442,14 @@ Error 22:8: Only a single target iteration variable is supported at the moment
     "Unsupported primitive: %s" % (fn,)
 AssertionError: Unsupported primitive: <type 'numpy.uint32'>
 </pre>
-    </dd>
+    </div>
   
-    <dt>julia_parakeet_numpy: AssertionError</dt>
-    <dd>
-      <pre class="pre-scrollable">Traceback (most recent call last):
+    <div id="runtime-errors-julia-julia_parakeet_numpy">
+    <h5>julia_parakeet_numpy: AssertionError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-julia-julia_parakeet_numpy"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
   File "run_benchmarks.py", line 149, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 99, in run_benchmark
@@ -454,9 +516,8 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
     "Unsupported primitive: %s" % (fn,)
 AssertionError: Unsupported primitive: <built-in function geterrobj>
 </pre>
-    </dd>
+    </div>
   
-</dl>
 </div>
 
 
@@ -477,11 +538,13 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
     <a title="Permalink to this headline"
        href="#import-errors-pairwise"
        class="headerlink">&para;</a></h4>
-<dl>
   
-    <dt>pairwise.pairwise_pythran: EnvironmentError</dt>
-    <dd>
-      <pre class="pre-scrollable">Traceback (most recent call last):
+    <div id="import-errors-pairwise-pairwise.pairwise_pythran">
+    <h5>pairwise.pairwise_pythran: EnvironmentError
+    <a title="Permalink to this headline"
+       href="#import-errors-pairwise-pairwise.pairwise_pythran"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
   File "run_benchmarks.py", line 65, in find_benchmarks
     module = __import__(module_name, fromlist="dummy")
   File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
@@ -502,15 +565,14 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
     self.prepare(node, ctx)
   File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
     self.env[module_name] = __import__(import_name)
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 44, in <module>
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 49, in <module>
     sys.modules[__name__] = omp()
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 30, in __init__
+  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 35, in __init__
     raise EnvironmentError("I can't find a shared library for libgomp,"
 EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
 </pre>
-    </dd>
+    </div>
   
-</dl>
 </div>
 
 

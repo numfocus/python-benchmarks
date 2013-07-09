@@ -6,40 +6,40 @@
       {
         "name": "julia_python_for_loops", 
         "cold_time": null, 
-        "warm_time": 3.8299899101257324, 
+        "warm_time": 3.9008278846740723, 
         "all_times": [
-          3.8299899101257324
+          3.9008278846740723
         ]
       }, 
       {
         "name": "julia_python_numpy", 
         "cold_time": null, 
-        "warm_time": 0.1657121181488037, 
+        "warm_time": 0.16549205780029297, 
         "all_times": [
           [
-            0.1766529083251953, 
-            0.16662096977233887, 
-            0.1657121181488037
+            0.17080402374267578, 
+            0.16549205780029297, 
+            0.16586899757385254
           ]
         ]
       }, 
       {
         "name": "julia_python_for_loops", 
         "cold_time": null, 
-        "warm_time": 3.9261081218719482, 
+        "warm_time": 3.8879661560058594, 
         "all_times": [
-          3.9261081218719482
+          3.8879661560058594
         ]
       }, 
       {
         "name": "julia_python_numpy", 
         "cold_time": null, 
-        "warm_time": 0.16599583625793457, 
+        "warm_time": 0.16547799110412598, 
         "all_times": [
           [
-            0.1735830307006836, 
-            0.16648507118225098, 
-            0.16599583625793457
+            0.16901016235351562, 
+            0.16547799110412598, 
+            0.17130088806152344
           ]
         ]
       }
@@ -69,7 +69,7 @@
         "name": "julia.julia_pythran", 
         "error_type": "EnvironmentError", 
         "error": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-        "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 65, in find_benchmarks\n    module = __import__(module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py\", line 27, in <module>\n    '\\n'.join([imports, exports, source]))\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 44, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 30, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 65, in find_benchmarks\n    module = __import__(module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py\", line 27, in <module>\n    '\\n'.join([imports, exports, source]))\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
       }
     ]
   }, 
@@ -79,77 +79,77 @@
     "records": [
       {
         "name": "pairwise_numba_nested_for_loops", 
-        "cold_time": 0.2875099182128906, 
-        "warm_time": 0.003634929656982422, 
+        "cold_time": 0.31785011291503906, 
+        "warm_time": 0.0037288665771484375, 
         "all_times": [
           [
-            0.2875099182128906, 
-            0.003634929656982422, 
-            0.003670930862426758
+            0.31785011291503906, 
+            0.0038127899169921875, 
+            0.0037288665771484375
           ]
         ]
       }, 
       {
         "name": "pairwise_parakeet_nested_for_loops", 
-        "cold_time": 0.11272597312927246, 
-        "warm_time": 0.004813194274902344, 
+        "cold_time": 0.12311506271362305, 
+        "warm_time": 0.0053288936614990234, 
         "all_times": [
           [
-            0.11272597312927246, 
-            0.005352973937988281, 
-            0.004813194274902344
+            0.12311506271362305, 
+            0.005655050277709961, 
+            0.0053288936614990234
           ]
         ]
       }, 
       {
         "name": "pairwise_parakeet_inner_broadcasting", 
-        "cold_time": 0.14144277572631836, 
-        "warm_time": 0.00487208366394043, 
+        "cold_time": 0.1624910831451416, 
+        "warm_time": 0.004817008972167969, 
         "all_times": [
           [
-            0.14144277572631836, 
-            0.0051691532135009766, 
-            0.00487208366394043
+            0.1624910831451416, 
+            0.00514984130859375, 
+            0.004817008972167969
           ]
         ]
       }, 
       {
         "name": "pairwise_python_nested_for_loops", 
         "cold_time": null, 
-        "warm_time": 5.894705057144165, 
+        "warm_time": 5.7787158489227295, 
         "all_times": [
-          5.894705057144165
+          5.7787158489227295
         ]
       }, 
       {
         "name": "pairwise_python_inner_broadcasting", 
         "cold_time": null, 
-        "warm_time": 0.7549378871917725, 
+        "warm_time": 0.7304091453552246, 
         "all_times": [
           [
-            0.7856490612030029, 
-            0.7584829330444336, 
-            0.7549378871917725
+            0.7431399822235107, 
+            0.7304091453552246, 
+            0.7382907867431641
           ]
         ]
       }, 
       {
         "name": "pairwise_python_nested_for_loops", 
         "cold_time": null, 
-        "warm_time": 5.85624098777771, 
+        "warm_time": 5.749488115310669, 
         "all_times": [
-          5.85624098777771
+          5.749488115310669
         ]
       }, 
       {
         "name": "pairwise_python_inner_broadcasting", 
         "cold_time": null, 
-        "warm_time": 0.7667369842529297, 
+        "warm_time": 0.7340688705444336, 
         "all_times": [
           [
-            0.7766389846801758, 
-            0.7688751220703125, 
-            0.7667369842529297
+            0.7525660991668701, 
+            0.7340688705444336, 
+            0.7350120544433594
           ]
         ]
       }
@@ -160,7 +160,7 @@
         "name": "pairwise.pairwise_pythran", 
         "error_type": "EnvironmentError", 
         "error": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-        "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 65, in find_benchmarks\n    module = __import__(module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py\", line 23, in <module>\n    '\\n'.join([imports, exports, source]))\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 44, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 30, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 65, in find_benchmarks\n    module = __import__(module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py\", line 23, in <module>\n    '\\n'.join([imports, exports, source]))\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
       }
     ]
   }

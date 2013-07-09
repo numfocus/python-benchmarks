@@ -24,3 +24,23 @@ h6:hover > a.headerlink
  {
     visibility: visible;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 15px 0 10px 0;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: .5em;
+    border-top: 1px dashed gray;
+}
+
+p.errors-summary {
+    font-color: gray;
+    font-size: 90%;
+    font-style: italic;;
+}
+
+p.errors-summary a {
+    font-weight: bold;
+}
