@@ -1,7 +1,11 @@
+# Authors: Serge Sans Paille
+# License: MIT
+
 from pairwise import pairwise_python
 from pythran import compile_pythrancode
 from inspect import getsource
-import re, imp
+import re
+import imp
 
 # grab imports
 imports = 'import numpy as np'

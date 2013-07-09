@@ -13,6 +13,9 @@ from jinja2 import Template
 
 log = logging.getLogger(__name__)
 
+REPORT_FILENAME = 'report/index.html'
+DATA_FILENAME = 'report/benchmark_results.json'
+
 GROUP_URL_PATTERN = ("https://github.com/numfocus/python-benchmarks/"
                      "tree/master/%s")
 
@@ -276,21 +279,7 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
     return bench_results
 
 
-if __name__ == "__main__":
-    # TODO: use argparse
-    logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s %(levelname)-8s %(message)s')
-    bench_data_filename = 'report/benchmark_results.json'
-    if os.path.exists(bench_data_filename):
-        log.info("Loading bench data from: %s", bench_data_filename)
-        with open(bench_data_filename, 'rb') as f:
-            bench_results = json.load(f)
-    else:
-        bench_results = run_benchmarks(catch_errors=True, memory=True)
-        log.info("Writing bench data to: %s", bench_data_filename)
-        with open(bench_data_filename, 'wb') as f:
-            json.dump(bench_results, f, indent=2)
-
+def build_report(report_filename=REPORT_FILENAME, data_filename=DATA_FILENAME):
     rendered = Template(MAIN_REPORT_TEMPLATE).render(
         bench_results=bench_results,
         runtime_environment=None,
@@ -302,3 +291,20 @@ if __name__ == "__main__":
     log.info("Writing report to: %s", report_filename)
     with open(report_filename, 'wb') as f:
         f.write(rendered)
+
+
+if __name__ == "__main__":
+    # TODO: use argparse
+    logging.basicConfig(level=logging.INFO,
+                        format='%(asctime)s %(levelname)-8s %(message)s')
+    bench_data_filename = DATA_FILENAME
+    if os.path.exists(bench_data_filename):
+        log.info("Loading bench data from: %s", bench_data_filename)
+        with open(bench_data_filename, 'rb') as f:
+            bench_results = json.load(f)
+    else:
+        bench_results = run_benchmarks(catch_errors=True, memory=True)
+        log.info("Writing bench data to: %s", bench_data_filename)
+        with open(bench_data_filename, 'wb') as f:
+            json.dump(bench_results, f, indent=2)
+    build_report(data_filename=bench_data_filename)

@@ -1,2 +1,4 @@
 *.pyc
 report/index.html
+report/*.json
+report/*.png
