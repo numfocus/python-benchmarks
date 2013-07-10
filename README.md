@@ -67,13 +67,25 @@ To run all the benchmarks:
 
     python run_benchmarks.py
 
-To run the benchmarks of a specific folder (TODO):
+To run the benchmarks of a specific folder:
 
-    python run_benchmarks.py pairwise
+    python run_benchmarks.py --folders pairwise
 
-To run only the benchmarks with specific platforms (TODO):
+To run only the benchmarks with specific platforms:
 
-    python run_benchmarks.py --with=numba,parakeet,cython
+    python run_benchmarks.py --platforms numba parakeet cython
+
+To ignore previously collected data:
+
+    python run_benchmarks.py --ignore-data
+
+To see all the tracebacks of the collected errors:
+
+    python run_benchmarks.py --log-level debug
+
+To open a browser on the generated HTML report page:
+
+    python run_benchmarks.py --open-report
 
 To publish the generated report to github (assuming you want to push to
 origin):

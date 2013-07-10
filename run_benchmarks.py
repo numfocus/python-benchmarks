@@ -3,6 +3,7 @@
 from __future__ import print_function
 
 from collections import OrderedDict
+import argparse
 import json
 import os
 import traceback
@@ -20,7 +21,7 @@ try:
 except ImportError:
     pass
 
-log = logging.getLogger(__name__)
+log = logging.getLogger("run_benchmarks")
 
 REPORT_FILENAME = 'report/index.html'
 DATA_FILENAME = 'report/benchmark_results.json'
@@ -38,6 +39,8 @@ GITHUB_REPO_URL = "https://github.com/numfocus/python-benchmarks"
 
 
 MAIN_REPORT_TEMPLATE_FILENAME = "templates/index.html"
+
+LOG_FORMAT = '%(asctime)s %(levelname)-8s %(name)-8s %(message)s'
 
 
 def find_benchmarks(folders=None, platforms=None):
@@ -69,8 +72,16 @@ def find_benchmarks(folders=None, platforms=None):
 
         for module_filename in sorted(os.listdir(folder)):
             module_name, ext = os.path.splitext(module_filename)
-            if ext not in ('.py', '.so', '.dll', '.pyx'):
+            if ext and ext not in ('.py', '.so', '.dll', '.pyx'):
                 continue
+
+            if not module_name.startswith(group_name + "_"):
+                continue
+
+            platform_name = module_name[len(group_name) + 1:]
+            if platforms is not None and platform_name not in platforms:
+                continue
+
             abs_module_name = "%s.%s" % (group_name, module_name)
 
             try:
@@ -214,8 +225,10 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
 def plot_group(group, width=0.5, zoom_scale=None, log_scale=False,
                figsize=(12, 6), folder="report/images"):
     records = group['records']
-    name = group['group_name']
+    if len(records) == 0:
+        return
 
+    name = group['group_name']
     for r in records:
         r['max_time'] = r['cold_time'] or r['warm_time']
 
@@ -298,17 +311,36 @@ def build_report(bench_data, report_filename=REPORT_FILENAME,
         f.write(rendered)
 
 
+def parse_args(args):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--no-catch-errors', action='store_true',
+                        default=False)
+    parser.add_argument('--folders', nargs='*', default=None)
+    parser.add_argument('--platforms', nargs='*', default=None)
+    parser.add_argument('--ignore-data', action='store_true', default=False)
+    parser.add_argument('--log-level', default='INFO')
+    parser.add_argument('--open-report', action='store_true',
+                        default=False)
+    return parser.parse_args(args)
+
 if __name__ == "__main__":
-    # TODO: use argparse
-    logging.basicConfig(level=logging.INFO,
-                        format='%(asctime)s %(levelname)-8s %(message)s')
+    import sys
+    options = parse_args(sys.argv[1:])
+
+    log_level = getattr(logging, options.log_level.upper(), logging.INFO)
+    logging.basicConfig(level=log_level, format=LOG_FORMAT)
+
     bench_data_filename = DATA_FILENAME
-    if os.path.exists(bench_data_filename):
+    if os.path.exists(bench_data_filename) and not options.ignore_data:
         log.info("Loading bench data from: %s", bench_data_filename)
         with open(bench_data_filename, 'rb') as f:
             bench_data = json.load(f)
     else:
-        bench_results = run_benchmarks(catch_errors=True, memory=True)
+        bench_results = run_benchmarks(
+            catch_errors=not options.no_catch_errors,
+            folders=options.folders,
+            platforms=options.platforms,
+        )
         bench_environment = {}  # TODO
         bench_data = OrderedDict([
             ('benchmark_results', bench_results),
@@ -317,4 +349,9 @@ if __name__ == "__main__":
         log.info("Writing bench data to: %s", bench_data_filename)
         with open(bench_data_filename, 'wb') as f:
             json.dump(bench_data, f, indent=2)
-    build_report(bench_data, data_filename=bench_data_filename)
+    report_filename = os.path.abspath('report/index.html')
+    build_report(bench_data, data_filename=bench_data_filename,
+                 report_filename=report_filename)
+    if options.open_report:
+        import webbrowser
+        webbrowser.open("file://" + report_filename)
