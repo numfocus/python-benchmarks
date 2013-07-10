@@ -117,8 +117,8 @@
     
   </td>
   <td>0.006 
-      (0.000)</td>
-  <td>1574.5</td>
+      (0.001)</td>
+  <td>1606.6</td>
 </tr>
 
 <tr>
@@ -130,8 +130,8 @@
     
   </td>
   <td>0.010 
-      (0.000)</td>
-  <td>981.9</td>
+      (0.001)</td>
+  <td>989.7</td>
 </tr>
 
 <tr>
@@ -139,12 +139,12 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    0.801
+    0.799
     
   </td>
-  <td>0.045 
-      (0.001)</td>
-  <td>212.1</td>
+  <td>0.044 
+      (0.002)</td>
+  <td>219.2</td>
 </tr>
 
 <tr>
@@ -155,7 +155,7 @@
     N/A
     
   </td>
-  <td>9.507 
+  <td>9.715 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -234,7 +234,7 @@ while running this benchmark.
   </td>
   <td>0.002 
       (0.000)</td>
-  <td>1584.1</td>
+  <td>1812.9</td>
 </tr>
 
 <tr>
@@ -246,8 +246,8 @@ while running this benchmark.
     
   </td>
   <td>0.004 
-      (0.000)</td>
-  <td>1023.4</td>
+      (0.001)</td>
+  <td>1145.1</td>
 </tr>
 
 <tr>
@@ -258,9 +258,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.169 
-      (0.005)</td>
-  <td>23.3</td>
+  <td>0.172 
+      (0.006)</td>
+  <td>25.7</td>
 </tr>
 
 <tr>
@@ -271,7 +271,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>3.926 
+  <td>4.414 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -343,58 +343,84 @@ while running this benchmark.
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#1</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float32</a></td>
   <td>
-    0.229
+    0.003
     
   </td>
-  <td>0.013 
+  <td>0.001 
       (0.000)</td>
-  <td>1666.2</td>
+  <td>29515.5</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#2</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float64</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.001 
+      (0.000)</td>
+  <td>15606.0</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#3</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td>
+    0.228
+    
+  </td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1717.4</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
   <td>
     N/A
     
   </td>
   <td>0.013 
-      (0.000)</td>
-  <td>1658.9</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#3</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
-  <td>
-    0.117
-    
-  </td>
-  <td>0.014 
-      (0.000)</td>
-  <td>1473.9</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
-  <td>
-    0.150
-    
-  </td>
-  <td>0.014 
-      (0.000)</td>
-  <td>1464.1</td>
+      (0.001)</td>
+  <td>1715.2</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#5</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
+  <td>
+    0.125
+    
+  </td>
+  <td>0.014 
+      (0.000)</td>
+  <td>1518.3</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#6</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
+  <td>
+    0.181
+    
+  </td>
+  <td>0.015 
+      (0.002)</td>
+  <td>1483.8</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#7</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py">pairwise_pythran_nested_for_loops</a></td>
   <td>
     N/A
@@ -402,31 +428,57 @@ while running this benchmark.
   </td>
   <td>0.016 
       (0.002)</td>
-  <td>1342.5</td>
+  <td>1349.5</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
-  <td>#6</td>
+  <td>#8</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_tensor_float32</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.037 
+      (0.009)</td>
+  <td>590.7</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#9</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_tensor_float64</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.052 
+      (0.012)</td>
+  <td>415.6</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#10</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py">pairwise_python_inner_broadcasting</a></td>
   <td>
     N/A
     
   </td>
-  <td>1.789 
+  <td>1.885 
       (0.000)</td>
-  <td>11.8</td>
+  <td>11.6</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
-  <td>#7</td>
+  <td>#11</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py">pairwise_python_nested_for_loops</a></td>
   <td>
     N/A
     
   </td>
-  <td>21.068 
+  <td>21.815 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -477,11 +529,11 @@ while running this benchmark.
 >NameNotFound: d
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 123, in time_once
+  File &#34;run_benchmarks.py&#34;, line 126, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -590,11 +642,11 @@ Error 23:8: Only a single target iteration variable is supported at the moment
 --------------------------------------------------------------------------------
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 123, in time_once
+  File &#34;run_benchmarks.py&#34;, line 126, in time_once
     func(*args, **kwargs)
   File &#34;numbawrapper.pyx&#34;, line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 68, in compile_from_args
@@ -635,11 +687,11 @@ Error 23:8: Only a single target iteration variable is supported at the moment
 >AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 123, in time_once
+  File &#34;run_benchmarks.py&#34;, line 126, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -692,11 +744,11 @@ AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
 >AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 123, in time_once
+  File &#34;run_benchmarks.py&#34;, line 126, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
