@@ -7,61 +7,41 @@
         {
           "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.006250858306884766, 
+          "warm_time": 0.0061800479888916016, 
           "all_warm_times": [
-            0.006415843963623047, 
-            0.006262063980102539, 
-            0.006844043731689453, 
+            0.0061800479888916016, 
             0.006250858306884766, 
-            0.009641885757446289
+            0.006187915802001953, 
+            0.006281137466430664, 
+            0.00642085075378418
           ], 
-          "std_warm_times": 0.0012974196948074659, 
+          "std_warm_times": 8.7069133276222675e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
           "rank": 1, 
-          "speedup": 1044.2796551987185
-        }, 
-        {
-          "name": "growcut_pythran", 
-          "cold_time": null, 
-          "warm_time": 0.00945591926574707, 
-          "all_warm_times": [
-            0.009664058685302734, 
-            0.009621143341064453, 
-            0.00945591926574707, 
-            0.012501955032348633, 
-            0.010338783264160156
-          ], 
-          "std_warm_times": 0.0011337115958365658, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py", 
-          "rank": 2, 
-          "speedup": 690.3235924459797
+          "speedup": 1106.9829867674857
         }, 
         {
           "name": "growcut_numba", 
-          "cold_time": 0.8188879489898682, 
-          "warm_time": 0.044632911682128906, 
+          "cold_time": null, 
+          "warm_time": 1.1291370391845703, 
           "all_warm_times": [
-            0.04573202133178711, 
-            0.04622817039489746, 
-            0.04521608352661133, 
-            0.044632911682128906, 
-            0.045202016830444336
+            1.1291370391845703
           ], 
-          "std_warm_times": 0.00053991228081933993, 
+          "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
-          "rank": 3, 
-          "speedup": 146.25181085874235
+          "rank": 2, 
+          "speedup": 6.058793347218633
         }, 
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 6.527644157409668, 
+          "warm_time": 6.841207981109619, 
           "all_warm_times": [
-            6.527644157409668
+            6.841207981109619
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py", 
-          "rank": 4, 
+          "rank": 3, 
           "speedup": 1.0
         }
       ], 
@@ -74,7 +54,14 @@
           "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 167, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 113, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 109, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 500, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 482, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function sqrt>\n"
         }
       ], 
-      "import_errors": []
+      "import_errors": [
+        {
+          "name": "growcut_pythran", 
+          "error_type": "PythranSyntaxError", 
+          "error": "identifier sqrt unknown, either because it is an unsupported intrinsic, the input code is faulty, or... pythran is buggy. (line 19)", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 77, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/growcut/growcut_pythran.py\", line 24, in <module>\n    '\\n'.join([imports, exports, source]))\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 33, in refine\n    pm.apply(ListCompToGenexp, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 71, in prepare\n    setattr(self, uncamel(D.__name__), d.run(rnode, ctx))\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 93, in run\n    super(Analysis, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 71, in prepare\n    setattr(self, uncamel(D.__name__), d.run(rnode, ctx))\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 93, in run\n    super(Analysis, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 76, in run\n    return self.visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 55, in visit\n    return super(ContextManager, self).visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 249, in generic_visit\n    self.visit(item)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 55, in visit\n    return super(ContextManager, self).visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py\", line 545, in visit_FunctionDef\n    self.generic_visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 249, in generic_visit\n    self.visit(item)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 55, in visit\n    return super(ContextManager, self).visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py\", line 548, in visit_Assign\n    value_aliases = self.visit(node.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 55, in visit\n    return super(ContextManager, self).visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py\", line 458, in visit_Call\n    self.generic_visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 251, in generic_visit\n    self.visit(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 55, in visit\n    return super(ContextManager, self).visit(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py\", line 500, in visit_Name\n    raise PythranSyntaxError(err.format(node.id), node)\nPythranSyntaxError: identifier sqrt unknown, either because it is an unsupported intrinsic, the input code is faulty, or... pythran is buggy. (line 19)\n"
+        }
+      ]
     }, 
     {
       "group_name": "julia", 
@@ -83,57 +70,57 @@
         {
           "name": "julia_pythran_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.002480030059814453, 
+          "warm_time": 0.002560853958129883, 
           "all_warm_times": [
-            0.002624034881591797, 
-            0.003025054931640625, 
-            0.002480030059814453, 
-            0.0026340484619140625, 
-            0.0027899742126464844
+            0.0029211044311523438, 
+            0.002901792526245117, 
+            0.002847909927368164, 
+            0.002566099166870117, 
+            0.002560853958129883
           ], 
-          "std_warm_times": 0.0001853096439087351, 
+          "std_warm_times": 0.00016189106778047733, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py", 
           "rank": 1, 
-          "speedup": 1718.3710824841376
+          "speedup": 1788.849734661577
         }, 
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0038461685180664062, 
+          "warm_time": 0.004309892654418945, 
           "all_warm_times": [
-            0.004071950912475586, 
-            0.003910064697265625, 
-            0.0038461685180664062, 
-            0.0038940906524658203, 
-            0.00391387939453125
+            0.004403829574584961, 
+            0.0050678253173828125, 
+            0.0043790340423583984, 
+            0.004309892654418945, 
+            0.004445075988769531
           ], 
-          "std_warm_times": 7.6270845015493112e-05, 
+          "std_warm_times": 0.00027685080812951131, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx", 
           "rank": 2, 
-          "speedup": 1108.0148772625837
+          "speedup": 1062.8995408530177
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.17233610153198242, 
+          "warm_time": 0.1807239055633545, 
           "all_warm_times": [
-            0.18316006660461426, 
-            0.17295098304748535, 
-            0.17761802673339844, 
-            0.17233610153198242, 
-            0.17914915084838867
+            0.2014908790588379, 
+            0.21013307571411133, 
+            0.1878659725189209, 
+            0.1807239055633545, 
+            0.22980093955993652
           ], 
-          "std_warm_times": 0.0040270218977145047, 
+          "std_warm_times": 0.017272760339838843, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
           "rank": 3, 
-          "speedup": 24.728492176583707
+          "speedup": 25.3479632881317
         }, 
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 4.2616119384765625, 
+          "warm_time": 4.58098292350769, 
           "all_warm_times": [
-            4.2616119384765625
+            4.58098292350769
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
@@ -172,102 +159,102 @@
       "records": [
         {
           "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.23783302307128906, 
-          "warm_time": 0.012797117233276367, 
+          "cold_time": 0.2573099136352539, 
+          "warm_time": 0.01273798942565918, 
           "all_warm_times": [
-            0.012993812561035156, 
-            0.013563871383666992, 
-            0.013715982437133789, 
-            0.012797117233276367, 
-            0.013120889663696289
+            0.01273798942565918, 
+            0.012775897979736328, 
+            0.012884855270385742, 
+            0.012755870819091797, 
+            0.012921810150146484
           ], 
-          "std_warm_times": 0.00034709617086342657, 
+          "std_warm_times": 7.3815470202160177e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
           "rank": 1, 
-          "speedup": 1772.3862878435025
+          "speedup": 1709.1479027458026
         }, 
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.01291513442993164, 
+          "warm_time": 0.013931989669799805, 
           "all_warm_times": [
-            0.013326883316040039, 
-            0.016421079635620117, 
-            0.013317108154296875, 
-            0.012964010238647461, 
-            0.01291513442993164
+            0.013931989669799805, 
+            0.014858007431030273, 
+            0.016238927841186523, 
+            0.018420934677124023, 
+            0.017653942108154297
           ], 
-          "std_warm_times": 0.0013272773613504363, 
+          "std_warm_times": 0.0016727626146039059, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx", 
           "rank": 2, 
-          "speedup": 1756.190400590733
-        }, 
-        {
-          "name": "pairwise_parakeet_inner_broadcasting", 
-          "cold_time": 0.15107393264770508, 
-          "warm_time": 0.014400959014892578, 
-          "all_warm_times": [
-            0.01459193229675293, 
-            0.014573812484741211, 
-            0.014400959014892578, 
-            0.014702081680297852, 
-            0.014783143997192383
-          ], 
-          "std_warm_times": 0.00012945365707638692, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
-          "rank": 3, 
-          "speedup": 1574.9947683851528
+          "speedup": 1562.6704030118935
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.12386703491210938, 
-          "warm_time": 0.014694929122924805, 
+          "cold_time": 0.12002086639404297, 
+          "warm_time": 0.014456987380981445, 
           "all_warm_times": [
-            0.015189886093139648, 
-            0.015010833740234375, 
-            0.014694929122924805, 
-            0.01470804214477539, 
-            0.014561176300048828
+            0.014774799346923828, 
+            0.014456987380981445, 
+            0.014728784561157227, 
+            0.014657020568847656, 
+            0.014384984970092773
           ], 
-          "std_warm_times": 0.00023132603643322529, 
+          "std_warm_times": 0.00015301919123117009, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
+          "rank": 3, 
+          "speedup": 1505.922868875439
+        }, 
+        {
+          "name": "pairwise_parakeet_inner_broadcasting", 
+          "cold_time": 0.17592096328735352, 
+          "warm_time": 0.014774084091186523, 
+          "all_warm_times": [
+            0.014775991439819336, 
+            0.015093088150024414, 
+            0.014774084091186523, 
+            0.014963150024414062, 
+            0.014834880828857422
+          ], 
+          "std_warm_times": 0.00012333108954748709, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 4, 
-          "speedup": 1543.4872069441064
+          "speedup": 1473.6011909564768
         }, 
         {
           "name": "pairwise_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.016077041625976562, 
+          "warm_time": 0.015960216522216797, 
           "all_warm_times": [
-            0.01964402198791504, 
-            0.020594120025634766, 
-            0.019628047943115234, 
-            0.016077041625976562, 
-            0.016529083251953125
+            0.015960216522216797, 
+            0.016020774841308594, 
+            0.0232698917388916, 
+            0.017129182815551758, 
+            0.017169952392578125
           ], 
-          "std_warm_times": 0.0018287538909798336, 
+          "std_warm_times": 0.002729711072616325, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py", 
           "rank": 5, 
-          "speedup": 1410.7965654288764
+          "speedup": 1364.0859998207404
         }, 
         {
           "name": "pairwise_python_inner_broadcasting", 
           "cold_time": null, 
-          "warm_time": 2.069636106491089, 
+          "warm_time": 1.9563870429992676, 
           "all_warm_times": [
-            2.069636106491089
+            1.9563870429992676
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 6, 
-          "speedup": 10.959141579066992
+          "speedup": 11.12822127399039
         }, 
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 22.681435108184814, 
+          "warm_time": 21.7711079120636, 
           "all_warm_times": [
-            22.681435108184814
+            21.7711079120636
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
