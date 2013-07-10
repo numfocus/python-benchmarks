@@ -123,7 +123,7 @@ def run_benchmark(name, func, args, kwargs, memory=False, n_runs=3,
 
         all_timings = [first_timing] + other_timings
         best_timing = min(all_timings)
-        if first_timing > 10 * best_timing:
+        if first_timing > 5 * best_timing:
             # The cold time is much slower, let's report it as cold time
             cold = first_timing
             warm = best_timing
