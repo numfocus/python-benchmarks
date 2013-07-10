@@ -169,11 +169,10 @@ while running this benchmark.
     <a title="Permalink to this headline"
        href="#import-errors-{{ result.group_name }}-{{ import_error.name }}"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-{{ import_error.error_type }}: {{ import_error.error_message }}
+    <pre class="pre-scrollable"
+>{{ import_error.error_type }}: {{ import_error.error_message }}
 
-{{ import_error.traceback }}
-    </pre>
+{{ import_error.traceback }}</pre>
     </div>
   {% endfor %}
 </div>
@@ -191,11 +190,10 @@ while running this benchmark.
     <a title="Permalink to this headline"
        href="#runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-{{ runtime_error.error_type }}: {{ runtime_error.error_message|e }}
+    <pre class="pre-scrollable"
+>{{ runtime_error.error_type }}: {{ runtime_error.error_message|e }}
 
-{{ runtime_error.traceback|e }}
-    </pre>
+{{ runtime_error.traceback|e }}</pre>
     </div>
   {% endfor %}
 </div>
