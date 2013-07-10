@@ -45,9 +45,6 @@
     
   
     
-    <li><a href="#errors-pairwise">
-        pairwise</a></li>
-    
   
   </ul></li>
   <li><a href="#runtime-environment">Runtime Environment</a></li>
@@ -97,7 +94,7 @@
     
   </td>
   <td>
-    4.272
+    3.954
     
   </td>
 </tr>
@@ -110,7 +107,20 @@
     
   </td>
   <td>
-    0.165
+    0.167
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py">julia_pythran_for_loops</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    0.005
     
   </td>
 </tr>
@@ -123,13 +133,7 @@
 There were
 
 
-<a href="#import-errors-julia">
-1 import error(s)
-</a>
 
-
-
-and
 
 
 
@@ -188,7 +192,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
   <td>
-    0.292
+    0.331
     
   </td>
   <td>
@@ -201,7 +205,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.106
+    0.105
     
   </td>
   <td>
@@ -214,7 +218,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.141
+    0.142
     
   </td>
   <td>
@@ -231,7 +235,7 @@ while running this benchmark.
     
   </td>
   <td>
-    6.078
+    6.065
     
   </td>
 </tr>
@@ -244,7 +248,20 @@ while running this benchmark.
     
   </td>
   <td>
-    1.333
+    0.733
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py">pairwise_pythran_nested_for_loops</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    0.009
     
   </td>
 </tr>
@@ -253,21 +270,11 @@ while running this benchmark.
 </table>
 
 
+
 <p class="errors-summary">
-There were
-
-
-<a href="#import-errors-pairwise">
-1 import error(s)
-</a>
-
-
-
-
-
-
-while running this benchmark.
+  All methods were benchmarked without any error.
 </p>
+
 
 
 </section>
@@ -287,49 +294,6 @@ while running this benchmark.
        href="#errors-julia"
        class="headerlink">&para;</a></h3>
 
-
-<div id="import-errors-julia">
-<h4>Benchmark loading errors
-    <a title="Permalink to this headline"
-       href="#import-errors-julia"
-       class="headerlink">&para;</a></h4>
-  
-    <div id="import-errors-julia-julia_pythran">
-    <h5><a href="">julia_pythran</a>:
-         EnvironmentError
-    <a title="Permalink to this headline"
-       href="#import-errors-julia-julia_pythran"
-       class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 74, in find_benchmarks
-    module = __import__(abs_module_name, fromlist="dummy")
-  File "/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py", line 27, in <module>
-    '\n'.join([imports, exports, source]))
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
-    module = generate_cxx(module_name, pythrancode, specs, opts)
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 149, in generate_cxx
-    refine(pm, ir, optimizations)
-  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 45, in refine
-    pm.apply(optimization, node)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
-    return a.apply(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 132, in apply
-    return self.run(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 127, in run
-    n = super(Transformation, self).run(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
-    self.prepare(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
-    self.env[module_name] = __import__(import_name)
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 49, in <module>
-    sys.modules[__name__] = omp()
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 35, in __init__
-    raise EnvironmentError("I can't find a shared library for libgomp,"
-EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
-</pre>
-    </div>
-  
-</div>
 
 
 
@@ -353,25 +317,25 @@ EnvironmentError: I can't find a shared library for libgomp, you may need to ins
   File "run_benchmarks.py", line 106, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
-  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
     return self.compile(signature)
-  File "/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 83, in compile
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 83, in compile
     compiled_function = dec(self.py_func)
-  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 222, in _jit_decorator
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py", line 222, in _jit_decorator
     env, func, argtys, restype=return_type, nopython=nopython, **kwargs)
-  File "/usr/local/lib/python2.7/site-packages/numba/decorators.py", line 133, in compile_function
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py", line 133, in compile_function
     func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 134, in compile2
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 134, in compile2
     post_ast = pipeline(func_ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 181, in __call__
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 181, in __call__
     ast = self.transform(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 602, in transform
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 602, in transform
     ast = stage(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 587, in _stage
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 587, in _stage
     return _check_stage_object(stage_obj)(ast, env)
-  File "/usr/local/lib/python2.7/site-packages/numba/pipeline.py", line 192, in __call__
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 192, in __call__
     reporting.report(env, exc=e)
-  File "/usr/local/lib/python2.7/site-packages/numba/reporting.py", line 181, in report
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py", line 181, in report
     raise exc
 NumbaError: (see below)
 --------------------- Numba Encountered Errors or Warnings ---------------------
@@ -518,62 +482,6 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
 </section>
 
 
-
-
-<section id="errors-pairwise">
-<h3>pairwise
-    <a title="Permalink to this headline"
-       href="#errors-pairwise"
-       class="headerlink">&para;</a></h3>
-
-
-<div id="import-errors-pairwise">
-<h4>Benchmark loading errors
-    <a title="Permalink to this headline"
-       href="#import-errors-pairwise"
-       class="headerlink">&para;</a></h4>
-  
-    <div id="import-errors-pairwise-pairwise_pythran">
-    <h5><a href="">pairwise_pythran</a>:
-         EnvironmentError
-    <a title="Permalink to this headline"
-       href="#import-errors-pairwise-pairwise_pythran"
-       class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 74, in find_benchmarks
-    module = __import__(abs_module_name, fromlist="dummy")
-  File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py", line 23, in <module>
-    '\n'.join([imports, exports, source]))
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 289, in compile_pythrancode
-    module = generate_cxx(module_name, pythrancode, specs, opts)
-  File "/usr/local/lib/python2.7/site-packages/pythran/toolchain.py", line 149, in generate_cxx
-    refine(pm, ir, optimizations)
-  File "/usr/local/lib/python2.7/site-packages/pythran/middlend.py", line 45, in refine
-    pm.apply(optimization, node)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 165, in apply
-    return a.apply(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 132, in apply
-    return self.run(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 127, in run
-    n = super(Transformation, self).run(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/passmanager.py", line 75, in run
-    self.prepare(node, ctx)
-  File "/usr/local/lib/python2.7/site-packages/pythran/optimizations.py", line 55, in prepare
-    self.env[module_name] = __import__(import_name)
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 49, in <module>
-    sys.modules[__name__] = omp()
-  File "/usr/local/lib/python2.7/site-packages/omp/__init__.py", line 35, in __init__
-    raise EnvironmentError("I can't find a shared library for libgomp,"
-EnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.
-</pre>
-    </div>
-  
-</div>
-
-
-
-
-</section>
 
 
 
