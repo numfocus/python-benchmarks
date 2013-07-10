@@ -117,8 +117,8 @@
     
   </td>
   <td>0.006 
-      (0.000)</td>
-  <td>1662.2</td>
+      (0.001)</td>
+  <td>1653.3</td>
 </tr>
 
 <tr>
@@ -130,8 +130,8 @@
     
   </td>
   <td>0.010 
-      (0.001)</td>
-  <td>1043.1</td>
+      (0.002)</td>
+  <td>1007.8</td>
 </tr>
 
 <tr>
@@ -139,12 +139,12 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    0.807
+    0.831
     
   </td>
   <td>0.045 
-      (0.002)</td>
-  <td>228.8</td>
+      (0.001)</td>
+  <td>229.2</td>
 </tr>
 
 <tr>
@@ -155,7 +155,7 @@
     N/A
     
   </td>
-  <td>10.186 
+  <td>10.268 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -232,9 +232,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.003 
+  <td>0.002 
       (0.000)</td>
-  <td>1736.5</td>
+  <td>1676.7</td>
 </tr>
 
 <tr>
@@ -247,7 +247,7 @@ while running this benchmark.
   </td>
   <td>0.004 
       (0.000)</td>
-  <td>1120.3</td>
+  <td>1070.4</td>
 </tr>
 
 <tr>
@@ -258,9 +258,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.173 
-      (0.001)</td>
-  <td>25.2</td>
+  <td>0.174 
+      (0.003)</td>
+  <td>23.7</td>
 </tr>
 
 <tr>
@@ -271,7 +271,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.345 
+  <td>4.127 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -343,6 +343,19 @@ while running this benchmark.
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#1</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td>
+    0.235
+    
+  </td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1712.4</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
   <td>
     N/A
@@ -350,20 +363,7 @@ while running this benchmark.
   </td>
   <td>0.013 
       (0.000)</td>
-  <td>1841.0</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#2</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
-  <td>
-    0.232
-    
-  </td>
-  <td>0.013 
-      (0.002)</td>
-  <td>1829.4</td>
+  <td>1709.5</td>
 </tr>
 
 <tr>
@@ -375,8 +375,8 @@ while running this benchmark.
     
   </td>
   <td>0.015 
-      (0.001)</td>
-  <td>1625.0</td>
+      (0.000)</td>
+  <td>1505.0</td>
 </tr>
 
 <tr>
@@ -389,7 +389,7 @@ while running this benchmark.
   </td>
   <td>0.015 
       (0.000)</td>
-  <td>1598.7</td>
+  <td>1499.0</td>
 </tr>
 
 <tr>
@@ -400,9 +400,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.016 
-      (0.001)</td>
-  <td>1467.3</td>
+  <td>0.021 
+      (0.002)</td>
+  <td>1042.1</td>
 </tr>
 
 <tr>
@@ -413,9 +413,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.873 
+  <td>1.966 
       (0.000)</td>
-  <td>12.6</td>
+  <td>11.1</td>
 </tr>
 
 <tr>
@@ -426,7 +426,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>23.617 
+  <td>21.867 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -469,86 +469,89 @@ while running this benchmark.
        class="headerlink">&para;</a></h4>
   
     <div id="runtime-errors-growcut-growcut_parakeet">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a>:
-        NameNotFound
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a>
     <a title="Permalink to this headline"
        href="#runtime-errors-growcut-growcut_parakeet"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 168, in run_benchmarks
+    <pre class="pre-scrollable">
+NameNotFound: d
+
+Traceback (most recent call last):
+  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 114, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 110, in time_once
+  File &#34;run_benchmarks.py&#34;, line 112, in time_once
     func(*args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 134, in run
     untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 116, in specialize_and_compile
     untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 98, in prepare_args
     untyped = ast_conversion.translate_function_value(fn)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 893, in translate_function_value
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 840, in translate_function_source
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 726, in visit_For
     body, merge, _ = self.visit_loop_body(stmt.body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 703, in visit_loop_body
     scope_after, body = self.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 726, in visit_For
     body, merge, _ = self.visit_loop_body(stmt.body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 703, in visit_loop_body
     scope_after, body = self.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 726, in visit_For
     body, merge, _ = self.visit_loop_body(stmt.body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 703, in visit_loop_body
     scope_after, body = self.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 726, in visit_For
     body, merge, _ = self.visit_loop_body(stmt.body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 703, in visit_loop_body
     scope_after, body = self.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 695, in visit_If
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 695, in visit_If
     merge = self.create_phi_nodes(true_scope, false_scope)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 362, in create_phi_nodes
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 362, in create_phi_nodes
     right = self.lookup(name)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 281, in lookup
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 281, in lookup
     raise NameNotFound(name)
 NameNotFound: d
-</pre>
+
+    </pre>
     </div>
   
 </div>
@@ -575,38 +578,45 @@ NameNotFound: d
        class="headerlink">&para;</a></h4>
   
     <div id="runtime-errors-julia-julia_numba_for_loops">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_numba.py">julia_numba_for_loops</a>:
-        NumbaError
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_numba.py">julia_numba_for_loops</a>
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 168, in run_benchmarks
+    <pre class="pre-scrollable">
+NumbaError: (see below)
+--------------------- Numba Encountered Errors or Warnings ---------------------
+    for i, x in enumerate(grid_x):
+--------^
+Error 23:8: Only a single target iteration variable is supported at the moment
+--------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 114, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 110, in time_once
+  File &#34;run_benchmarks.py&#34;, line 112, in time_once
     func(*args, **kwargs)
-  File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
+  File &#34;numbawrapper.pyx&#34;, line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 68, in compile_from_args
     return self.compile(signature)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 83, in compile
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 83, in compile
     compiled_function = dec(self.py_func)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py", line 222, in _jit_decorator
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py&#34;, line 222, in _jit_decorator
     env, func, argtys, restype=return_type, nopython=nopython, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py", line 133, in compile_function
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py&#34;, line 133, in compile_function
     func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 134, in compile2
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 134, in compile2
     post_ast = pipeline(func_ast, env)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 181, in __call__
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 181, in __call__
     ast = self.transform(ast, env)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 602, in transform
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 602, in transform
     ast = stage(ast, env)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 587, in _stage
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 587, in _stage
     return _check_stage_object(stage_obj)(ast, env)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py", line 192, in __call__
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 192, in __call__
     reporting.report(env, exc=e)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py", line 181, in report
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py&#34;, line 181, in report
     raise exc
 NumbaError: (see below)
 --------------------- Numba Encountered Errors or Warnings ---------------------
@@ -614,137 +624,144 @@ NumbaError: (see below)
 --------^
 Error 23:8: Only a single target iteration variable is supported at the moment
 --------------------------------------------------------------------------------
-</pre>
+
+    </pre>
     </div>
   
     <div id="runtime-errors-julia-julia_parakeet_for_loops">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_for_loops</a>:
-        AssertionError
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_for_loops</a>
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 168, in run_benchmarks
+    <pre class="pre-scrollable">
+AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
+
+Traceback (most recent call last):
+  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 114, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 110, in time_once
+  File &#34;run_benchmarks.py&#34;, line 112, in time_once
     func(*args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 134, in run
     untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 116, in specialize_and_compile
     untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 98, in prepare_args
     untyped = ast_conversion.translate_function_value(fn)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 893, in translate_function_value
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 840, in translate_function_source
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 517, in visit_Call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 517, in visit_Call
     keywords_dict[kwd.arg] = self.visit(kwd.value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 631, in visit_Attribute
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 631, in visit_Attribute
     return value_to_syntax(value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 135, in value_to_syntax
     return translate_function_value(v)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
-    "Unsupported primitive: %s" % (fn,)
-AssertionError: Unsupported primitive: <type 'numpy.uint32'>
-</pre>
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 855, in translate_function_value
+    &#34;Unsupported primitive: %s&#34; % (fn,)
+AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
+
+    </pre>
     </div>
   
     <div id="runtime-errors-julia-julia_parakeet_numpy">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_numpy</a>:
-        AssertionError
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_numpy</a>
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 168, in run_benchmarks
+    <pre class="pre-scrollable">
+AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
+
+Traceback (most recent call last):
+  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 114, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 110, in time_once
+  File &#34;run_benchmarks.py&#34;, line 112, in time_once
     func(*args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 134, in run
     untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 116, in specialize_and_compile
     untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py&#34;, line 98, in prepare_args
     untyped = ast_conversion.translate_function_value(fn)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 893, in translate_function_value
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 840, in translate_function_source
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 553, in visit_Call
     positional, keywords_dict, starargs_expr)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 497, in translate_value_call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 497, in translate_value_call
     return syntax.Call(translate_function_value(value),
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 893, in translate_function_value
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 840, in translate_function_source
     filename = filename)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 784, in translate_function_ast
     _, body = translator.visit_block(body)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 746, in visit_block
     parakeet_stmt = self.visit(stmt)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 677, in visit_Assign
     ssa_rhs = self.visit(stmt.value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 553, in visit_Call
     positional, keywords_dict, starargs_expr)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 500, in translate_value_call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 500, in translate_value_call
     return self.translate_builtin_call(value, positional, keywords_dict)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 482, in translate_builtin_call
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 482, in translate_builtin_call
     fn = value_to_syntax(value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 135, in value_to_syntax
     return translate_function_value(v)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
-    "Unsupported primitive: %s" % (fn,)
-AssertionError: Unsupported primitive: <built-in function geterrobj>
-</pre>
+  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 855, in translate_function_value
+    &#34;Unsupported primitive: %s&#34; % (fn,)
+AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
+
+    </pre>
     </div>
   
 </div>
