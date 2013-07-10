@@ -21,10 +21,12 @@ source = '\n'.join(sources)
 # patch them
 source = re.sub(r'cutoff=cutoff', 'cutoff', source)
 source = re.sub(r'dtype=np.uint32', 'np.uint32', source)
+source = re.sub(r'#"omp', '"omp', source)
 
 # compile to a native module
 native = compile_pythrancode(modname,
-                             '\n'.join([imports, exports, source]))
+                             '\n'.join([imports, exports, source]),
+                             cxxflags=['-O2', '-fopenmp'])
 
 # load it
 native = imp.load_dynamic(modname, native)

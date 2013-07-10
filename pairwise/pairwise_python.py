@@ -7,6 +7,7 @@ import numpy as np
 def pairwise_python_nested_for_loops(data):
     n_samples, n_features = data.shape
     distances = np.empty((n_samples, n_samples), dtype=data.dtype)
+    #"omp parallel for private(j, d, k, tmp)"
     for i in range(n_samples):
         for j in range(n_samples):
             d = 0.0
