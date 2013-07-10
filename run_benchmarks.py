@@ -2,8 +2,11 @@
 # License: MIT
 from __future__ import print_function
 
-from collections import OrderedDict
 import argparse
+try:
+    from collections import OrderedDict
+except:
+    from ordereddict import OrderedDict
 import json
 import os
 import traceback
