@@ -117,8 +117,8 @@
     
   </td>
   <td>0.006 
-      (0.001)</td>
-  <td>1653.3</td>
+      (0.000)</td>
+  <td>1574.5</td>
 </tr>
 
 <tr>
@@ -130,8 +130,8 @@
     
   </td>
   <td>0.010 
-      (0.002)</td>
-  <td>1007.8</td>
+      (0.000)</td>
+  <td>981.9</td>
 </tr>
 
 <tr>
@@ -139,12 +139,12 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    0.831
+    0.801
     
   </td>
   <td>0.045 
       (0.001)</td>
-  <td>229.2</td>
+  <td>212.1</td>
 </tr>
 
 <tr>
@@ -155,7 +155,7 @@
     N/A
     
   </td>
-  <td>10.268 
+  <td>9.507 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -234,7 +234,7 @@ while running this benchmark.
   </td>
   <td>0.002 
       (0.000)</td>
-  <td>1676.7</td>
+  <td>1584.1</td>
 </tr>
 
 <tr>
@@ -247,7 +247,7 @@ while running this benchmark.
   </td>
   <td>0.004 
       (0.000)</td>
-  <td>1070.4</td>
+  <td>1023.4</td>
 </tr>
 
 <tr>
@@ -258,9 +258,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.174 
-      (0.003)</td>
-  <td>23.7</td>
+  <td>0.169 
+      (0.005)</td>
+  <td>23.3</td>
 </tr>
 
 <tr>
@@ -271,7 +271,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.127 
+  <td>3.926 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -345,12 +345,12 @@ while running this benchmark.
   <td>#1</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
   <td>
-    0.235
+    0.229
     
   </td>
   <td>0.013 
       (0.000)</td>
-  <td>1712.4</td>
+  <td>1666.2</td>
 </tr>
 
 <tr>
@@ -363,7 +363,7 @@ while running this benchmark.
   </td>
   <td>0.013 
       (0.000)</td>
-  <td>1709.5</td>
+  <td>1658.9</td>
 </tr>
 
 <tr>
@@ -371,12 +371,12 @@ while running this benchmark.
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.118
+    0.117
     
   </td>
-  <td>0.015 
+  <td>0.014 
       (0.000)</td>
-  <td>1505.0</td>
+  <td>1473.9</td>
 </tr>
 
 <tr>
@@ -384,12 +384,12 @@ while running this benchmark.
   <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.157
+    0.150
     
   </td>
-  <td>0.015 
+  <td>0.014 
       (0.000)</td>
-  <td>1499.0</td>
+  <td>1464.1</td>
 </tr>
 
 <tr>
@@ -400,9 +400,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.021 
+  <td>0.016 
       (0.002)</td>
-  <td>1042.1</td>
+  <td>1342.5</td>
 </tr>
 
 <tr>
@@ -413,9 +413,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.966 
+  <td>1.789 
       (0.000)</td>
-  <td>11.1</td>
+  <td>11.8</td>
 </tr>
 
 <tr>
@@ -426,7 +426,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>21.867 
+  <td>21.068 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -473,15 +473,15 @@ while running this benchmark.
     <a title="Permalink to this headline"
        href="#runtime-errors-growcut-growcut_parakeet"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-NameNotFound: d
+    <pre class="pre-scrollable"
+>NameNotFound: d
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 112, in time_once
+  File &#34;run_benchmarks.py&#34;, line 123, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -550,8 +550,7 @@ Traceback (most recent call last):
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 281, in lookup
     raise NameNotFound(name)
 NameNotFound: d
-
-    </pre>
+</pre>
     </div>
   
 </div>
@@ -582,8 +581,8 @@ NameNotFound: d
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-NumbaError: (see below)
+    <pre class="pre-scrollable"
+>NumbaError: (see below)
 --------------------- Numba Encountered Errors or Warnings ---------------------
     for i, x in enumerate(grid_x):
 --------^
@@ -591,11 +590,11 @@ Error 23:8: Only a single target iteration variable is supported at the moment
 --------------------------------------------------------------------------------
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 112, in time_once
+  File &#34;run_benchmarks.py&#34;, line 123, in time_once
     func(*args, **kwargs)
   File &#34;numbawrapper.pyx&#34;, line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 68, in compile_from_args
@@ -624,8 +623,7 @@ NumbaError: (see below)
 --------^
 Error 23:8: Only a single target iteration variable is supported at the moment
 --------------------------------------------------------------------------------
-
-    </pre>
+</pre>
     </div>
   
     <div id="runtime-errors-julia-julia_parakeet_for_loops">
@@ -633,15 +631,15 @@ Error 23:8: Only a single target iteration variable is supported at the moment
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
+    <pre class="pre-scrollable"
+>AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 112, in time_once
+  File &#34;run_benchmarks.py&#34;, line 123, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -682,8 +680,7 @@ Traceback (most recent call last):
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 855, in translate_function_value
     &#34;Unsupported primitive: %s&#34; % (fn,)
 AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
-
-    </pre>
+</pre>
     </div>
   
     <div id="runtime-errors-julia-julia_parakeet_numpy">
@@ -691,15 +688,15 @@ AssertionError: Unsupported primitive: &lt;type &#39;numpy.uint32&#39;&gt;
     <a title="Permalink to this headline"
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">
-AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
+    <pre class="pre-scrollable"
+>AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 170, in run_benchmarks
+  File &#34;run_benchmarks.py&#34;, line 181, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 116, in run_benchmark
+  File &#34;run_benchmarks.py&#34;, line 127, in run_benchmark
     first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 112, in time_once
+  File &#34;run_benchmarks.py&#34;, line 123, in time_once
     func(*args, **kwargs)
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py&#34;, line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -760,8 +757,7 @@ Traceback (most recent call last):
   File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py&#34;, line 855, in translate_function_value
     &#34;Unsupported primitive: %s&#34; % (fn,)
 AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
-
-    </pre>
+</pre>
     </div>
   
 </div>
