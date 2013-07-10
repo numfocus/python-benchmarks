@@ -184,10 +184,12 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
             # TODO: add special support for PyPy with a sub-process
 
         # Rerank records by ascending warm time:
-        records.sort(key=lambda r: r['warm_time'])
-
-        for rank, record in enumerate(records):
-            record['rank'] = rank + 1  # start at 1 instead of 0
+        if len(records) > 0:
+            records.sort(key=lambda r: r['warm_time'])
+            slowest_time = records[-1]['warm_time']
+            for rank, record in enumerate(records):
+                record['rank'] = rank + 1  # start at 1 instead of 0
+                record['speedup'] = slowest_time / record['warm_time']
 
         bench_results.append(OrderedDict([
             ('group_name', group['name']),

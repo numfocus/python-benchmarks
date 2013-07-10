@@ -71,6 +71,7 @@
   <col class="bench_name">
   <col class="bench_time">
   <col class="bench_time">
+  <col class="bench_time">
 </colgroup>
 <thead>
 <tr>
@@ -79,6 +80,7 @@
   <th>Function name</th>
   <th>Cold time (s)</th>
   <th>Warm time (s)</th>
+  <th>Speedup</th>
 </tr>
 </thead>
 <tbody>
@@ -93,12 +95,8 @@
     N/A
     {% endif %}
   </td>
-  <td>{% if record.warm_time %}
-    {{ "{:0.3f}".format(record.warm_time) }}
-    {% else %}
-    N/A
-    {% endif %}
-  </td>
+  <td>{{ "{:0.3f}".format(record.warm_time) }}</td>
+  <td>{{ "{:0.1f}".format(record.speedup) }}</td>
 </tr>
 {% endfor %}
 </tbody>
