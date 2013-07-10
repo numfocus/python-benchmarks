@@ -100,7 +100,7 @@ def find_benchmarks(folders=None, platforms=None):
     return benchmark_groups
 
 
-def run_benchmark(name, func, args, kwargs, memory=False, n_runs=3,
+def run_benchmark(name, func, args, kwargs, memory=False, n_runs=5,
                   slow_threshold=1):
     """Call a function with the provided arguments"""
     # TODO: find a way to use memory_profiler on non-python, builtin functions
@@ -117,7 +117,7 @@ def run_benchmark(name, func, args, kwargs, memory=False, n_runs=3,
         # XXX: how to deal with slow JIT compiler if any?
         cold = None
         warm = first_timing
-        all_ = [first_timing]
+        all_warm_timings = [first_timing]
     else:
         # Take the best time of several runs for fast executions
         other_timings = []
@@ -126,22 +126,24 @@ def run_benchmark(name, func, args, kwargs, memory=False, n_runs=3,
 
         all_timings = [first_timing] + other_timings
         best_timing = min(all_timings)
-        if first_timing > 5 * best_timing:
+
+        if first_timing > 2 * best_timing:
             # The cold time is much slower, let's report it as cold time
             cold = first_timing
             warm = best_timing
-            all_ = [all_timings]
+            all_warm_timings = [other_timings] + [time_once()]
         else:
             # The first run is not significantly slower, their is no warm-up
             # for this execution
             cold = None
             warm = best_timing
-            all_ = [all_timings]
+            all_warm_timings = all_timings
     return OrderedDict([
         ('name', name),
         ('cold_time', cold),
         ('warm_time', warm),
-        ('all_times', all_),
+        ('all_warm_times', all_warm_timings),
+        ('std_warm_times', np.std(all_warm_timings)),
     ])
 
 
@@ -214,6 +216,7 @@ def plot_group(group, width=0.5, zoom_scale=None, log_scale=False,
     labels = [r['name'][len(name) + 1:] for r in records]
     best_time = records[0]['warm_time']
     warm_time = np.asarray([r['warm_time'] for r in records])
+    std = np.asarray([r['std_warm_times'] for r in records])
     max_time = np.asarray([r['cold_time'] or r['warm_time'] for r in records])
 
     if log_scale:
@@ -225,7 +228,8 @@ def plot_group(group, width=0.5, zoom_scale=None, log_scale=False,
     ind = np.arange(len(labels))
     p1 = plt.bar(ind, max_time, width, color='g', alpha=0.2, log=log_scale,
                  bottom=bottom)
-    p2 = plt.bar(ind, warm_time, width, color='g', alpha=0.4, log=log_scale,
+    p2 = plt.bar(ind, warm_time, width, yerr=[np.zeros(len(std)), std],
+                 color='g', ecolor='g', alpha=0.4, log=log_scale,
                  bottom=bottom)
 
     title = group['group_name']
@@ -248,7 +252,7 @@ def plot_group(group, width=0.5, zoom_scale=None, log_scale=False,
 
     plt.legend((p2[0], p1[0]),
                ('Execution time', 'Cold startup overhead'),
-               loc='best')
+               loc='upper left')
 
     # Save the image in the report folder
     if not os.path.exists(folder):

@@ -86,7 +86,7 @@
   <th>Rank</th>
   <th>Function name</th>
   <th>Cold time (s)</th>
-  <th>Warm time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
   <th>Speedup</th>
 </tr>
 </thead>
@@ -102,7 +102,8 @@
     N/A
     {% endif %}
   </td>
-  <td>{{ "{:0.3f}".format(record.warm_time) }}</td>
+  <td>{{ "{:0.3f}".format(record.warm_time) }} 
+      ({{ "{:0.3f}".format(record.std_warm_times)}})</td>
   <td>{{ "{:0.1f}".format(record.speedup) }}</td>
 </tr>
 {% endfor %}
