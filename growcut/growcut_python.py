@@ -1,6 +1,6 @@
 # Authors: Stefan van der Walt, Aron Ahmadia, Olivier Grisel
 # https://github.com/stefanv/growcut_py
-from math import sqrt
+import numpy as np
 
 
 def window_floor(idx, radius):
@@ -19,7 +19,7 @@ def window_ceil(idx, ceil, radius):
 
 def growcut_python(image, state, state_next, window_radius):
     changes = 0
-    sqrt_3 = sqrt(3.0)
+    sqrt_3 = np.sqrt(3.0)
 
     height = image.shape[0]
     width = image.shape[1]
@@ -40,7 +40,7 @@ def growcut_python(image, state, state_next, window_radius):
                         for k in range(1, 3):
                             d = image[i, j, k] - image[ii, jj, k]
                             s += d * d
-                        gval = 1.0 - sqrt(s) / sqrt_3
+                        gval = 1.0 - np.sqrt(s) / sqrt_3
 
                         attack_strength = gval * state[ii, jj, 1]
 
