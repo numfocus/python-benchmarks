@@ -76,7 +76,8 @@ def find_benchmarks(folders=None, platforms=None):
             try:
                 module = __import__(abs_module_name, fromlist="dummy")
             except Exception as e:
-                log.error("Failed to load %s: %s", abs_module_name, e)
+                log.error("Failed to load %s: %s: %s", abs_module_name,
+                          type(e).__name__, e)
                 tb = traceback.format_exc()
                 loading_error = OrderedDict([
                     ('name', module_name),
@@ -180,7 +181,8 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
                         ('traceback', tb),
                     ])
                     runtime_errors.append(runtime_error)
-                    log.warn("Could not run %s: %s", name, e)
+                    log.warn("Could not run %s: %s: %s", name,
+                             type(e).__name__, e)
                     log.debug(tb)
                 else:
                     raise
