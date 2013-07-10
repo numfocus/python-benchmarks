@@ -67,6 +67,7 @@
 <table class="table table-striped table-hover">
 <colgroup>
   <col class="bench_icon">
+  <col class="bench_icon">
   <col class="bench_name">
   <col class="bench_time">
   <col class="bench_time">
@@ -74,6 +75,7 @@
 <thead>
 <tr>
   <th></th>
+  <th>Rank</th>
   <th>Function name</th>
   <th>Cold time (s)</th>
   <th>Warm time (s)</th>
@@ -83,6 +85,7 @@
 {% for record in result.records %}
 <tr>
   <td><i class="icon-tasks"></i></td>
+  <td>#{{ record.rank }}</td>
   <td><a href="{{ record.source_url }}">{{ record.name }}</a></td>
   <td>{% if record.cold_time %}
     {{ "{:0.3f}".format(record.cold_time) }}
