@@ -15,6 +15,14 @@
     color: gray;
 }
 
+.plot {
+    text-align: center;
+}
+
+.plot img {
+    max-width: 80%;
+}
+
 h1:hover > a.headerlink,
 h2:hover > a.headerlink,
 h3:hover > a.headerlink,

@@ -77,6 +77,11 @@
        class="headerlink">&para;</a>
 </h3>
 
+<p class="plot">
+  <img src="images/growcut.png"
+       alt="Plot for growcut" />
+</p>
+
 <table class="table table-striped table-hover">
 <colgroup>
   <col class="bench_icon">
@@ -106,8 +111,8 @@
     N/A
     
   </td>
-  <td>0.006</td>
-  <td>1086.7</td>
+  <td>0.007</td>
+  <td>1122.4</td>
 </tr>
 
 <tr>
@@ -119,7 +124,7 @@
     
   </td>
   <td>0.009</td>
-  <td>695.7</td>
+  <td>784.0</td>
 </tr>
 
 <tr>
@@ -127,11 +132,11 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    0.833
+    0.858
     
   </td>
-  <td>0.045</td>
-  <td>146.5</td>
+  <td>0.047</td>
+  <td>156.6</td>
 </tr>
 
 <tr>
@@ -142,7 +147,7 @@
     N/A
     
   </td>
-  <td>6.560</td>
+  <td>7.317</td>
   <td>1.0</td>
 </tr>
 
@@ -179,6 +184,11 @@ while running this benchmark.
        class="headerlink">&para;</a>
 </h3>
 
+<p class="plot">
+  <img src="images/julia.png"
+       alt="Plot for julia" />
+</p>
+
 <table class="table table-striped table-hover">
 <colgroup>
   <col class="bench_icon">
@@ -209,7 +219,7 @@ while running this benchmark.
     
   </td>
   <td>0.003</td>
-  <td>1478.0</td>
+  <td>1798.6</td>
 </tr>
 
 <tr>
@@ -221,7 +231,7 @@ while running this benchmark.
     
   </td>
   <td>0.004</td>
-  <td>1027.1</td>
+  <td>1121.1</td>
 </tr>
 
 <tr>
@@ -232,8 +242,8 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.167</td>
-  <td>24.7</td>
+  <td>0.196</td>
+  <td>23.0</td>
 </tr>
 
 <tr>
@@ -244,7 +254,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.128</td>
+  <td>4.509</td>
   <td>1.0</td>
 </tr>
 
@@ -281,6 +291,11 @@ while running this benchmark.
        class="headerlink">&para;</a>
 </h3>
 
+<p class="plot">
+  <img src="images/pairwise.png"
+       alt="Plot for pairwise" />
+</p>
+
 <table class="table table-striped table-hover">
 <colgroup>
   <col class="bench_icon">
@@ -311,7 +326,7 @@ while running this benchmark.
     
   </td>
   <td>0.013</td>
-  <td>1678.7</td>
+  <td>1694.1</td>
 </tr>
 
 <tr>
@@ -319,35 +334,35 @@ while running this benchmark.
   <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
   <td>
-    0.234
+    0.246
     
   </td>
   <td>0.013</td>
-  <td>1670.8</td>
+  <td>1686.6</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#3</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.121
+    0.170
     
   </td>
-  <td>0.014</td>
-  <td>1527.3</td>
+  <td>0.015</td>
+  <td>1511.9</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.159
+    0.136
     
   </td>
-  <td>0.014</td>
-  <td>1518.2</td>
+  <td>0.015</td>
+  <td>1499.1</td>
 </tr>
 
 <tr>
@@ -359,7 +374,7 @@ while running this benchmark.
     
   </td>
   <td>0.016</td>
-  <td>1382.9</td>
+  <td>1392.4</td>
 </tr>
 
 <tr>
@@ -370,8 +385,8 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.842</td>
-  <td>11.7</td>
+  <td>1.843</td>
+  <td>12.1</td>
 </tr>
 
 <tr>
@@ -382,7 +397,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>21.630</td>
+  <td>22.371</td>
   <td>1.0</td>
 </tr>
 
@@ -430,11 +445,11 @@ while running this benchmark.
        href="#runtime-errors-growcut-growcut_parakeet"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 163, in run_benchmarks
+  File "run_benchmarks.py", line 165, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 111, in run_benchmark
+  File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 107, in time_once
+  File "run_benchmarks.py", line 109, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -506,11 +521,11 @@ AssertionError: Unsupported primitive: <built-in function sqrt>
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 163, in run_benchmarks
+  File "run_benchmarks.py", line 165, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 111, in run_benchmark
+  File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 107, in time_once
+  File "run_benchmarks.py", line 109, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
@@ -549,11 +564,11 @@ Error 23:8: Only a single target iteration variable is supported at the moment
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 163, in run_benchmarks
+  File "run_benchmarks.py", line 165, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 111, in run_benchmark
+  File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 107, in time_once
+  File "run_benchmarks.py", line 109, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -604,11 +619,11 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 163, in run_benchmarks
+  File "run_benchmarks.py", line 165, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 111, in run_benchmark
+  File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 107, in time_once
+  File "run_benchmarks.py", line 109, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
