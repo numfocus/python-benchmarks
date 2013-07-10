@@ -2,14 +2,16 @@
 # License: MIT
 from __future__ import print_function
 
-import numpy as np
 from collections import OrderedDict
 import json
 import os
 import traceback
 from time import time
 import logging
+
 from jinja2 import Template
+import numpy as np
+import matplotlib.pyplot as plt
 
 try:
     # Use automated Cython support when available
@@ -201,8 +203,40 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
     return bench_results
 
 
+def plot_group(group, width=0.5, zoom_scale=5, figsize=(12, 6),
+               folder="report/images"):
+    records = group['records']
+    name = group['group_name']
+    labels = [r['name'][len(name) + 1:] for r in records]
+    warm_time = np.asarray([r['warm_time'] for r in records])
+    max_time = np.asarray([r['cold_time'] or r['warm_time'] for r in records])
+    overhead = max_time - warm_time
+
+    plt.figure(figsize=figsize)
+    ind = np.arange(len(labels))
+    p1 = plt.bar(ind, warm_time, width, color='g', alpha=0.6)
+    p2 = plt.bar(ind, overhead, width, color='g', alpha=0.2, bottom=warm_time)
+
+    plt.ylabel('Time (s)')
+    plt.title(group['group_name'])
+    plt.xticks(ind + width / 2., labels, rotation=10)
+    plt.ylim((0, warm_time[0] * zoom_scale))
+    plt.legend((p1[0], p2[0]),
+               ('Execution time', 'Cold startup overhead'),
+               loc='best')
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+    filename = group['group_name'] + '.png'
+    filepath = os.path.join(folder, filename)
+    plt.savefig(filepath)
+    # Make it available to the template engine
+    group['plot_filename'] = filename
+
+
 def build_report(bench_data, report_filename=REPORT_FILENAME,
                  data_filename=DATA_FILENAME):
+    for group in bench_data['benchmark_results']:
+        plot_group(group)
     with open(MAIN_REPORT_TEMPLATE_FILENAME, 'rb') as f:
         rendered = Template(f.read()).render(
             bench_results=bench_data['benchmark_results'],
