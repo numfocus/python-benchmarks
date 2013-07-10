@@ -7,25 +7,25 @@
         {
           "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.006608009338378906, 
+          "warm_time": 0.006330966949462891, 
           "all_times": [
             [
-              0.0077130794525146484, 
-              0.006608009338378906, 
-              0.006913900375366211
+              0.00763392448425293, 
+              0.006463050842285156, 
+              0.006330966949462891
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx"
         }, 
         {
           "name": "growcut_numba", 
-          "cold_time": 0.8023009300231934, 
-          "warm_time": 0.04525899887084961, 
+          "cold_time": 0.9049489498138428, 
+          "warm_time": 0.04792308807373047, 
           "all_times": [
             [
-              0.8023009300231934, 
-              0.04820990562438965, 
-              0.04525899887084961
+              0.9049489498138428, 
+              0.04792308807373047, 
+              0.06358909606933594
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py"
@@ -33,21 +33,21 @@
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 6.25349497795105, 
+          "warm_time": 7.839018106460571, 
           "all_times": [
-            6.25349497795105
+            7.839018106460571
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py"
         }, 
         {
           "name": "growcut_pythran", 
           "cold_time": null, 
-          "warm_time": 0.009348869323730469, 
+          "warm_time": 0.009619951248168945, 
           "all_times": [
             [
-              0.009400129318237305, 
-              0.009556055068969727, 
-              0.009348869323730469
+              0.010029792785644531, 
+              0.009619951248168945, 
+              0.009769201278686523
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py"
@@ -71,12 +71,12 @@
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.004067897796630859, 
+          "warm_time": 0.0040891170501708984, 
           "all_times": [
             [
-              0.006448984146118164, 
-              0.004067897796630859, 
-              0.004324913024902344
+              0.007467031478881836, 
+              0.004148006439208984, 
+              0.0040891170501708984
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx"
@@ -84,21 +84,21 @@
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 3.9501309394836426, 
+          "warm_time": 5.07985782623291, 
           "all_times": [
-            3.9501309394836426
+            5.07985782623291
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.17068099975585938, 
+          "warm_time": 0.173814058303833, 
           "all_times": [
             [
-              0.1775670051574707, 
-              0.17068099975585938, 
-              0.17213892936706543
+              0.18101191520690918, 
+              0.1752181053161621, 
+              0.173814058303833
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
@@ -106,12 +106,12 @@
         {
           "name": "julia_pythran_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.004999876022338867, 
+          "warm_time": 0.002463817596435547, 
           "all_times": [
             [
-              0.00504302978515625, 
-              0.005074977874755859, 
-              0.004999876022338867
+              0.0039288997650146484, 
+              0.002463817596435547, 
+              0.003612995147705078
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py"
@@ -122,8 +122,8 @@
           "name": "julia_numba_for_loops", 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_numba.py", 
           "error_type": "NumbaError", 
-          "error": "(see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 22:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"numbawrapper.pyx\", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 68, in compile_from_args\n    return self.compile(signature)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 83, in compile\n    compiled_function = dec(self.py_func)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 222, in _jit_decorator\n    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 133, in compile_function\n    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 134, in compile2\n    post_ast = pipeline(func_ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 181, in __call__\n    ast = self.transform(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 602, in transform\n    ast = stage(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 587, in _stage\n    return _check_stage_object(stage_obj)(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 192, in __call__\n    reporting.report(env, exc=e)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py\", line 181, in report\n    raise exc\nNumbaError: (see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 22:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------\n"
+          "error": "(see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 23:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"numbawrapper.pyx\", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 68, in compile_from_args\n    return self.compile(signature)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 83, in compile\n    compiled_function = dec(self.py_func)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 222, in _jit_decorator\n    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 133, in compile_function\n    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 134, in compile2\n    post_ast = pipeline(func_ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 181, in __call__\n    ast = self.transform(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 602, in transform\n    ast = stage(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 587, in _stage\n    return _check_stage_object(stage_obj)(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 192, in __call__\n    reporting.report(env, exc=e)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py\", line 181, in report\n    raise exc\nNumbaError: (see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 23:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------\n"
         }, 
         {
           "name": "julia_parakeet_for_loops", 
@@ -149,51 +149,51 @@
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0036880970001220703, 
+          "warm_time": 0.013917922973632812, 
           "all_times": [
             [
-              0.003905057907104492, 
-              0.0036880970001220703, 
-              0.003885984420776367
+              0.015053033828735352, 
+              0.013917922973632812, 
+              0.01432490348815918
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx"
         }, 
         {
           "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.21549105644226074, 
-          "warm_time": 0.003710031509399414, 
+          "cold_time": 0.2467179298400879, 
+          "warm_time": 0.013357877731323242, 
           "all_times": [
             [
-              0.21549105644226074, 
-              0.003760099411010742, 
-              0.003710031509399414
+              0.2467179298400879, 
+              0.018653154373168945, 
+              0.013357877731323242
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py"
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.10815906524658203, 
-          "warm_time": 0.004828929901123047, 
+          "cold_time": 0.130079984664917, 
+          "warm_time": 0.014599084854125977, 
           "all_times": [
             [
-              0.10815906524658203, 
-              0.005046844482421875, 
-              0.004828929901123047
+              0.130079984664917, 
+              0.014778852462768555, 
+              0.014599084854125977
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
         }, 
         {
           "name": "pairwise_parakeet_inner_broadcasting", 
-          "cold_time": 0.13792920112609863, 
-          "warm_time": 0.004924774169921875, 
+          "cold_time": 0.1647200584411621, 
+          "warm_time": 0.014966964721679688, 
           "all_times": [
             [
-              0.13792920112609863, 
-              0.004975080490112305, 
-              0.004924774169921875
+              0.1647200584411621, 
+              0.015092134475708008, 
+              0.014966964721679688
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
@@ -201,34 +201,30 @@
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 6.0968098640441895, 
+          "warm_time": 26.912620067596436, 
           "all_times": [
-            6.0968098640441895
+            26.912620067596436
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
         }, 
         {
           "name": "pairwise_python_inner_broadcasting", 
           "cold_time": null, 
-          "warm_time": 0.7723898887634277, 
+          "warm_time": 2.070117950439453, 
           "all_times": [
-            [
-              0.7834889888763428, 
-              0.7723898887634277, 
-              0.7904481887817383
-            ]
+            2.070117950439453
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
         }, 
         {
           "name": "pairwise_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.008841991424560547, 
+          "warm_time": 0.015893936157226562, 
           "all_times": [
             [
-              0.008841991424560547, 
-              0.008901119232177734, 
-              0.009001016616821289
+              0.015893936157226562, 
+              0.016338825225830078, 
+              0.027148962020874023
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py"
