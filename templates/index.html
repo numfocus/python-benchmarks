@@ -65,8 +65,10 @@
 </h3>
 
 <p class="plot">
-  <img src="images/{{ result.plot_filename }}"
+  {% for filename in result.plot_filenames %}
+  <img src="images/{{ filename }}"
        alt="Plot for {{ result.group_name }}" />
+  {% endfor %}
 </p>
 
 <table class="table table-striped table-hover">

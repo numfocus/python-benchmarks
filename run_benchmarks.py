@@ -203,40 +203,77 @@ def run_benchmarks(folders=None, platforms=None, catch_errors=True,
     return bench_results
 
 
-def plot_group(group, width=0.5, zoom_scale=5, figsize=(12, 6),
-               folder="report/images"):
+def plot_group(group, width=0.5, zoom_scale=None, log_scale=False,
+               figsize=(12, 6), folder="report/images"):
     records = group['records']
     name = group['group_name']
+
+    for r in records:
+        r['max_time'] = r['cold_time'] or r['warm_time']
+
     labels = [r['name'][len(name) + 1:] for r in records]
+    best_time = records[0]['warm_time']
     warm_time = np.asarray([r['warm_time'] for r in records])
     max_time = np.asarray([r['cold_time'] or r['warm_time'] for r in records])
-    overhead = max_time - warm_time
+
+    if log_scale:
+        bottom = best_time / 2.
+    else:
+        bottom = 0.0
 
     plt.figure(figsize=figsize)
     ind = np.arange(len(labels))
-    p1 = plt.bar(ind, warm_time, width, color='g', alpha=0.6)
-    p2 = plt.bar(ind, overhead, width, color='g', alpha=0.2, bottom=warm_time)
+    p1 = plt.bar(ind, max_time, width, color='g', alpha=0.2, log=log_scale,
+                 bottom=bottom)
+    p2 = plt.bar(ind, warm_time, width, color='g', alpha=0.4, log=log_scale,
+                 bottom=bottom)
 
+    title = group['group_name']
+    if log_scale:
+        title += " (log scale)"
+    elif zoom_scale:
+        title += " (zoom %dx best time)" % zoom_scale
+    plt.title(title)
     plt.ylabel('Time (s)')
-    plt.title(group['group_name'])
     plt.xticks(ind + width / 2., labels, rotation=10)
-    plt.ylim((0, warm_time[0] * zoom_scale))
-    plt.legend((p1[0], p2[0]),
+
+    if log_scale:
+        plt.yscale('log')
+        plt.ylim(bottom, None)
+    else:
+        if zoom_scale:
+            plt.ylim((0, warm_time[0] * zoom_scale))
+        else:
+            plt.ylim(0, max(max_time) * 1.1)
+
+    plt.legend((p2[0], p1[0]),
                ('Execution time', 'Cold startup overhead'),
                loc='best')
+
+    # Save the image in the report folder
     if not os.path.exists(folder):
         os.makedirs(folder)
-    filename = group['group_name'] + '.png'
+
+    if log_scale:
+        suffix = "_logscale"
+    elif zoom_scale:
+        suffix = "_zoom_%dx_best" % zoom_scale if zoom_scale else ""
+    else:
+        suffix = ""
+
+    filename = "%s%s.png" % (group['group_name'], suffix)
     filepath = os.path.join(folder, filename)
     plt.savefig(filepath)
+
     # Make it available to the template engine
-    group['plot_filename'] = filename
+    group.setdefault('plot_filenames', []).append(filename)
 
 
 def build_report(bench_data, report_filename=REPORT_FILENAME,
                  data_filename=DATA_FILENAME):
     for group in bench_data['benchmark_results']:
-        plot_group(group)
+        plot_group(group, zoom_scale=5, log_scale=False)
+        plot_group(group, zoom_scale=None, log_scale=True)
     with open(MAIN_REPORT_TEMPLATE_FILENAME, 'rb') as f:
         rendered = Template(f.read()).render(
             bench_results=bench_data['benchmark_results'],
