@@ -2,6 +2,7 @@
 # License: MIT
 from __future__ import print_function
 
+import numpy as np
 from collections import OrderedDict
 import json
 import os
@@ -13,7 +14,7 @@ from jinja2 import Template
 try:
     # Use automated Cython support when available
     import pyximport
-    pyximport.install()
+    pyximport.install(setup_args={'include_dirs': np.get_include()})
 except ImportError:
     pass
 
