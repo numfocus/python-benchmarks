@@ -7,56 +7,65 @@
         {
           "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.006101131439208984, 
+          "warm_time": 0.006250858306884766, 
           "all_warm_times": [
-            0.006426095962524414, 
-            0.006194114685058594, 
-            0.006154060363769531, 
-            0.006101131439208984, 
-            0.006129026412963867
+            0.006415843963623047, 
+            0.006262063980102539, 
+            0.006844043731689453, 
+            0.006250858306884766, 
+            0.009641885757446289
           ], 
-          "std_warm_times": 0.00011668143878271775, 
+          "std_warm_times": 0.0012974196948074659, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
           "rank": 1, 
-          "speedup": 1091.00945681907
+          "speedup": 1044.2796551987185
         }, 
         {
           "name": "growcut_pythran", 
           "cold_time": null, 
-          "warm_time": 0.00960993766784668, 
+          "warm_time": 0.00945591926574707, 
           "all_warm_times": [
-            0.009771108627319336, 
-            0.00960993766784668, 
-            0.009775876998901367, 
-            0.010354042053222656, 
-            0.011363983154296875
+            0.009664058685302734, 
+            0.009621143341064453, 
+            0.00945591926574707, 
+            0.012501955032348633, 
+            0.010338783264160156
           ], 
-          "std_warm_times": 0.00064613618497092601, 
+          "std_warm_times": 0.0011337115958365658, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py", 
           "rank": 2, 
-          "speedup": 692.657156325204
+          "speedup": 690.3235924459797
+        }, 
+        {
+          "name": "growcut_numba", 
+          "cold_time": 0.8188879489898682, 
+          "warm_time": 0.044632911682128906, 
+          "all_warm_times": [
+            0.04573202133178711, 
+            0.04622817039489746, 
+            0.04521608352661133, 
+            0.044632911682128906, 
+            0.045202016830444336
+          ], 
+          "std_warm_times": 0.00053991228081933993, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
+          "rank": 3, 
+          "speedup": 146.25181085874235
         }, 
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 6.6563920974731445, 
+          "warm_time": 6.527644157409668, 
           "all_warm_times": [
-            6.6563920974731445
+            6.527644157409668
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py", 
-          "rank": 3, 
+          "rank": 4, 
           "speedup": 1.0
         }
       ], 
       "runtime_errors": [
-        {
-          "name": "growcut_numba", 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
-          "error_type": "TypeError", 
-          "error": "can only concatenate list (not \"float\") to list", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 167, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 146, in run_benchmark\n    ('std_warm_times', np.std(all_warm_timings)),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py\", line 2590, in std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 102, in _std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 68, in _var\n    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)\nTypeError: can only concatenate list (not \"float\") to list\n"
-        }, 
         {
           "name": "growcut_parakeet", 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
@@ -74,57 +83,57 @@
         {
           "name": "julia_pythran_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.002546072006225586, 
+          "warm_time": 0.002480030059814453, 
           "all_warm_times": [
-            0.002758026123046875, 
-            0.003072977066040039, 
-            0.002546072006225586, 
-            0.0025479793548583984, 
-            0.0026051998138427734
+            0.002624034881591797, 
+            0.003025054931640625, 
+            0.002480030059814453, 
+            0.0026340484619140625, 
+            0.0027899742126464844
           ], 
-          "std_warm_times": 0.00019904122012861657, 
+          "std_warm_times": 0.0001853096439087351, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py", 
           "rank": 1, 
-          "speedup": 1636.3127633673564
+          "speedup": 1718.3710824841376
         }, 
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.003914833068847656, 
+          "warm_time": 0.0038461685180664062, 
           "all_warm_times": [
-            0.004106044769287109, 
-            0.0039560794830322266, 
-            0.0039539337158203125, 
-            0.003914833068847656, 
-            0.003951072692871094
+            0.004071950912475586, 
+            0.003910064697265625, 
+            0.0038461685180664062, 
+            0.0038940906524658203, 
+            0.00391387939453125
           ], 
-          "std_warm_times": 6.6569336444045481e-05, 
+          "std_warm_times": 7.6270845015493112e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx", 
           "rank": 2, 
-          "speedup": 1064.2012180267966
+          "speedup": 1108.0148772625837
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.17165207862854004, 
+          "warm_time": 0.17233610153198242, 
           "all_warm_times": [
-            0.17603707313537598, 
-            0.17209696769714355, 
-            0.17165207862854004, 
-            0.17254996299743652, 
-            0.1730661392211914
+            0.18316006660461426, 
+            0.17295098304748535, 
+            0.17761802673339844, 
+            0.17233610153198242, 
+            0.17914915084838867
           ], 
-          "std_warm_times": 0.0015511752858782387, 
+          "std_warm_times": 0.0040270218977145047, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
           "rank": 3, 
-          "speedup": 24.27101467996183
+          "speedup": 24.728492176583707
         }, 
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 4.166170120239258, 
+          "warm_time": 4.2616119384765625, 
           "all_warm_times": [
-            4.166170120239258
+            4.2616119384765625
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
@@ -162,85 +171,111 @@
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise", 
       "records": [
         {
+          "name": "pairwise_numba_nested_for_loops", 
+          "cold_time": 0.23783302307128906, 
+          "warm_time": 0.012797117233276367, 
+          "all_warm_times": [
+            0.012993812561035156, 
+            0.013563871383666992, 
+            0.013715982437133789, 
+            0.012797117233276367, 
+            0.013120889663696289
+          ], 
+          "std_warm_times": 0.00034709617086342657, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
+          "rank": 1, 
+          "speedup": 1772.3862878435025
+        }, 
+        {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.012841939926147461, 
+          "warm_time": 0.01291513442993164, 
           "all_warm_times": [
-            0.01292109489440918, 
-            0.013293027877807617, 
-            0.013091087341308594, 
-            0.012841939926147461, 
-            0.01290583610534668
+            0.013326883316040039, 
+            0.016421079635620117, 
+            0.013317108154296875, 
+            0.012964010238647461, 
+            0.01291513442993164
           ], 
-          "std_warm_times": 0.00016350937361334862, 
+          "std_warm_times": 0.0013272773613504363, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx", 
-          "rank": 1, 
-          "speedup": 1646.753318604608
+          "rank": 2, 
+          "speedup": 1756.190400590733
+        }, 
+        {
+          "name": "pairwise_parakeet_inner_broadcasting", 
+          "cold_time": 0.15107393264770508, 
+          "warm_time": 0.014400959014892578, 
+          "all_warm_times": [
+            0.01459193229675293, 
+            0.014573812484741211, 
+            0.014400959014892578, 
+            0.014702081680297852, 
+            0.014783143997192383
+          ], 
+          "std_warm_times": 0.00012945365707638692, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
+          "rank": 3, 
+          "speedup": 1574.9947683851528
+        }, 
+        {
+          "name": "pairwise_parakeet_nested_for_loops", 
+          "cold_time": 0.12386703491210938, 
+          "warm_time": 0.014694929122924805, 
+          "all_warm_times": [
+            0.015189886093139648, 
+            0.015010833740234375, 
+            0.014694929122924805, 
+            0.01470804214477539, 
+            0.014561176300048828
+          ], 
+          "std_warm_times": 0.00023132603643322529, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
+          "rank": 4, 
+          "speedup": 1543.4872069441064
         }, 
         {
           "name": "pairwise_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.01595592498779297, 
+          "warm_time": 0.016077041625976562, 
           "all_warm_times": [
-            0.016067028045654297, 
-            0.015990018844604492, 
-            0.021310091018676758, 
-            0.01627206802368164, 
-            0.01595592498779297
+            0.01964402198791504, 
+            0.020594120025634766, 
+            0.019628047943115234, 
+            0.016077041625976562, 
+            0.016529083251953125
           ], 
-          "std_warm_times": 0.0020984053289059266, 
+          "std_warm_times": 0.0018287538909798336, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py", 
-          "rank": 2, 
-          "speedup": 1325.3701811009503
+          "rank": 5, 
+          "speedup": 1410.7965654288764
         }, 
         {
           "name": "pairwise_python_inner_broadcasting", 
           "cold_time": null, 
-          "warm_time": 1.89308500289917, 
+          "warm_time": 2.069636106491089, 
           "all_warm_times": [
-            1.89308500289917
+            2.069636106491089
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 3, 
-          "speedup": 11.170923206468775
+          "rank": 6, 
+          "speedup": 10.959141579066992
         }, 
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 21.147507190704346, 
+          "warm_time": 22.681435108184814, 
           "all_warm_times": [
-            21.147507190704346
+            22.681435108184814
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 4, 
+          "rank": 7, 
           "speedup": 1.0
         }
       ], 
-      "runtime_errors": [
-        {
-          "name": "pairwise_numba_nested_for_loops", 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
-          "error_type": "TypeError", 
-          "error": "can only concatenate list (not \"float\") to list", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 167, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 146, in run_benchmark\n    ('std_warm_times', np.std(all_warm_timings)),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py\", line 2590, in std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 102, in _std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 68, in _var\n    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)\nTypeError: can only concatenate list (not \"float\") to list\n"
-        }, 
-        {
-          "name": "pairwise_parakeet_nested_for_loops", 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
-          "error_type": "TypeError", 
-          "error": "can only concatenate list (not \"float\") to list", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 167, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 146, in run_benchmark\n    ('std_warm_times', np.std(all_warm_timings)),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py\", line 2590, in std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 102, in _std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 68, in _var\n    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)\nTypeError: can only concatenate list (not \"float\") to list\n"
-        }, 
-        {
-          "name": "pairwise_parakeet_inner_broadcasting", 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
-          "error_type": "TypeError", 
-          "error": "can only concatenate list (not \"float\") to list", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 167, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 146, in run_benchmark\n    ('std_warm_times', np.std(all_warm_timings)),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py\", line 2590, in std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 102, in _std\n    keepdims=keepdims)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py\", line 68, in _var\n    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)\nTypeError: can only concatenate list (not \"float\") to list\n"
-        }
-      ], 
+      "runtime_errors": [], 
       "import_errors": []
     }
   ], 
