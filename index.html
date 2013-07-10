@@ -29,6 +29,9 @@
   <li><a href="#benchmark-results">Results</a></li>
   <li><ul class="nav nav-list">
     
+    <li><a href="#results-growcut">
+        growcut</a></li>
+    
     <li><a href="#results-julia">
         julia</a></li>
     
@@ -39,6 +42,11 @@
   <li><a href="#error-summary">Error Summary</a></li>
   <li><ul class="nav nav-list">
     
+    
+    <li><a href="#errors-growcut">
+        growcut</a></li>
+    
+  
     
     <li><a href="#errors-julia">
         julia</a></li>
@@ -58,6 +66,108 @@
      href="#benchmark-results"
      class="headerlink">&para;</a></h2>
 
+
+
+<section id="results-growcut">
+<h3>growcut
+    (<a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut"
+     title="Source code for growcut">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-growcut"
+       class="headerlink">&para;</a>
+</h3>
+
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
+<thead>
+<tr>
+  <th></th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s)</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx">growcut_cython</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    0.007
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
+  <td>
+    0.802
+    
+  </td>
+  <td>
+    0.045
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py">growcut_python</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    6.253
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py">growcut_pythran</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    0.009
+    
+  </td>
+</tr>
+
+</tbody>
+</table>
+
+
+<p class="errors-summary">
+There were
+
+
+
+
+
+
+<a href="#runtime-errors-growcut">
+1 execution error(s)
+</a>
+
+
+while running this benchmark.
+</p>
+
+
+</section>
 
 
 <section id="results-julia">
@@ -88,13 +198,26 @@
 
 <tr>
   <td><i class="icon-tasks"></i></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx">julia_cython_for_loops</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>
+    0.004
+    
+  </td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py">julia_python_for_loops</a></td>
   <td>
     N/A
     
   </td>
   <td>
-    3.954
+    3.950
     
   </td>
 </tr>
@@ -107,7 +230,7 @@
     
   </td>
   <td>
-    0.167
+    0.171
     
   </td>
 </tr>
@@ -192,7 +315,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
   <td>
-    0.331
+    0.215
     
   </td>
   <td>
@@ -205,7 +328,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.105
+    0.108
     
   </td>
   <td>
@@ -218,7 +341,7 @@ while running this benchmark.
   <td><i class="icon-tasks"></i></td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.142
+    0.138
     
   </td>
   <td>
@@ -235,7 +358,7 @@ while running this benchmark.
     
   </td>
   <td>
-    6.065
+    6.097
     
   </td>
 </tr>
@@ -248,7 +371,7 @@ while running this benchmark.
     
   </td>
   <td>
-    0.733
+    0.772
     
   </td>
 </tr>
@@ -288,6 +411,82 @@ while running this benchmark.
 
 
 
+<section id="errors-growcut">
+<h3>growcut
+    <a title="Permalink to this headline"
+       href="#errors-growcut"
+       class="headerlink">&para;</a></h3>
+
+
+
+
+<div id="runtime-errors-growcut">
+<h4>Benchmark execution errors
+    <a title="Permalink to this headline"
+       href="#runtime-errors-growcut"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="runtime-errors-growcut-growcut_parakeet">
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a>:
+        AssertionError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-growcut-growcut_parakeet"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 163, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 111, in run_benchmark
+    first_timing = time_once()
+  File "run_benchmarks.py", line 107, in time_once
+    func(*args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
+    return run_function.run(self.f, *args, **kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 134, in run
+    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 116, in specialize_and_compile
+    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py", line 98, in prepare_args
+    untyped = ast_conversion.translate_function_value(fn)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 893, in translate_function_value
+    filename = filename)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 840, in translate_function_source
+    filename = filename)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 784, in translate_function_ast
+    _, body = translator.visit_block(body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
+    ssa_rhs = self.visit(stmt.value)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
+    positional, keywords_dict, starargs_expr)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 500, in translate_value_call
+    return self.translate_builtin_call(value, positional, keywords_dict)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 482, in translate_builtin_call
+    fn = value_to_syntax(value)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
+    return translate_function_value(v)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
+    "Unsupported primitive: %s" % (fn,)
+AssertionError: Unsupported primitive: <built-in function sqrt>
+</pre>
+    </div>
+  
+</div>
+
+
+</section>
+
+
+
+
 <section id="errors-julia">
 <h3>julia
     <a title="Permalink to this headline"
@@ -310,11 +509,11 @@ while running this benchmark.
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 163, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 111, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 107, in time_once
     func(*args, **kwargs)
   File "numbawrapper.pyx", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py", line 68, in compile_from_args
@@ -353,11 +552,11 @@ Error 22:8: Only a single target iteration variable is supported at the moment
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 163, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 111, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 107, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)
@@ -408,11 +607,11 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 162, in run_benchmarks
+  File "run_benchmarks.py", line 163, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File "run_benchmarks.py", line 110, in run_benchmark
+  File "run_benchmarks.py", line 111, in run_benchmark
     first_timing = time_once()
-  File "run_benchmarks.py", line 106, in time_once
+  File "run_benchmarks.py", line 107, in time_once
     func(*args, **kwargs)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py", line 115, in __call__
     return run_function.run(self.f, *args, **kwargs)

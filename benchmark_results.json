@@ -1,27 +1,104 @@
 {
   "benchmark_results": [
     {
+      "group_name": "growcut", 
+      "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut", 
+      "records": [
+        {
+          "name": "growcut_cython", 
+          "cold_time": null, 
+          "warm_time": 0.006608009338378906, 
+          "all_times": [
+            [
+              0.0077130794525146484, 
+              0.006608009338378906, 
+              0.006913900375366211
+            ]
+          ], 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx"
+        }, 
+        {
+          "name": "growcut_numba", 
+          "cold_time": 0.8023009300231934, 
+          "warm_time": 0.04525899887084961, 
+          "all_times": [
+            [
+              0.8023009300231934, 
+              0.04820990562438965, 
+              0.04525899887084961
+            ]
+          ], 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py"
+        }, 
+        {
+          "name": "growcut_python", 
+          "cold_time": null, 
+          "warm_time": 6.25349497795105, 
+          "all_times": [
+            6.25349497795105
+          ], 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py"
+        }, 
+        {
+          "name": "growcut_pythran", 
+          "cold_time": null, 
+          "warm_time": 0.009348869323730469, 
+          "all_times": [
+            [
+              0.009400129318237305, 
+              0.009556055068969727, 
+              0.009348869323730469
+            ]
+          ], 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py"
+        }
+      ], 
+      "runtime_errors": [
+        {
+          "name": "growcut_parakeet", 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
+          "error_type": "AssertionError", 
+          "error": "Unsupported primitive: <built-in function sqrt>", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 500, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 482, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function sqrt>\n"
+        }
+      ], 
+      "import_errors": []
+    }, 
+    {
       "group_name": "julia", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia", 
       "records": [
         {
+          "name": "julia_cython_for_loops", 
+          "cold_time": null, 
+          "warm_time": 0.004067897796630859, 
+          "all_times": [
+            [
+              0.006448984146118164, 
+              0.004067897796630859, 
+              0.004324913024902344
+            ]
+          ], 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx"
+        }, 
+        {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 3.9543230533599854, 
+          "warm_time": 3.9501309394836426, 
           "all_times": [
-            3.9543230533599854
+            3.9501309394836426
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.16686606407165527, 
+          "warm_time": 0.17068099975585938, 
           "all_times": [
             [
-              0.16991806030273438, 
-              0.16686606407165527, 
-              0.16846394538879395
+              0.1775670051574707, 
+              0.17068099975585938, 
+              0.17213892936706543
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py"
@@ -29,12 +106,12 @@
         {
           "name": "julia_pythran_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0049839019775390625, 
+          "warm_time": 0.004999876022338867, 
           "all_times": [
             [
-              0.005141019821166992, 
-              0.0049839019775390625, 
-              0.005079984664916992
+              0.00504302978515625, 
+              0.005074977874755859, 
+              0.004999876022338867
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py"
@@ -46,21 +123,21 @@
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_numba.py", 
           "error_type": "NumbaError", 
           "error": "(see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 22:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 162, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 110, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 106, in time_once\n    func(*args, **kwargs)\n  File \"numbawrapper.pyx\", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 68, in compile_from_args\n    return self.compile(signature)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 83, in compile\n    compiled_function = dec(self.py_func)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 222, in _jit_decorator\n    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 133, in compile_function\n    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 134, in compile2\n    post_ast = pipeline(func_ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 181, in __call__\n    ast = self.transform(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 602, in transform\n    ast = stage(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 587, in _stage\n    return _check_stage_object(stage_obj)(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 192, in __call__\n    reporting.report(env, exc=e)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py\", line 181, in report\n    raise exc\nNumbaError: (see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 22:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------\n"
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"numbawrapper.pyx\", line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 68, in compile_from_args\n    return self.compile(signature)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/wrapping/compiler.py\", line 83, in compile\n    compiled_function = dec(self.py_func)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 222, in _jit_decorator\n    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/decorators.py\", line 133, in compile_function\n    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 134, in compile2\n    post_ast = pipeline(func_ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 181, in __call__\n    ast = self.transform(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 602, in transform\n    ast = stage(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 587, in _stage\n    return _check_stage_object(stage_obj)(ast, env)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/pipeline.py\", line 192, in __call__\n    reporting.report(env, exc=e)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numba/reporting.py\", line 181, in report\n    raise exc\nNumbaError: (see below)\n--------------------- Numba Encountered Errors or Warnings ---------------------\n    for i, x in enumerate(grid_x):\n--------^\nError 22:8: Only a single target iteration variable is supported at the moment\n--------------------------------------------------------------------------------\n"
         }, 
         {
           "name": "julia_parakeet_for_loops", 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py", 
           "error_type": "AssertionError", 
           "error": "Unsupported primitive: <type 'numpy.uint32'>", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 162, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 110, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 106, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 517, in visit_Call\n    keywords_dict[kwd.arg] = self.visit(kwd.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 631, in visit_Attribute\n    return value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <type 'numpy.uint32'>\n"
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 517, in visit_Call\n    keywords_dict[kwd.arg] = self.visit(kwd.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 631, in visit_Attribute\n    return value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <type 'numpy.uint32'>\n"
         }, 
         {
           "name": "julia_parakeet_numpy", 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py", 
           "error_type": "AssertionError", 
           "error": "Unsupported primitive: <built-in function geterrobj>", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 162, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 110, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 106, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 497, in translate_value_call\n    return syntax.Call(translate_function_value(value),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 500, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 482, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function geterrobj>\n"
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 163, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 111, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 107, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 497, in translate_value_call\n    return syntax.Call(translate_function_value(value),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 500, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 482, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function geterrobj>\n"
         }
       ], 
       "import_errors": []
@@ -72,51 +149,51 @@
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0036978721618652344, 
+          "warm_time": 0.0036880970001220703, 
           "all_times": [
             [
-              0.004304170608520508, 
-              0.0036978721618652344, 
-              0.003849029541015625
+              0.003905057907104492, 
+              0.0036880970001220703, 
+              0.003885984420776367
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx"
         }, 
         {
           "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.33107709884643555, 
-          "warm_time": 0.0037238597869873047, 
+          "cold_time": 0.21549105644226074, 
+          "warm_time": 0.003710031509399414, 
           "all_times": [
             [
-              0.33107709884643555, 
-              0.0038537979125976562, 
-              0.0037238597869873047
+              0.21549105644226074, 
+              0.003760099411010742, 
+              0.003710031509399414
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py"
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.1052548885345459, 
-          "warm_time": 0.004966020584106445, 
+          "cold_time": 0.10815906524658203, 
+          "warm_time": 0.004828929901123047, 
           "all_times": [
             [
-              0.1052548885345459, 
-              0.005009174346923828, 
-              0.004966020584106445
+              0.10815906524658203, 
+              0.005046844482421875, 
+              0.004828929901123047
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
         }, 
         {
           "name": "pairwise_parakeet_inner_broadcasting", 
-          "cold_time": 0.14226889610290527, 
-          "warm_time": 0.0049741268157958984, 
+          "cold_time": 0.13792920112609863, 
+          "warm_time": 0.004924774169921875, 
           "all_times": [
             [
-              0.14226889610290527, 
-              0.00506591796875, 
-              0.0049741268157958984
+              0.13792920112609863, 
+              0.004975080490112305, 
+              0.004924774169921875
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py"
@@ -124,21 +201,21 @@
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 6.064609050750732, 
+          "warm_time": 6.0968098640441895, 
           "all_times": [
-            6.064609050750732
+            6.0968098640441895
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
         }, 
         {
           "name": "pairwise_python_inner_broadcasting", 
           "cold_time": null, 
-          "warm_time": 0.733447790145874, 
+          "warm_time": 0.7723898887634277, 
           "all_times": [
             [
-              0.7495250701904297, 
-              0.7335071563720703, 
-              0.733447790145874
+              0.7834889888763428, 
+              0.7723898887634277, 
+              0.7904481887817383
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py"
@@ -146,12 +223,12 @@
         {
           "name": "pairwise_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.00888681411743164, 
+          "warm_time": 0.008841991424560547, 
           "all_times": [
             [
-              0.00893092155456543, 
-              0.008923053741455078, 
-              0.00888681411743164
+              0.008841991424560547, 
+              0.008901119232177734, 
+              0.009001016616821289
             ]
           ], 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py"
