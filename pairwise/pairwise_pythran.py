@@ -17,10 +17,13 @@ source = getsource(pairwise_python.pairwise_python_nested_for_loops)
 
 # a few rewriting rules to prune unsupported features
 source = re.sub(r'dtype=data.dtype', 'np.double', source)
+source = re.sub(r'#"omp', '"omp', source)
 
 # compile to a native module
 native = compile_pythrancode(modname,
-                             '\n'.join([imports, exports, source]))
+                             '\n'.join([imports, exports, source]),
+                             cxxflags=['-O2', '-fopenmp']
+                             )
 
 # load it
 native = imp.load_dynamic(modname, native)
