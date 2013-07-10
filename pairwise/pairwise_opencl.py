@@ -3,61 +3,77 @@ import time
 import pyopencl as cl
 import numpy
 import numpy.linalg as la
-N = 1000
-D = 3
-
-a = numpy.random.rand(N, D).astype(numpy.float32)
-c = numpy.random.rand(N, N).astype(numpy.float32)
-
-
-
-def pairwise_ocl_cpu_prepare(dtype):
-    ctx = cl.create_some_context()
-    queue = cl.CommandQueue(ctx)
-
-    def pairwise_ocl_cpu(data):
-
-
 
 mf = cl.mem_flags
-a_buf = cl.Buffer(ctx, mf.READ_ONLY | mf.COPY_HOST_PTR, hostbuf=a)
-#b_buf = cl.Buffer(ctx, mf.READ_ONLY | mf.COPY_HOST_PTR, hostbuf=b)
-dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, c.nbytes)
 
-prg = cl.Program(ctx, """
-    __kernel void sum(__global const float *a,
-    __global float *c)
-    {
-      int m0 = get_global_id(0) * %(N)s;
-      int n0 = get_global_id(1) * %(N)s;
-      for (int m = 0; m < %(N)s; ++m)
-      {
-      }
-      float diff = 0;
-      float sum = 0;
-      for (int d = 0; d < %(D)s; ++d)
-      {
-        diff = a[n * %(D)s + d] - a[m * %(D)s + d];
-        //diff = a[n + d * %(N)s] - a[m + d * %(N)s];
-        sum += diff * diff;
-      }
-      c[n * %(N)s + m] = sqrt(sum);
-    }
-    """ % locals()).build()
+BLOCK_SIZE = 16
 
-f = prg.sum
-f.set_args(a_buf, dest_buf)
+ctx = cl.create_some_context()
+queue = cl.CommandQueue(ctx)
+
+_cache = {}
+
+def pairwise_ocl_cpu_prepare(N16, shp, dtype):
+    N, D = shp
+    ctype = {
+            'float32': 'float',
+            'float64': 'double',
+            }[str(dtype)]
+    B = BLOCK_SIZE
+
+    prg = cl.Program(ctx, """
+        __kernel void foo(__global %(ctype)s *a)
+        {
+          int m0 = get_global_id(0) * %(B)s;
+          int n0 = get_global_id(1) * %(B)s;
+          __global %(ctype)s *c = a + %(D)s * %(N16)s;
+          for (int m = m0; m < min(m0 + %(B)s, %(N)s); ++m)
+          {
+              for (int n = n0; n < min(n0 + %(B)s, %(N)s); ++n)
+              {
+                  %(ctype)s diff = 0;
+                  %(ctype)s sum = 0;
+                  for (int d = 0; d < %(D)s; ++d)
+                  {
+                    diff = a[n * %(D)s + d] - a[m * %(D)s + d];
+                    //diff = a[n + d * %(N)s] - a[m + d * %(N)s];
+                    sum += diff * diff;
+                  }
+                  c[n * %(N)s + m] = sqrt(sum);
+              }
+          }
+        }
+        """ % locals()).build()
+
+    return prg.foo
+
+def pairwise_ocl_cpu(data):
+    N, D = data.shape
+    blocks = int(np.ceil(N / float(BLOCK_SIZE)))
+    N16 = blocks * 16
+    data16 = np.empty((N16, D + N16), order='F', dtype=data.dtype)
+    data16[:N, :D] = data
+    try:
+        f = _cache[(N16, data.shape, data.dtype)]
+    except:
+        f = pairwise_ocl_cpu_prepare(N16, data.shape, data.dtype)
+        _cache[(N16, data.shape, data.dtype)] = f
+    a_buf = cl.Buffer(ctx, mf.COPY_HOST_PTR, hostbuf=data16)
+    dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, data16.nbytes)
+    f(queue, (blocks, blocks), None, a_buf)
+    queue.flush()
+
+
+
+_data = numpy.random.rand(1000, 3).astype(numpy.float32)
+
 t0 = time.time()
-for i in range(100):
-    ev = cl.enqueue_nd_range_kernel(queue, f, (N, N), None)
-ev.wait()
+pairwise_ocl_cpu(_data)
 t1 = time.time()
-print 'cl took', (t1 - t0) * 1000 / 100, 'ms per iter'
+print 'runtime', (t1 - t0)
 
 t0 = time.time()
-for i in range(10):
-    np.sqrt(((a[:, None, :] - a) ** 2).sum(-1))
+pairwise_ocl_cpu(_data)
 t1 = time.time()
-print 'np took', (t1 - t0) * 1000 / 10, 'ms per iter'
-
+print 'runtime', (t1 - t0)
 
