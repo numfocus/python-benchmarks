@@ -165,12 +165,15 @@ while running this benchmark.
        class="headerlink">&para;</a></h4>
   {% for import_error in result.import_errors %}
     <div id="import-errors-{{ result.group_name }}-{{ import_error.name }}">
-    <h5><a href="{{ import_error.source_url }}">{{ import_error.name }}</a>:
-         {{ import_error.error_type }}
+    <h5><a href="{{ import_error.source_url }}">{{ import_error.name }}</a>
     <a title="Permalink to this headline"
        href="#import-errors-{{ result.group_name }}-{{ import_error.name }}"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">{{ import_error.traceback }}</pre>
+    <pre class="pre-scrollable">
+{{ import_error.error_type }}: {{ import_error.error_message }}
+
+{{ import_error.traceback }}
+    </pre>
     </div>
   {% endfor %}
 </div>
@@ -184,12 +187,15 @@ while running this benchmark.
        class="headerlink">&para;</a></h4>
   {% for runtime_error in result.runtime_errors %}
     <div id="runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}">
-    <h5><a href="{{ runtime_error.source_url }}">{{ runtime_error.name }}</a>:
-        {{ runtime_error.error_type }}
+    <h5><a href="{{ runtime_error.source_url }}">{{ runtime_error.name }}</a>
     <a title="Permalink to this headline"
        href="#runtime-errors-{{ result.group_name }}-{{ runtime_error.name }}"
        class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable">{{ runtime_error.traceback }}</pre>
+    <pre class="pre-scrollable">
+{{ runtime_error.error_type }}: {{ runtime_error.error_message|e }}
+
+{{ runtime_error.traceback|e }}
+    </pre>
     </div>
   {% endfor %}
 </div>
