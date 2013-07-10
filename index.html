@@ -118,7 +118,7 @@
   </td>
   <td>0.006 
       (0.000)</td>
-  <td>1107.0</td>
+  <td>1840.1</td>
 </tr>
 
 <tr>
@@ -126,12 +126,12 @@
   <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    N/A
+    0.883
     
   </td>
-  <td>1.129 
-      (0.000)</td>
-  <td>6.1</td>
+  <td>0.045 
+      (0.004)</td>
+  <td>241.7</td>
 </tr>
 
 <tr>
@@ -142,7 +142,7 @@
     N/A
     
   </td>
-  <td>6.841 
+  <td>10.969 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -227,7 +227,7 @@ while running this benchmark.
   </td>
   <td>0.003 
       (0.000)</td>
-  <td>1788.8</td>
+  <td>1815.6</td>
 </tr>
 
 <tr>
@@ -240,7 +240,7 @@ while running this benchmark.
   </td>
   <td>0.004 
       (0.000)</td>
-  <td>1062.9</td>
+  <td>1157.0</td>
 </tr>
 
 <tr>
@@ -251,9 +251,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.181 
-      (0.017)</td>
-  <td>25.3</td>
+  <td>0.176 
+      (0.003)</td>
+  <td>26.2</td>
 </tr>
 
 <tr>
@@ -264,7 +264,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.581 
+  <td>4.599 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -336,27 +336,27 @@ while running this benchmark.
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#1</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
-  <td>
-    0.257
-    
-  </td>
-  <td>0.013 
-      (0.000)</td>
-  <td>1709.1</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
   <td>
     N/A
     
   </td>
-  <td>0.014 
-      (0.002)</td>
-  <td>1562.7</td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1665.7</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#2</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td>
+    0.279
+    
+  </td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1655.3</td>
 </tr>
 
 <tr>
@@ -364,12 +364,12 @@ while running this benchmark.
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.120
+    0.125
     
   </td>
-  <td>0.014 
+  <td>0.015 
       (0.000)</td>
-  <td>1505.9</td>
+  <td>1452.6</td>
 </tr>
 
 <tr>
@@ -377,12 +377,12 @@ while running this benchmark.
   <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.176
+    0.156
     
   </td>
   <td>0.015 
-      (0.000)</td>
-  <td>1473.6</td>
+      (0.001)</td>
+  <td>1427.4</td>
 </tr>
 
 <tr>
@@ -394,8 +394,8 @@ while running this benchmark.
     
   </td>
   <td>0.016 
-      (0.003)</td>
-  <td>1364.1</td>
+      (0.002)</td>
+  <td>1328.7</td>
 </tr>
 
 <tr>
@@ -406,9 +406,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.956 
+  <td>1.863 
       (0.000)</td>
-  <td>11.1</td>
+  <td>11.3</td>
 </tr>
 
 <tr>
@@ -419,7 +419,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>21.771 
+  <td>21.073 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -461,7 +461,7 @@ while running this benchmark.
   
     <div id="import-errors-growcut-growcut_pythran">
     <h5><a href="">growcut_pythran</a>:
-         PythranSyntaxError
+         TypeError
     <a title="Permalink to this headline"
        href="#import-errors-growcut-growcut_pythran"
        class="headerlink">&para;</a></h5>
@@ -528,9 +528,13 @@ while running this benchmark.
     return super(ContextManager, self).visit(node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py", line 500, in visit_Name
-    raise PythranSyntaxError(err.format(node.id), node)
-PythranSyntaxError: identifier sqrt unknown, either because it is an unsupported intrinsic, the input code is faulty, or... pythran is buggy. (line 19)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py", line 487, in visit_Attribute
+    return self.add(node, {Aliases.access_path(node)})
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py", line 393, in access_path
+    return rec(modules, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/analysis.py", line 388, in rec
+    return rec(w, n.value)[n.attr]
+TypeError: string indices must be integers, not str
 </pre>
     </div>
   
@@ -546,7 +550,7 @@ PythranSyntaxError: identifier sqrt unknown, either because it is an unsupported
   
     <div id="runtime-errors-growcut-growcut_parakeet">
     <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a>:
-        AssertionError
+        NameNotFound
     <a title="Permalink to this headline"
        href="#runtime-errors-growcut-growcut_parakeet"
        class="headerlink">&para;</a></h5>
@@ -577,23 +581,53 @@ PythranSyntaxError: identifier sqrt unknown, either because it is an unsupported
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 677, in visit_Assign
-    ssa_rhs = self.visit(stmt.value)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+    body, merge, _ = self.visit_loop_body(stmt.body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+    scope_after, body = self.visit_block(body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
     res = ast.NodeVisitor.visit(self, node)
   File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
     return visitor(node)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 553, in visit_Call
-    positional, keywords_dict, starargs_expr)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 500, in translate_value_call
-    return self.translate_builtin_call(value, positional, keywords_dict)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 482, in translate_builtin_call
-    fn = value_to_syntax(value)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 135, in value_to_syntax
-    return translate_function_value(v)
-  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 855, in translate_function_value
-    "Unsupported primitive: %s" % (fn,)
-AssertionError: Unsupported primitive: <built-in function sqrt>
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+    body, merge, _ = self.visit_loop_body(stmt.body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+    scope_after, body = self.visit_block(body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+    body, merge, _ = self.visit_loop_body(stmt.body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+    scope_after, body = self.visit_block(body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 726, in visit_For
+    body, merge, _ = self.visit_loop_body(stmt.body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 703, in visit_loop_body
+    scope_after, body = self.visit_block(body)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 746, in visit_block
+    parakeet_stmt = self.visit(stmt)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 487, in visit
+    res = ast.NodeVisitor.visit(self, node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py", line 241, in visit
+    return visitor(node)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 695, in visit_If
+    merge = self.create_phi_nodes(true_scope, false_scope)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 362, in create_phi_nodes
+    right = self.lookup(name)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py", line 281, in lookup
+    raise NameNotFound(name)
+NameNotFound: d
 </pre>
     </div>
   
