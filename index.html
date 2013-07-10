@@ -53,6 +53,9 @@
     
   
     
+    <li><a href="#errors-pairwise">
+        pairwise</a></li>
+    
   
   </ul></li>
   <li><a href="#runtime-environment">Runtime Environment</a></li>
@@ -102,7 +105,7 @@
   <th>Rank</th>
   <th>Function name</th>
   <th>Cold time (s)</th>
-  <th>Warm time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
   <th>Speedup</th>
 </tr>
 </thead>
@@ -116,8 +119,9 @@
     N/A
     
   </td>
-  <td>0.007</td>
-  <td>1122.4</td>
+  <td>0.006 
+      (0.000)</td>
+  <td>1091.0</td>
 </tr>
 
 <tr>
@@ -128,31 +132,21 @@
     N/A
     
   </td>
-  <td>0.009</td>
-  <td>784.0</td>
+  <td>0.010 
+      (0.001)</td>
+  <td>692.7</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#3</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
-  <td>
-    0.858
-    
-  </td>
-  <td>0.047</td>
-  <td>156.6</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py">growcut_python</a></td>
   <td>
     N/A
     
   </td>
-  <td>7.317</td>
+  <td>6.656 
+      (0.000)</td>
   <td>1.0</td>
 </tr>
 
@@ -169,7 +163,7 @@ There were
 
 
 <a href="#runtime-errors-growcut">
-1 execution error(s)
+2 execution error(s)
 </a>
 
 
@@ -214,7 +208,7 @@ while running this benchmark.
   <th>Rank</th>
   <th>Function name</th>
   <th>Cold time (s)</th>
-  <th>Warm time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
   <th>Speedup</th>
 </tr>
 </thead>
@@ -228,8 +222,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.003</td>
-  <td>1798.6</td>
+  <td>0.003 
+      (0.000)</td>
+  <td>1636.3</td>
 </tr>
 
 <tr>
@@ -240,8 +235,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.004</td>
-  <td>1121.1</td>
+  <td>0.004 
+      (0.000)</td>
+  <td>1064.2</td>
 </tr>
 
 <tr>
@@ -252,8 +248,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.196</td>
-  <td>23.0</td>
+  <td>0.172 
+      (0.002)</td>
+  <td>24.3</td>
 </tr>
 
 <tr>
@@ -264,7 +261,8 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.509</td>
+  <td>4.166 
+      (0.000)</td>
   <td>1.0</td>
 </tr>
 
@@ -326,7 +324,7 @@ while running this benchmark.
   <th>Rank</th>
   <th>Function name</th>
   <th>Cold time (s)</th>
-  <th>Warm time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
   <th>Speedup</th>
 </tr>
 </thead>
@@ -340,79 +338,47 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.013</td>
-  <td>1694.1</td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1646.8</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#2</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
-  <td>
-    0.246
-    
-  </td>
-  <td>0.013</td>
-  <td>1686.6</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#3</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
-  <td>
-    0.170
-    
-  </td>
-  <td>0.015</td>
-  <td>1511.9</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
-  <td>
-    0.136
-    
-  </td>
-  <td>0.015</td>
-  <td>1499.1</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#5</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py">pairwise_pythran_nested_for_loops</a></td>
   <td>
     N/A
     
   </td>
-  <td>0.016</td>
-  <td>1392.4</td>
+  <td>0.016 
+      (0.002)</td>
+  <td>1325.4</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
-  <td>#6</td>
+  <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py">pairwise_python_inner_broadcasting</a></td>
   <td>
     N/A
     
   </td>
-  <td>1.843</td>
-  <td>12.1</td>
+  <td>1.893 
+      (0.000)</td>
+  <td>11.2</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
-  <td>#7</td>
+  <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py">pairwise_python_nested_for_loops</a></td>
   <td>
     N/A
     
   </td>
-  <td>22.371</td>
+  <td>21.148 
+      (0.000)</td>
   <td>1.0</td>
 </tr>
 
@@ -420,11 +386,21 @@ while running this benchmark.
 </table>
 
 
-
 <p class="errors-summary">
-  All methods were benchmarked without any error.
-</p>
+There were
 
+
+
+
+
+
+<a href="#runtime-errors-pairwise">
+3 execution error(s)
+</a>
+
+
+while running this benchmark.
+</p>
 
 
 </section>
@@ -453,6 +429,27 @@ while running this benchmark.
        href="#runtime-errors-growcut"
        class="headerlink">&para;</a></h4>
   
+    <div id="runtime-errors-growcut-growcut_numba">
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a>:
+        TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-growcut-growcut_numba"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 167, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 146, in run_benchmark
+    ('std_warm_times', np.std(all_warm_timings)),
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 2590, in std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 102, in _std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 68, in _var
+    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)
+TypeError: can only concatenate list (not "float") to list
+</pre>
+    </div>
+  
     <div id="runtime-errors-growcut-growcut_parakeet">
     <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a>:
         AssertionError
@@ -460,7 +457,7 @@ while running this benchmark.
        href="#runtime-errors-growcut-growcut_parakeet"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 165, in run_benchmarks
+  File "run_benchmarks.py", line 167, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
@@ -536,7 +533,7 @@ AssertionError: Unsupported primitive: <built-in function sqrt>
        href="#runtime-errors-julia-julia_numba_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 165, in run_benchmarks
+  File "run_benchmarks.py", line 167, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
@@ -579,7 +576,7 @@ Error 23:8: Only a single target iteration variable is supported at the moment
        href="#runtime-errors-julia-julia_parakeet_for_loops"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 165, in run_benchmarks
+  File "run_benchmarks.py", line 167, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
@@ -634,7 +631,7 @@ AssertionError: Unsupported primitive: <type 'numpy.uint32'>
        href="#runtime-errors-julia-julia_parakeet_numpy"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable">Traceback (most recent call last):
-  File "run_benchmarks.py", line 165, in run_benchmarks
+  File "run_benchmarks.py", line 167, in run_benchmarks
     record = run_benchmark(name, func, args, kwargs, memory=memory)
   File "run_benchmarks.py", line 113, in run_benchmark
     first_timing = time_once()
@@ -708,6 +705,90 @@ AssertionError: Unsupported primitive: <built-in function geterrobj>
 </section>
 
 
+
+
+<section id="errors-pairwise">
+<h3>pairwise
+    <a title="Permalink to this headline"
+       href="#errors-pairwise"
+       class="headerlink">&para;</a></h3>
+
+
+
+
+<div id="runtime-errors-pairwise">
+<h4>Benchmark execution errors
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="runtime-errors-pairwise-pairwise_numba_nested_for_loops">
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a>:
+        TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_numba_nested_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 167, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 146, in run_benchmark
+    ('std_warm_times', np.std(all_warm_timings)),
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 2590, in std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 102, in _std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 68, in _var
+    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)
+TypeError: can only concatenate list (not "float") to list
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_parakeet_nested_for_loops">
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a>:
+        TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_parakeet_nested_for_loops"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 167, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 146, in run_benchmark
+    ('std_warm_times', np.std(all_warm_timings)),
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 2590, in std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 102, in _std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 68, in _var
+    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)
+TypeError: can only concatenate list (not "float") to list
+</pre>
+    </div>
+  
+    <div id="runtime-errors-pairwise-pairwise_parakeet_inner_broadcasting">
+    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a>:
+        TypeError
+    <a title="Permalink to this headline"
+       href="#runtime-errors-pairwise-pairwise_parakeet_inner_broadcasting"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable">Traceback (most recent call last):
+  File "run_benchmarks.py", line 167, in run_benchmarks
+    record = run_benchmark(name, func, args, kwargs, memory=memory)
+  File "run_benchmarks.py", line 146, in run_benchmark
+    ('std_warm_times', np.std(all_warm_timings)),
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 2590, in std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 102, in _std
+    keepdims=keepdims)
+  File "/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/numpy/core/_methods.py", line 68, in _var
+    arrmean = um.add.reduce(arr, axis=axis, dtype=dtype, keepdims=True)
+TypeError: can only concatenate list (not "float") to list
+</pre>
+    </div>
+  
+</div>
+
+
+</section>
 
 
 
