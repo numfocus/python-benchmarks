@@ -131,7 +131,7 @@ def run_benchmark(name, func, args, kwargs, memory=False, n_runs=5,
             # The cold time is much slower, let's report it as cold time
             cold = first_timing
             warm = best_timing
-            all_warm_timings = [other_timings] + [time_once()]
+            all_warm_timings = other_timings + [time_once()]
         else:
             # The first run is not significantly slower, their is no warm-up
             # for this execution
