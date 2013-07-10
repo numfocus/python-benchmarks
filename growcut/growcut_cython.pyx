@@ -1,4 +1,5 @@
 # Authors: Stefan van der Walt, Aron Ahmadia
+# https://github.com/stefanv/growcut_py
 from __future__ import division
  
 import numpy as np
