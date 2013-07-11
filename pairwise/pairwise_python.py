@@ -27,7 +27,12 @@ def pairwise_python_inner_broadcasting(data):
     return result
 
 
+def pairwise_python_broadcast_numpy(data):
+    return np.sqrt(((data[:, None, :] - data) ** 2).sum(axis=2))
+
+
 benchmarks = (
     pairwise_python_nested_for_loops,
     pairwise_python_inner_broadcasting,
+    pairwise_python_broadcast_numpy,
 )
