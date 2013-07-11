@@ -31,8 +31,14 @@ def pairwise_python_broadcast_numpy(data):
     return np.sqrt(((data[:, None, :] - data) ** 2).sum(axis=2))
 
 
+def pairwise_python_numpy_dot(data):
+    X_norm_2 = (data ** 2).sum(axis=1)
+    dists = np.sqrt(2 * X_norm_2 - np.dot(data, data.T))
+    return dists
+
 benchmarks = (
     pairwise_python_nested_for_loops,
     pairwise_python_inner_numpy,
     pairwise_python_broadcast_numpy,
+    pairwise_python_numpy_dot,
 )
