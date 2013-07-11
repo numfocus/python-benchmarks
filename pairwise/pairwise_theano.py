@@ -13,7 +13,7 @@ def pairwise_theano_tensor_prepare(dtype):
     rval = theano.function([X],
                            theano.Out(dists, borrow=True),
                            allow_input_downcast=True)
-    rval.__name__ = 'pairwise_theano_tensor_' + dtype
+    rval.__name__ = 'pairwise_theano_broadcast_' + dtype
     return rval
 
 
