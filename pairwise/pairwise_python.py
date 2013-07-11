@@ -18,7 +18,7 @@ def pairwise_python_nested_for_loops(data):
     return distances
 
 
-def pairwise_python_inner_broadcasting(data):
+def pairwise_python_inner_numpy(data):
     n_samples = data.shape[0]
     result = np.empty((n_samples, n_samples), dtype=data.dtype)
     for i in xrange(n_samples):
@@ -33,6 +33,6 @@ def pairwise_python_broadcast_numpy(data):
 
 benchmarks = (
     pairwise_python_nested_for_loops,
-    pairwise_python_inner_broadcasting,
+    pairwise_python_inner_numpy,
     pairwise_python_broadcast_numpy,
 )
