@@ -1,7 +1,7 @@
 # Authors: Travis E. Oliphant (numpy version), Serge Guelton (python version)
+#          James Bergstra (theano version)
 # License: BSD
 # Source: https://github.com/scipy/scipy/blob/master/scipy/optimize/optimize.py
-import numpy
 import theano
 from theano import tensor as TT
 
