@@ -29,7 +29,7 @@ def arc_distance_python_nested_for_loops(a, b):
     return distance_matrix
 
 
-def arc_distance_numpy(a, b):
+def arc_distance_numpy_tile(a, b):
     """
     Calculates the pairwise arc distance between all points in vector a and b.
     """
@@ -47,7 +47,25 @@ def arc_distance_numpy(a, b):
 
     return distance_matrix
 
+
+def arc_distance_numpy_broadcast(a, b):
+    """
+    Calculates the pairwise arc distance between all points in vector a and b.
+    """
+    theta_1 = a[:, 0][:, None]
+    theta_2 = b[:, 0][None, :]
+    phi_1 = a[:, 1][:, None]
+    phi_2 = b[:, 1][None, :]
+
+    temp = (np.sin((theta_2 - theta_1) / 2)**2
+            +
+            np.cos(theta_1) * np.cos(theta_2)
+            * np.sin((phi_2 - phi_1) / 2)**2)
+    distance_matrix = 2 * (np.arctan2(np.sqrt(temp), np.sqrt(1 - temp)))
+    return distance_matrix
+
 benchmarks = (
     arc_distance_python_nested_for_loops,
-    arc_distance_numpy
+    arc_distance_numpy_tile,
+    arc_distance_numpy_broadcast,
 )
