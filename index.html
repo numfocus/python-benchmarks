@@ -29,6 +29,9 @@
   <li><a href="#benchmark-results">Results</a></li>
   <li><ul class="nav nav-list">
     
+    <li><a href="#results-arc_distance">
+        arc_distance</a></li>
+    
     <li><a href="#results-growcut">
         growcut</a></li>
     
@@ -38,10 +41,15 @@
     <li><a href="#results-pairwise">
         pairwise</a></li>
     
+    <li><a href="#results-rosen_der">
+        rosen_der</a></li>
+    
   </ul></li>
   <li><a href="#error-summary">Error Summary</a></li>
   <li><ul class="nav nav-list">
     
+    
+  
     
     <li><a href="#errors-growcut">
         growcut</a></li>
@@ -50,6 +58,8 @@
     
     <li><a href="#errors-julia">
         julia</a></li>
+    
+  
     
   
     
@@ -66,6 +76,112 @@
      href="#benchmark-results"
      class="headerlink">&para;</a></h2>
 
+
+
+<section id="results-arc_distance">
+<h3>arc_distance
+    (<a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance"
+     title="Source code for arc_distance">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-arc_distance"
+       class="headerlink">&para;</a>
+</h3>
+
+<p class="plot">
+  
+  <img src="images/arc_distance_zoom_5x_best.png"
+       alt="Plot for arc_distance" />
+  
+  <img src="images/arc_distance_logscale.png"
+       alt="Plot for arc_distance" />
+  
+</p>
+
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
+<thead>
+<tr>
+  <th></th>
+  <th>Rank</th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
+  <th>Speedup</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#1</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_pythran.py">arc_distance_pythran_nested_for_loops</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.001 
+      (0.000)</td>
+  <td>55.6</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#2</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_numpy</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.001 
+      (0.000)</td>
+  <td>43.2</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#3</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_numba.py">arc_distance_numba_for_loops</a></td>
+  <td>
+    0.631
+    
+  </td>
+  <td>0.011 
+      (0.000)</td>
+  <td>5.0</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#4</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_python_nested_for_loops</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.057 
+      (0.004)</td>
+  <td>1.0</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<p class="errors-summary">
+  All methods were benchmarked without any error.
+</p>
+
+
+
+</section>
 
 
 <section id="results-growcut">
@@ -117,8 +233,8 @@
     
   </td>
   <td>0.006 
-      (0.001)</td>
-  <td>1606.6</td>
+      (0.002)</td>
+  <td>1658.2</td>
 </tr>
 
 <tr>
@@ -131,7 +247,7 @@
   </td>
   <td>0.010 
       (0.001)</td>
-  <td>989.7</td>
+  <td>1050.1</td>
 </tr>
 
 <tr>
@@ -139,12 +255,12 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
   <td>
-    0.799
+    0.728
     
   </td>
-  <td>0.044 
-      (0.002)</td>
-  <td>219.2</td>
+  <td>0.045 
+      (0.001)</td>
+  <td>227.2</td>
 </tr>
 
 <tr>
@@ -155,7 +271,7 @@
     N/A
     
   </td>
-  <td>9.715 
+  <td>10.159 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -232,9 +348,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.002 
-      (0.000)</td>
-  <td>1812.9</td>
+  <td>0.003 
+      (0.001)</td>
+  <td>1526.7</td>
 </tr>
 
 <tr>
@@ -247,7 +363,7 @@ while running this benchmark.
   </td>
   <td>0.004 
       (0.001)</td>
-  <td>1145.1</td>
+  <td>1076.2</td>
 </tr>
 
 <tr>
@@ -258,9 +374,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.172 
-      (0.006)</td>
-  <td>25.7</td>
+  <td>0.167 
+      (0.005)</td>
+  <td>24.6</td>
 </tr>
 
 <tr>
@@ -271,7 +387,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>4.414 
+  <td>4.122 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -345,12 +461,12 @@ while running this benchmark.
   <td>#1</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float32</a></td>
   <td>
-    0.003
+    0.008
     
   </td>
   <td>0.001 
       (0.000)</td>
-  <td>29515.5</td>
+  <td>32356.0</td>
 </tr>
 
 <tr>
@@ -358,30 +474,17 @@ while running this benchmark.
   <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float64</a></td>
   <td>
-    N/A
+    0.005
     
   </td>
   <td>0.001 
       (0.000)</td>
-  <td>15606.0</td>
+  <td>19971.7</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#3</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
-  <td>
-    0.228
-    
-  </td>
-  <td>0.013 
-      (0.000)</td>
-  <td>1717.4</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
   <td>
     N/A
@@ -389,33 +492,46 @@ while running this benchmark.
   </td>
   <td>0.013 
       (0.001)</td>
-  <td>1715.2</td>
+  <td>1740.5</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#4</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td>
+    0.224
+    
+  </td>
+  <td>0.013 
+      (0.001)</td>
+  <td>1708.7</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#5</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
   <td>
-    0.125
+    0.165
     
   </td>
   <td>0.014 
       (0.000)</td>
-  <td>1518.3</td>
+  <td>1536.0</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#6</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_broadcasting</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.181
+    0.119
     
   </td>
-  <td>0.015 
-      (0.002)</td>
-  <td>1483.8</td>
+  <td>0.014 
+      (0.000)</td>
+  <td>1521.3</td>
 </tr>
 
 <tr>
@@ -427,8 +543,8 @@ while running this benchmark.
     
   </td>
   <td>0.016 
-      (0.002)</td>
-  <td>1349.5</td>
+      (0.000)</td>
+  <td>1368.6</td>
 </tr>
 
 <tr>
@@ -440,8 +556,8 @@ while running this benchmark.
     
   </td>
   <td>0.037 
-      (0.009)</td>
-  <td>590.7</td>
+      (0.007)</td>
+  <td>592.5</td>
 </tr>
 
 <tr>
@@ -452,9 +568,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.052 
-      (0.012)</td>
-  <td>415.6</td>
+  <td>0.050 
+      (0.013)</td>
+  <td>432.3</td>
 </tr>
 
 <tr>
@@ -465,9 +581,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.885 
+  <td>1.813 
       (0.000)</td>
-  <td>11.6</td>
+  <td>12.0</td>
 </tr>
 
 <tr>
@@ -478,7 +594,113 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>21.815 
+  <td>21.808 
+      (0.000)</td>
+  <td>1.0</td>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<p class="errors-summary">
+  All methods were benchmarked without any error.
+</p>
+
+
+
+</section>
+
+
+<section id="results-rosen_der">
+<h3>rosen_der
+    (<a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der"
+     title="Source code for rosen_der">source code</a>)
+    <a title="Permalink to this headline"
+       href="#results-rosen_der"
+       class="headerlink">&para;</a>
+</h3>
+
+<p class="plot">
+  
+  <img src="images/rosen_der_zoom_5x_best.png"
+       alt="Plot for rosen_der" />
+  
+  <img src="images/rosen_der_logscale.png"
+       alt="Plot for rosen_der" />
+  
+</p>
+
+<table class="table table-striped table-hover">
+<colgroup>
+  <col class="bench_icon">
+  <col class="bench_icon">
+  <col class="bench_name">
+  <col class="bench_time">
+  <col class="bench_time">
+  <col class="bench_time">
+</colgroup>
+<thead>
+<tr>
+  <th></th>
+  <th>Rank</th>
+  <th>Function name</th>
+  <th>Cold time (s)</th>
+  <th>Warm time (s): best (stddev)</th>
+  <th>Speedup</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#1</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py">rosen_der_pythran</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.005 
+      (0.001)</td>
+  <td>2155.0</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#2</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_cython.pyx">rosen_der_cython</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.006 
+      (0.001)</td>
+  <td>1646.1</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#3</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py">rosen_der_numpy</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>0.041 
+      (0.003)</td>
+  <td>242.9</td>
+</tr>
+
+<tr>
+  <td><i class="icon-tasks"></i></td>
+  <td>#4</td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py">rosen_der_python</a></td>
+  <td>
+    N/A
+    
+  </td>
+  <td>9.890 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -501,6 +723,8 @@ while running this benchmark.
   <a title="Permalink to this headline"
      href="#error-summary"
      class="headerlink">&para;</a></h2>
+
+
 
 
 
@@ -816,6 +1040,8 @@ AssertionError: Unsupported primitive: &lt;built-in function geterrobj&gt;
 
 
 </section>
+
+
 
 
 
