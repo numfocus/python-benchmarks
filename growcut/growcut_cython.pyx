@@ -1,4 +1,4 @@
-# Authors: Stefan van der Walt, Aron Ahmadia
+# Authors: Stefan van der Walt, Nathan Faggian, Aron Ahmadia
 # https://github.com/stefanv/growcut_py
 from __future__ import division
  
