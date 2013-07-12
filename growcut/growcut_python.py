@@ -1,4 +1,4 @@
-# Authors: Stefan van der Walt, Aron Ahmadia, Olivier Grisel
+# Authors: Nathan Faggian, Stefan van der Walt, Aron Ahmadia, Olivier Grisel
 # https://github.com/stefanv/growcut_py
 import numpy as np
 
