@@ -36,6 +36,7 @@ def pairwise_python_numpy_dot(data):
     dists = np.sqrt(2 * X_norm_2 - np.dot(data, data.T))
     return dists
 
+
 benchmarks = (
     pairwise_python_nested_for_loops,
     pairwise_python_inner_numpy,
