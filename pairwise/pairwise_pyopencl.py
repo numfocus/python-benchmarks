@@ -8,7 +8,7 @@ import numpy
 
 mf = cl.mem_flags
 
-BLOCK_SIZE = 32
+BLOCK_SIZE = 4
 
 PROFILING = 0
 
@@ -22,13 +22,15 @@ else:
 
 _cache = {}
 
-def pairwise_ocl_cpu_prepare(shp, dtype):
+def pairwise_pyopencl_cpu_prepare(shp, dtype):
     N, D = shp
     ctype = {
             'float32': 'float',
             'float64': 'double',
             }[str(dtype)]
     B = BLOCK_SIZE
+
+    options = "-cl-mad-enable -cl-fast-relaxed-math -cl-unsafe-math-optimizations"
 
     prg = cl.Program(ctx, """
         __kernel void foo(__global %(ctype)s *a, __global %(ctype)s *c)
@@ -50,12 +52,12 @@ def pairwise_ocl_cpu_prepare(shp, dtype):
               }
           }
         }
-        """ % locals()).build()
+        """ % locals()).build(options)
 
     return prg.foo
 
 
-def pairwise_ocl_cpu(data):
+def pairwise_pyopencl_cpu(data):
     data = np.asarray(data, order='C')
     N, D = data.shape
     blocks = int(np.ceil(N / float(BLOCK_SIZE)))
@@ -63,30 +65,32 @@ def pairwise_ocl_cpu(data):
     try:
         f = _cache[(data.shape, data.dtype)]
     except:
-        f = pairwise_ocl_cpu_prepare(data.shape, data.dtype)
+        f = pairwise_pyopencl_cpu_prepare(data.shape, data.dtype)
         _cache[(data.shape, data.dtype)] = f
-    data_buf = cl.Buffer(ctx, mf.COPY_HOST_PTR, hostbuf=data)
-    dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, rval.nbytes)
+    data_buf = cl.Buffer(ctx, mf.USE_HOST_PTR, hostbuf=data)
+    dest_buf = cl.Buffer(ctx, mf.USE_HOST_PTR, hostbuf=rval)
     ev = f(queue, (blocks, blocks), None, data_buf, dest_buf)
     ev.wait()
     if PROFILING:
         print 'computation time', 1e-9 * (ev.profile.end - ev.profile.start)
+    return rval
 
 
-if 0:
+if PROFILING:
 
     _data = numpy.random.rand(200, 100).astype(numpy.float32)
 
     t0 = time.time()
-    pairwise_ocl_cpu(_data)
+    pairwise_pyopencl_cpu(_data)
     t1 = time.time()
     print 'runtime', (t1 - t0)
 
     t0 = time.time()
-    pairwise_ocl_cpu(_data)
+    pairwise_pyopencl_cpu(_data)
     t1 = time.time()
     print 'runtime', (t1 - t0)
 
+
 benchmarks = (
-    pairwise_ocl_cpu,
+    pairwise_pyopencl_cpu,
 )
