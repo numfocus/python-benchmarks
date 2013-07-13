@@ -49,7 +49,7 @@ def julia_cpu_prepare(cr, ci, N, bound, lim, cutoff):
     return prg.foo, queue, ctx
 
 
-def julia_opencl(cr, ci, N, bound=1.5, lim=4., cutoff=1e6):
+def julia_pyopencl(cr, ci, N, bound=1.5, lim=4., cutoff=1e6):
     output = np.empty((N, N), dtype='int64')
     args = (cr, ci, N, bound, lim, cutoff)
     try:
@@ -67,5 +67,5 @@ def julia_opencl(cr, ci, N, bound=1.5, lim=4., cutoff=1e6):
 
 
 benchmarks = (
-    julia_opencl,
+    julia_pyopencl,
 )
