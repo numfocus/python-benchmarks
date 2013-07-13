@@ -1,3 +1,6 @@
+# Authors: James Bergstra
+# License: MIT
+
 import numpy as np
 import pyopencl as cl
 

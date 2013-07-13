@@ -1,3 +1,6 @@
+# Authors: James Bergstra
+# License: MIT
+
 import numpy as np
 import time
 import pyopencl as cl
