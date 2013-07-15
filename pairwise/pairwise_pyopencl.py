@@ -72,7 +72,7 @@ def pairwise_pyopencl_cpu(data):
     dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, N * N * data.dtype.itemsize)
     rval, _ = cl.enqueue_map_buffer(queue, dest_buf, cl.map_flags.READ,
             offset=0, shape=(N, N), dtype=data.dtype)
-    ev = f(queue, (N, 1), (4, 1), data_buf, dest_buf)
+    ev = f(queue, (N, 1), (1, 1), data_buf, dest_buf)
     queue.finish()
     if PROFILING:
         comptimes.append(1e-9 * (ev.profile.end - ev.profile.start))
