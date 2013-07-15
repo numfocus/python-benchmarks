@@ -27,22 +27,29 @@ def pairwise_pyopencl_cpu_prepare(shp, dtype):
             'float64': 'double',
             }[str(dtype)]
 
+    odd_d = "" if 0 == D % 2 else """
+    __global %(ctype)s * a1 = (__global %(ctype)s*) (a);
+    %(ctype)s diff = a1[(n0 + 1) * %(D)s - 1] - a1[(m0 + 1) * %(D)s - 1];
+    buf.s0 += diff * diff;
+    """
+
     prg = cl.Program(ctx, """
-        __kernel void foo(__global %(ctype)s *a, __global %(ctype)s *c)
+        __kernel void foo(__global %(ctype)s2 *a, __global %(ctype)s *c)
         {
           for(int n0 = get_global_id(0); n0 < %(N)s; n0 += get_global_size(0))
           {
               for(int m0 = get_global_id(1); m0 < %(N)s; m0 += get_global_size(1))
               {
-                  __global %(ctype)s *an = a + n0 * %(D)s;
-                  __global %(ctype)s *am = a + m0 * %(D)s;
-                  %(ctype)s buf = 0;
-                  for (int d = 0; d < %(D)s; ++d)
+                  __global %(ctype)s2 *an = a + n0 * %(D)s / 2;
+                  __global %(ctype)s2 *am = a + m0 * %(D)s / 2;
+                  %(ctype)s2 buf = 0;
+                  for (int d = 0; d < %(D)s/2; ++d)
                   {
-                    %(ctype)s diff = am[d] - an[d];
+                    %(ctype)s2 diff = am[d] - an[d];
                     buf += diff * diff;
                   }
-                  c[m0 * %(N)s + n0] = sqrt(buf);
+                  %(odd_d)s;
+                  c[m0 * %(N)s + n0] = sqrt(buf.s0 + buf.s1);
               }
           }
         }
@@ -62,9 +69,10 @@ def pairwise_pyopencl_cpu(data):
         f = pairwise_pyopencl_cpu_prepare(data.shape, data.dtype)
         _cache[(data.shape, data.dtype)] = f
     data_buf = cl.Buffer(ctx, mf.COPY_HOST_PTR, hostbuf=data)
-    dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, rval.nbytes)
+    dest_buf = cl.Buffer(ctx, mf.WRITE_ONLY, N * N * data.dtype.itemsize)
+    rval, _ = cl.enqueue_map_buffer(queue, dest_buf, cl.map_flags.READ,
+            offset=0, shape=(N, N), dtype=data.dtype)
     ev = f(queue, (N, 1), (4, 1), data_buf, dest_buf)
-    cl.enqueue_copy(queue, rval, dest_buf)
     queue.finish()
     if PROFILING:
         comptimes.append(1e-9 * (ev.profile.end - ev.profile.start))
