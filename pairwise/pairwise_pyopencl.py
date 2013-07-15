@@ -91,7 +91,7 @@ def pairwise_pyopencl_cpu(data):
     lower(queue, (N, 1), (1, 1), data_buf, dest_buf)
     upper(queue, (4, 4), (1, 1), data_buf, dest_buf)
     if need_copy:
-        cl.enqueue_copy(queue, rval, dest_buffer)
+        cl.enqueue_copy(queue, rval, dest_buf)
     else:
         queue.finish()
     if PROFILING:
