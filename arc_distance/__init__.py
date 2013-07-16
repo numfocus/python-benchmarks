@@ -13,7 +13,7 @@ See also http://en.wikipedia.org/wiki/Great-circle_distance
 import numpy as np
 
 
-def make_env(n=100):
+def make_env(n=1000):
     rng = np.random.RandomState(42)
     a = rng.rand(n, 2)
     b = rng.rand(n, 2)
