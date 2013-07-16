@@ -7,111 +7,103 @@
         {
           "name": "arc_distance_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.001032114028930664, 
+          "warm_time": 0.10498595237731934, 
           "all_warm_times": [
-            0.0011420249938964844, 
-            0.001055002212524414, 
-            0.0010781288146972656, 
-            0.0010609626770019531, 
-            0.001032114028930664
+            0.10577583312988281, 
+            0.10660600662231445, 
+            0.10523700714111328, 
+            0.10550093650817871, 
+            0.10498595237731934
           ], 
-          "std_warm_times": 3.7226723054896636e-05, 
+          "std_warm_times": 0.00055845545510008654, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_pythran.py", 
           "rank": 1, 
-          "speedup": 54.64218064218064
-        }, 
-        {
-          "name": "arc_distance_numpy_broadcast", 
-          "cold_time": null, 
-          "warm_time": 0.001062154769897461, 
-          "all_warm_times": [
-            0.0012829303741455078, 
-            0.001062154769897461, 
-            0.00115203857421875, 
-            0.001154184341430664, 
-            0.0011858940124511719
-          ], 
-          "std_warm_times": 7.095980999538455e-05, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 2, 
-          "speedup": 53.09674523007856
-        }, 
-        {
-          "name": "arc_distance_theano_alloc", 
-          "cold_time": null, 
-          "warm_time": 0.0011310577392578125, 
-          "all_warm_times": [
-            0.0013039112091064453, 
-            0.001190185546875, 
-            0.0011589527130126953, 
-            0.0011310577392578125, 
-            0.001194000244140625
-          ], 
-          "std_warm_times": 5.8774004960682408e-05, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
-          "rank": 3, 
-          "speedup": 49.86214165261383
+          "speedup": 55.04899362542382
         }, 
         {
           "name": "arc_distance_theano_broadcast", 
           "cold_time": null, 
-          "warm_time": 0.0011670589447021484, 
+          "warm_time": 0.11734700202941895, 
           "all_warm_times": [
-            0.0012891292572021484, 
-            0.0012171268463134766, 
-            0.0011670589447021484, 
-            0.0012400150299072266, 
-            0.0012640953063964844
+            0.11909890174865723, 
+            0.12147808074951172, 
+            0.11832499504089355, 
+            0.11734700202941895, 
+            0.11771607398986816
           ], 
-          "std_warm_times": 4.1799339669914446e-05, 
+          "std_warm_times": 0.0014678516896899014, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
+          "rank": 2, 
+          "speedup": 49.25026564998405
+        }, 
+        {
+          "name": "arc_distance_numpy_broadcast", 
+          "cold_time": null, 
+          "warm_time": 0.12993097305297852, 
+          "all_warm_times": [
+            0.13030791282653809, 
+            0.1299760341644287, 
+            0.1300048828125, 
+            0.12993097305297852, 
+            0.13011503219604492
+          ], 
+          "std_warm_times": 0.0001348945773157766, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
+          "rank": 3, 
+          "speedup": 44.480318182652255
+        }, 
+        {
+          "name": "arc_distance_theano_alloc", 
+          "cold_time": null, 
+          "warm_time": 0.14725089073181152, 
+          "all_warm_times": [
+            0.15047311782836914, 
+            0.14725089073181152, 
+            0.14763498306274414, 
+            0.1517961025238037, 
+            0.15173602104187012
+          ], 
+          "std_warm_times": 0.0019681755811058188, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
           "rank": 4, 
-          "speedup": 48.32400408580184
+          "speedup": 39.248462229706206
         }, 
         {
           "name": "arc_distance_numpy_tile", 
           "cold_time": null, 
-          "warm_time": 0.0013239383697509766, 
+          "warm_time": 0.1907179355621338, 
           "all_warm_times": [
-            0.001811981201171875, 
-            0.0014109611511230469, 
-            0.0013239383697509766, 
-            0.0015079975128173828, 
-            0.0013880729675292969
+            0.2180309295654297, 
+            0.1907179355621338, 
+            0.19221806526184082, 
+            0.19433093070983887, 
+            0.19542384147644043
           ], 
-          "std_warm_times": 0.00017216189583481835, 
+          "std_warm_times": 0.01007662505327786, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
           "rank": 5, 
-          "speedup": 42.59787502251036
+          "speedup": 30.30323816238691
         }, 
         {
           "name": "arc_distance_numba_for_loops", 
-          "cold_time": 0.8395638465881348, 
-          "warm_time": 0.011101007461547852, 
+          "cold_time": null, 
+          "warm_time": 1.838897943496704, 
           "all_warm_times": [
-            0.011259078979492188, 
-            0.011219024658203125, 
-            0.01155400276184082, 
-            0.011101007461547852, 
-            0.011178970336914062
+            1.838897943496704
           ], 
-          "std_warm_times": 0.00015487587216813593, 
+          "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_numba.py", 
           "rank": 6, 
-          "speedup": 5.080346212495436
+          "speedup": 3.142844899912445
         }, 
         {
           "name": "arc_distance_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0563969612121582, 
+          "warm_time": 5.779371023178101, 
           "all_warm_times": [
-            0.0607759952545166, 
-            0.0563969612121582, 
-            0.05726981163024902, 
-            0.059216976165771484, 
-            0.058502197265625
+            5.779371023178101
           ], 
-          "std_warm_times": 0.0015236464754676837, 
+          "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
           "rank": 7, 
           "speedup": 1.0
@@ -127,57 +119,57 @@
         {
           "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.005984067916870117, 
+          "warm_time": 0.00598907470703125, 
           "all_warm_times": [
-            0.008294820785522461, 
-            0.006506919860839844, 
-            0.006515026092529297, 
-            0.005984067916870117, 
-            0.0065860748291015625
+            0.010909080505371094, 
+            0.006994962692260742, 
+            0.00598907470703125, 
+            0.006115913391113281, 
+            0.006072998046875
           ], 
-          "std_warm_times": 0.0007887390603794214, 
+          "std_warm_times": 0.0018820037180273695, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
           "rank": 1, 
-          "speedup": 1805.553368660106
+          "speedup": 1702.7673964968153
         }, 
         {
           "name": "growcut_pythran", 
           "cold_time": null, 
-          "warm_time": 0.01003408432006836, 
+          "warm_time": 0.009686946868896484, 
           "all_warm_times": [
-            0.015601873397827148, 
-            0.013773918151855469, 
-            0.011842966079711914, 
-            0.012469768524169922, 
-            0.01003408432006836
+            0.009747982025146484, 
+            0.009686946868896484, 
+            0.009876012802124023, 
+            0.010107040405273438, 
+            0.01069498062133789
           ], 
-          "std_warm_times": 0.0018686293594396928, 
+          "std_warm_times": 0.00036572988525110242, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py", 
           "rank": 2, 
-          "speedup": 1076.7852492515326
+          "speedup": 1052.757002215112
         }, 
         {
           "name": "growcut_numba", 
-          "cold_time": 0.7984809875488281, 
-          "warm_time": 0.04455399513244629, 
+          "cold_time": 0.7024440765380859, 
+          "warm_time": 0.04504513740539551, 
           "all_warm_times": [
-            0.04487299919128418, 
-            0.04455399513244629, 
-            0.04504704475402832, 
-            0.05878090858459473, 
-            0.05613398551940918
+            0.04504513740539551, 
+            0.04663491249084473, 
+            0.0452880859375, 
+            0.04516482353210449, 
+            0.044580936431884766
           ], 
-          "std_warm_times": 0.0062471165407834437, 
+          "std_warm_times": 0.00068895036907357988, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
           "rank": 3, 
-          "speedup": 242.50471710734027
+          "speedup": 226.39516124763804
         }, 
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 10.804553985595703, 
+          "warm_time": 10.198001146316528, 
           "all_warm_times": [
-            10.804553985595703
+            10.198001146316528
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py", 
@@ -201,79 +193,63 @@
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia", 
       "records": [
         {
-          "name": "julia_pyopencl", 
-          "cold_time": 0.01613903045654297, 
-          "warm_time": 0.002377033233642578, 
-          "all_warm_times": [
-            0.0024411678314208984, 
-            0.0026061534881591797, 
-            0.002377033233642578, 
-            0.0024039745330810547, 
-            0.002485990524291992
-          ], 
-          "std_warm_times": 8.0464062837058088e-05, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pyopencl.py", 
-          "rank": 1, 
-          "speedup": 1886.6442326980944
-        }, 
-        {
           "name": "julia_pythran_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.0024759769439697266, 
+          "warm_time": 0.0026810169219970703, 
           "all_warm_times": [
-            0.004464864730834961, 
-            0.0025098323822021484, 
-            0.002747058868408203, 
-            0.0024871826171875, 
-            0.0024759769439697266
+            0.0030128955841064453, 
+            0.0026810169219970703, 
+            0.003086090087890625, 
+            0.0032749176025390625, 
+            0.0028429031372070312
           ], 
-          "std_warm_times": 0.00077042824163448486, 
+          "std_warm_times": 0.00020371504688378416, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py", 
-          "rank": 2, 
-          "speedup": 1811.2511314395763
+          "rank": 1, 
+          "speedup": 1622.616718541574
         }, 
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.004043102264404297, 
+          "warm_time": 0.00392603874206543, 
           "all_warm_times": [
-            0.006485939025878906, 
-            0.00414586067199707, 
-            0.004261970520019531, 
-            0.004352092742919922, 
-            0.004043102264404297
+            0.006016969680786133, 
+            0.004091978073120117, 
+            0.00392603874206543, 
+            0.0039958953857421875, 
+            0.003936052322387695
           ], 
-          "std_warm_times": 0.00092001797630864024, 
+          "std_warm_times": 0.00081393329548531826, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx", 
-          "rank": 3, 
-          "speedup": 1109.2017336950112
+          "rank": 2, 
+          "speedup": 1108.0539867614016
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.16751503944396973, 
+          "warm_time": 0.1801140308380127, 
           "all_warm_times": [
-            0.21197891235351562, 
-            0.2111361026763916, 
-            0.16882705688476562, 
-            0.16875910758972168, 
-            0.16751503944396973
+            0.1836719512939453, 
+            0.2232198715209961, 
+            0.1801140308380127, 
+            0.186845064163208, 
+            0.2108919620513916
           ], 
-          "std_warm_times": 0.02116574252400126, 
+          "std_warm_times": 0.017007942901845943, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
-          "rank": 4, 
-          "speedup": 26.771423366338887
+          "rank": 3, 
+          "speedup": 24.15282618508365
         }, 
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 4.484616041183472, 
+          "warm_time": 4.350262880325317, 
           "all_warm_times": [
-            4.484616041183472
+            4.350262880325317
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
-          "rank": 5, 
+          "rank": 4, 
           "speedup": 1.0
         }
       ], 
@@ -308,218 +284,202 @@
       "records": [
         {
           "name": "pairwise_theano_blas_float32", 
-          "cold_time": 0.005486965179443359, 
-          "warm_time": 0.0006971359252929688, 
+          "cold_time": 0.004115104675292969, 
+          "warm_time": 0.0006930828094482422, 
           "all_warm_times": [
-            0.0009479522705078125, 
-            0.0007021427154541016, 
-            0.0007429122924804688, 
-            0.0006971359252929688, 
-            0.0008749961853027344
+            0.0009219646453857422, 
+            0.0007028579711914062, 
+            0.0007159709930419922, 
+            0.0006930828094482422, 
+            0.0006930828094482422
           ], 
-          "std_warm_times": 0.00010068497611155062, 
+          "std_warm_times": 8.8684994432963309e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 1, 
-          "speedup": 31019.385430916554
+          "speedup": 32104.72514619883
         }, 
         {
           "name": "pairwise_theano_blas_float64", 
-          "cold_time": 0.002195119857788086, 
-          "warm_time": 0.0010600090026855469, 
+          "cold_time": null, 
+          "warm_time": 0.0013349056243896484, 
           "all_warm_times": [
-            0.001837015151977539, 
-            0.0010600090026855469, 
-            0.0010669231414794922, 
-            0.0011081695556640625, 
-            0.001071929931640625
+            0.001363992691040039, 
+            0.0014319419860839844, 
+            0.0013349056243896484, 
+            0.0013778209686279297, 
+            0.0013561248779296875
           ], 
-          "std_warm_times": 0.00030455873364720957, 
+          "std_warm_times": 3.2602064745157773e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 2, 
-          "speedup": 20400.513495276653
+          "speedup": 16668.768708697982
         }, 
         {
           "name": "pairwise_python_numpy_dot", 
-          "cold_time": 0.00816798210144043, 
-          "warm_time": 0.0015821456909179688, 
+          "cold_time": null, 
+          "warm_time": 0.0016698837280273438, 
           "all_warm_times": [
-            0.0016090869903564453, 
-            0.0016598701477050781, 
-            0.0015881061553955078, 
-            0.0015821456909179688, 
-            0.0017151832580566406
+            0.0025191307067871094, 
+            0.0016698837280273438, 
+            0.0020508766174316406, 
+            0.002089977264404297, 
+            0.0020689964294433594
           ], 
-          "std_warm_times": 5.0253433522829222e-05, 
+          "std_warm_times": 0.00026910952127415369, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 3, 
-          "speedup": 13667.97513562387
+          "speedup": 13325.019417475729
         }, 
         {
-          "name": "pairwise_pyopencl_cpu", 
-          "cold_time": 0.675199031829834, 
-          "warm_time": 0.002012968063354492, 
+          "name": "pairwise_parakeet_inner_numpy", 
+          "cold_time": 0.1569819450378418, 
+          "warm_time": 0.014576911926269531, 
           "all_warm_times": [
-            0.002012968063354492, 
-            0.0021500587463378906, 
-            0.0021088123321533203, 
-            0.003638029098510742, 
-            0.002165079116821289
+            0.015426874160766602, 
+            0.014576911926269531, 
+            0.015570878982543945, 
+            0.01642608642578125, 
+            0.014522075653076172
           ], 
-          "std_warm_times": 0.0006138134988764826, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pyopencl.py", 
+          "std_warm_times": 0.00070504773602218026, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 4, 
-          "speedup": 10742.707923723794
+          "speedup": 1526.4709846254498
         }, 
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.01259303092956543, 
+          "warm_time": 0.014854192733764648, 
           "all_warm_times": [
-            0.013206958770751953, 
-            0.01360321044921875, 
-            0.013031005859375, 
-            0.012829065322875977, 
-            0.01259303092956543
+            0.015406131744384766, 
+            0.016390085220336914, 
+            0.015537023544311523, 
+            0.015711069107055664, 
+            0.014854192733764648
           ], 
-          "std_warm_times": 0.00034311405434901926, 
+          "std_warm_times": 0.00049644537669631811, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx", 
           "rank": 5, 
-          "speedup": 1717.198034798084
+          "speedup": 1497.976598237645
         }, 
         {
           "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.23346185684204102, 
-          "warm_time": 0.012665987014770508, 
+          "cold_time": 0.3295450210571289, 
+          "warm_time": 0.015256881713867188, 
           "all_warm_times": [
-            0.012866973876953125, 
-            0.012930154800415039, 
-            0.012665987014770508, 
-            0.012911081314086914, 
-            0.013889074325561523
+            0.01827383041381836, 
+            0.019268035888671875, 
+            0.015256881713867188, 
+            0.017287015914916992, 
+            0.017708778381347656
           ], 
-          "std_warm_times": 0.00042863418106092716, 
+          "std_warm_times": 0.0013287545790549352, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
           "rank": 6, 
-          "speedup": 1707.306974117647
+          "speedup": 1458.4391173896738
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.16734886169433594, 
-          "warm_time": 0.014348983764648438, 
+          "cold_time": 0.16233205795288086, 
+          "warm_time": 0.015399932861328125, 
           "all_warm_times": [
-            0.01544809341430664, 
-            0.014725923538208008, 
-            0.01450204849243164, 
-            0.014348983764648438, 
-            0.015118837356567383
+            0.018687009811401367, 
+            0.01789093017578125, 
+            0.015399932861328125, 
+            0.015644073486328125, 
+            0.018041133880615234
           ], 
-          "std_warm_times": 0.00040378700633643606, 
+          "std_warm_times": 0.0013442124031236775, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 7, 
-          "speedup": 1507.056410341619
-        }, 
-        {
-          "name": "pairwise_parakeet_inner_numpy", 
-          "cold_time": 0.15027713775634766, 
-          "warm_time": 0.014448165893554688, 
-          "all_warm_times": [
-            0.014657974243164062, 
-            0.014636993408203125, 
-            0.014887094497680664, 
-            0.014448165893554688, 
-            0.014552116394042969
-          ], 
-          "std_warm_times": 0.00014549866845014282, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
-          "rank": 8, 
-          "speedup": 1496.7109405940594
+          "speedup": 1444.8915655189496
         }, 
         {
           "name": "pairwise_pythran_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.015980958938598633, 
+          "warm_time": 0.01578998565673828, 
           "all_warm_times": [
-            0.016999006271362305, 
-            0.021449804306030273, 
-            0.017333030700683594, 
-            0.015980958938598633, 
-            0.016203880310058594
+            0.020771026611328125, 
+            0.019830942153930664, 
+            0.01578998565673828, 
+            0.016011953353881836, 
+            0.015856027603149414
           ], 
-          "std_warm_times": 0.0019911645523690183, 
+          "std_warm_times": 0.0021844213502764929, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py", 
-          "rank": 9, 
-          "speedup": 1353.1558429933311
+          "rank": 8, 
+          "speedup": 1409.199069879809
         }, 
         {
           "name": "pairwise_theano_broadcast_float32", 
           "cold_time": null, 
-          "warm_time": 0.03696417808532715, 
+          "warm_time": 0.03681182861328125, 
           "all_warm_times": [
-            0.0578920841217041, 
-            0.03751516342163086, 
-            0.03696417808532715, 
-            0.03719186782836914, 
-            0.0372309684753418
+            0.05460095405578613, 
+            0.037420034408569336, 
+            0.03681182861328125, 
+            0.03994607925415039, 
+            0.04021716117858887
           ], 
-          "std_warm_times": 0.008268470772442818, 
+          "std_warm_times": 0.0065402259114124874, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
-          "rank": 10, 
-          "speedup": 585.0184985713272
+          "rank": 9, 
+          "speedup": 604.4587823834197
         }, 
         {
           "name": "pairwise_theano_broadcast_float64", 
           "cold_time": null, 
-          "warm_time": 0.049751996994018555, 
+          "warm_time": 0.05004620552062988, 
           "all_warm_times": [
-            0.05244898796081543, 
-            0.05151200294494629, 
-            0.04983091354370117, 
-            0.05043792724609375, 
-            0.049751996994018555
+            0.05372118949890137, 
+            0.0546259880065918, 
+            0.055848121643066406, 
+            0.052690982818603516, 
+            0.05004620552062988
           ], 
-          "std_warm_times": 0.0010387087165005528, 
+          "std_warm_times": 0.001967192926546331, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
-          "rank": 11, 
-          "speedup": 434.65045165927876
+          "rank": 10, 
+          "speedup": 444.61378978509737
         }, 
         {
           "name": "pairwise_python_broadcast_numpy", 
           "cold_time": null, 
-          "warm_time": 0.09984707832336426, 
+          "warm_time": 0.10441708564758301, 
           "all_warm_times": [
-            0.17253804206848145, 
-            0.10148501396179199, 
-            0.1002950668334961, 
-            0.09984707832336426, 
-            0.10080385208129883
+            0.17074298858642578, 
+            0.10441708564758301, 
+            0.10463094711303711, 
+            0.10488009452819824, 
+            0.10457587242126465
           ], 
-          "std_warm_times": 0.028777274546581046, 
+          "std_warm_times": 0.02644721421224324, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 12, 
-          "speedup": 216.5784750793359
+          "rank": 11, 
+          "speedup": 213.0995417358325
         }, 
         {
           "name": "pairwise_python_inner_numpy", 
           "cold_time": null, 
-          "warm_time": 1.8940620422363281, 
+          "warm_time": 2.2365059852600098, 
           "all_warm_times": [
-            1.8940620422363281
+            2.2365059852600098
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 13, 
-          "speedup": 11.417117012106333
+          "rank": 12, 
+          "speedup": 9.949105098551412
         }, 
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 21.624727964401245, 
+          "warm_time": 22.251233100891113, 
           "all_warm_times": [
-            21.624727964401245
+            22.251233100891113
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 14, 
+          "rank": 13, 
           "speedup": 1.0
         }
       ], 
@@ -533,89 +493,89 @@
         {
           "name": "rosen_der_pythran", 
           "cold_time": null, 
-          "warm_time": 0.004765033721923828, 
+          "warm_time": 0.004601955413818359, 
           "all_warm_times": [
-            0.005203962326049805, 
-            0.004765033721923828, 
-            0.004912853240966797, 
-            0.0049800872802734375, 
-            0.007377147674560547
+            0.004621028900146484, 
+            0.004739999771118164, 
+            0.004631996154785156, 
+            0.004601955413818359, 
+            0.006726980209350586
           ], 
-          "std_warm_times": 0.00097498023290960758, 
+          "std_warm_times": 0.00083268415062862588, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py", 
           "rank": 1, 
-          "speedup": 1950.9236965876114
+          "speedup": 2084.461092114807
         }, 
         {
           "name": "rosen_der_cython", 
           "cold_time": null, 
-          "warm_time": 0.006125926971435547, 
+          "warm_time": 0.006919145584106445, 
           "all_warm_times": [
-            0.009800910949707031, 
-            0.006257057189941406, 
-            0.006396055221557617, 
-            0.006125926971435547, 
-            0.00634312629699707
+            0.006919145584106445, 
+            0.010335922241210938, 
+            0.011586189270019531, 
+            0.011744976043701172, 
+            0.011101961135864258
           ], 
-          "std_warm_times": 0.0014111072774664151, 
+          "std_warm_times": 0.0017781880575731982, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_cython.pyx", 
           "rank": 2, 
-          "speedup": 1517.5200825095353
+          "speedup": 1386.384618035216
         }, 
         {
           "name": "rosen_der_theano_float32", 
           "cold_time": null, 
-          "warm_time": 0.0070650577545166016, 
+          "warm_time": 0.006948947906494141, 
           "all_warm_times": [
-            0.012273073196411133, 
-            0.007844924926757812, 
-            0.007750034332275391, 
-            0.0070650577545166016, 
-            0.009202003479003906
+            0.010832071304321289, 
+            0.006948947906494141, 
+            0.0069730281829833984, 
+            0.007010936737060547, 
+            0.007091999053955078
           ], 
-          "std_warm_times": 0.0018571383932218402, 
+          "std_warm_times": 0.0015311057348939064, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
           "rank": 3, 
-          "speedup": 1315.802011271218
+          "speedup": 1380.4387566046798
         }, 
         {
           "name": "rosen_der_theano_float64", 
           "cold_time": null, 
-          "warm_time": 0.008933067321777344, 
+          "warm_time": 0.008795022964477539, 
           "all_warm_times": [
-            0.01257181167602539, 
-            0.008933067321777344, 
-            0.009758949279785156, 
-            0.00925302505493164, 
-            0.009509086608886719
+            0.012418985366821289, 
+            0.008844137191772461, 
+            0.008795022964477539, 
+            0.008929014205932617, 
+            0.008891105651855469
           ], 
-          "std_warm_times": 0.0013122117997136119, 
+          "std_warm_times": 0.0014223771918942417, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
           "rank": 4, 
-          "speedup": 1040.6523166435359
+          "speedup": 1090.6847027569195
         }, 
         {
           "name": "rosen_der_numpy", 
           "cold_time": null, 
-          "warm_time": 0.042135000228881836, 
+          "warm_time": 0.04089188575744629, 
           "all_warm_times": [
-            0.051199913024902344, 
-            0.042675018310546875, 
-            0.04257798194885254, 
-            0.043077945709228516, 
-            0.042135000228881836
+            0.05058598518371582, 
+            0.042207956314086914, 
+            0.04120802879333496, 
+            0.041165828704833984, 
+            0.04089188575744629
           ], 
-          "std_warm_times": 0.0034464431013134541, 
+          "std_warm_times": 0.003714011547042114, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
           "rank": 5, 
-          "speedup": 220.62933790535686
+          "speedup": 234.58436386746195
         }, 
         {
           "name": "rosen_der_python", 
           "cold_time": null, 
-          "warm_time": 9.296217203140259, 
+          "warm_time": 9.592597007751465, 
           "all_warm_times": [
-            9.296217203140259
+            9.592597007751465
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
