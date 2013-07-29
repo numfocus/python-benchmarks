@@ -1,4 +1,4 @@
-# Authors: Yuancheng Peng
+# Authors: Alex Rubinsteyn
 # License: MIT
 
 from arc_distance import arc_distance_python as adp
