@@ -5,171 +5,170 @@
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance", 
       "records": [
         {
-          "name": "arc_distance_pythran_nested_for_loops", 
-          "cold_time": null, 
-          "warm_time": 0.10498595237731934, 
-          "all_warm_times": [
-            0.10577583312988281, 
-            0.10660600662231445, 
-            0.10523700714111328, 
-            0.10550093650817871, 
-            0.10498595237731934
-          ], 
-          "std_warm_times": 0.00055845545510008654, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_pythran.py", 
-          "rank": 1, 
-          "speedup": 55.04899362542382
-        }, 
-        {
           "name": "arc_distance_theano_broadcast", 
           "cold_time": null, 
-          "warm_time": 0.11734700202941895, 
+          "warm_time": 0.11752700805664062, 
           "all_warm_times": [
-            0.11909890174865723, 
-            0.12147808074951172, 
-            0.11832499504089355, 
-            0.11734700202941895, 
-            0.11771607398986816
+            0.12619709968566895, 
+            0.11752700805664062, 
+            0.12017512321472168, 
+            0.1379680633544922, 
+            0.12259697914123535
           ], 
-          "std_warm_times": 0.0014678516896899014, 
+          "std_warm_times": 0.0071336648093831521, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
-          "rank": 2, 
-          "speedup": 49.25026564998405
+          "rank": 1, 
+          "speedup": 51.63922879678016
         }, 
         {
           "name": "arc_distance_numpy_broadcast", 
           "cold_time": null, 
-          "warm_time": 0.12993097305297852, 
+          "warm_time": 0.12985610961914062, 
           "all_warm_times": [
-            0.13030791282653809, 
-            0.1299760341644287, 
-            0.1300048828125, 
-            0.12993097305297852, 
-            0.13011503219604492
+            0.13052821159362793, 
+            0.1322331428527832, 
+            0.13106608390808105, 
+            0.12985610961914062, 
+            0.12991595268249512
           ], 
-          "std_warm_times": 0.0001348945773157766, 
+          "std_warm_times": 0.0008762370439829143, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 3, 
-          "speedup": 44.480318182652255
+          "rank": 2, 
+          "speedup": 46.73637672218795
         }, 
         {
           "name": "arc_distance_theano_alloc", 
           "cold_time": null, 
-          "warm_time": 0.14725089073181152, 
+          "warm_time": 0.14884495735168457, 
           "all_warm_times": [
-            0.15047311782836914, 
-            0.14725089073181152, 
-            0.14763498306274414, 
-            0.1517961025238037, 
-            0.15173602104187012
+            0.14884495735168457, 
+            0.14983510971069336, 
+            0.14977002143859863, 
+            0.1567399501800537, 
+            0.1677839756011963
           ], 
-          "std_warm_times": 0.0019681755811058188, 
+          "std_warm_times": 0.0071770446930641352, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
-          "rank": 4, 
-          "speedup": 39.248462229706206
+          "rank": 3, 
+          "speedup": 40.773998439855134
         }, 
         {
           "name": "arc_distance_numpy_tile", 
           "cold_time": null, 
-          "warm_time": 0.1907179355621338, 
+          "warm_time": 0.19122791290283203, 
           "all_warm_times": [
-            0.2180309295654297, 
-            0.1907179355621338, 
-            0.19221806526184082, 
-            0.19433093070983887, 
-            0.19542384147644043
+            0.20965099334716797, 
+            0.19305801391601562, 
+            0.19122791290283203, 
+            0.19562888145446777, 
+            0.19601011276245117
           ], 
-          "std_warm_times": 0.01007662505327786, 
+          "std_warm_times": 0.0065068791866359083, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 5, 
-          "speedup": 30.30323816238691
+          "rank": 4, 
+          "speedup": 31.737019803807158
         }, 
         {
           "name": "arc_distance_numba_for_loops", 
           "cold_time": null, 
-          "warm_time": 1.838897943496704, 
+          "warm_time": 1.8413431644439697, 
           "all_warm_times": [
-            1.838897943496704
+            1.8413431644439697
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_numba.py", 
-          "rank": 6, 
-          "speedup": 3.142844899912445
+          "rank": 5, 
+          "speedup": 3.2959657797793205
         }, 
         {
           "name": "arc_distance_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 5.779371023178101, 
+          "warm_time": 6.069004058837891, 
           "all_warm_times": [
-            5.779371023178101
+            6.069004058837891
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 7, 
+          "rank": 6, 
           "speedup": 1.0
         }
       ], 
-      "runtime_errors": [], 
-      "import_errors": []
+      "runtime_errors": [
+        {
+          "name": "arc_distance_parakeet_for_loops", 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_parakeet.py", 
+          "error_type": "AssertionError", 
+          "error_message": "Invalid shape for IndexMap: shape.2 : array1(int64)", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/decorators.py\", line 19, in __call__\n    return run_python_fn(self.f, args, kwargs, backend = backend_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 145, in run_python_fn\n    return run_untyped_fn(untyped, args, kwargs, backend)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 133, in run_untyped_fn\n    typed_fn, linear_args = specialize(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 54, in specialize\n    typed_fn = type_inference.specialize(untyped, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 532, in specialize\n    typed =  _specialize(fundef, full_arg_types, return_type)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 502, in _specialize\n    typed_fundef = infer_types(fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 431, in infer_types\n    body = annotator.transform_block(untyped_fn.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 422, in transform_block\n    new_stmt = self.transform_stmt(old_stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 399, in transform_stmt\n    return self.transform_Assign(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 283, in transform_Assign\n    rhs = self.transform_expr(stmt.rhs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 39, in transform_expr\n    result = Transform.transform_expr(self, expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 271, in transform_expr\n    result = self.transform_Call(expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 88, in transform_Call\n    typed_fn = specialize(untyped_fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 532, in specialize\n    typed =  _specialize(fundef, full_arg_types, return_type)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 502, in _specialize\n    typed_fundef = infer_types(fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 431, in infer_types\n    body = annotator.transform_block(untyped_fn.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 422, in transform_block\n    new_stmt = self.transform_stmt(old_stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 407, in transform_stmt\n    return self.transform_Return(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 318, in transform_Return\n    ret_val = self.transform_expr(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 39, in transform_expr\n    result = Transform.transform_expr(self, expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 281, in transform_expr\n    result = method(expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 149, in transform_IndexMap\n    assert isinstance(shape.type, ScalarT), \"Invalid shape for IndexMap: %s : %s\" % (shape, shape.type)\nAssertionError: Invalid shape for IndexMap: shape.2 : array1(int64)\n"
+        }
+      ], 
+      "import_errors": [
+        {
+          "name": "arc_distance_pythran", 
+          "error_type": "EnvironmentError", 
+          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/arc_distance/arc_distance_pythran.py\", line 32, in <module>\n    native = compile_pythrancode(modname, source)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        }
+      ]
     }, 
     {
       "group_name": "growcut", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut", 
       "records": [
         {
-          "name": "growcut_cython", 
-          "cold_time": null, 
-          "warm_time": 0.00598907470703125, 
+          "name": "growcut_parakeet", 
+          "cold_time": 0.3933980464935303, 
+          "warm_time": 0.005945920944213867, 
           "all_warm_times": [
-            0.010909080505371094, 
-            0.006994962692260742, 
-            0.00598907470703125, 
-            0.006115913391113281, 
-            0.006072998046875
+            0.006263017654418945, 
+            0.005945920944213867, 
+            0.006265163421630859, 
+            0.006066083908081055, 
+            0.005944967269897461
           ], 
-          "std_warm_times": 0.0018820037180273695, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
+          "std_warm_times": 0.0001433425478485909, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
           "rank": 1, 
-          "speedup": 1702.7673964968153
+          "speedup": 1883.3289626689123
         }, 
         {
-          "name": "growcut_pythran", 
+          "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.009686946868896484, 
+          "warm_time": 0.006018161773681641, 
           "all_warm_times": [
-            0.009747982025146484, 
-            0.009686946868896484, 
-            0.009876012802124023, 
-            0.010107040405273438, 
-            0.01069498062133789
+            0.008247852325439453, 
+            0.006411075592041016, 
+            0.006018877029418945, 
+            0.006044864654541016, 
+            0.006018161773681641
           ], 
-          "std_warm_times": 0.00036572988525110242, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py", 
+          "std_warm_times": 0.00086279672269599537, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
           "rank": 2, 
-          "speedup": 1052.757002215112
+          "speedup": 1860.7218524681086
         }, 
         {
           "name": "growcut_numba", 
-          "cold_time": 0.7024440765380859, 
-          "warm_time": 0.04504513740539551, 
+          "cold_time": 0.7733209133148193, 
+          "warm_time": 0.044857025146484375, 
           "all_warm_times": [
-            0.04504513740539551, 
-            0.04663491249084473, 
-            0.0452880859375, 
-            0.04516482353210449, 
-            0.044580936431884766
+            0.04496598243713379, 
+            0.045320987701416016, 
+            0.04532790184020996, 
+            0.044857025146484375, 
+            0.04479408264160156
           ], 
-          "std_warm_times": 0.00068895036907357988, 
+          "std_warm_times": 0.00022821246057571818, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
           "rank": 3, 
-          "speedup": 226.39516124763804
+          "speedup": 249.64038715026788
         }, 
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 10.198001146316528, 
+          "warm_time": 11.198125123977661, 
           "all_warm_times": [
-            10.198001146316528
+            11.198125123977661
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py", 
@@ -177,75 +176,74 @@
           "speedup": 1.0
         }
       ], 
-      "runtime_errors": [
+      "runtime_errors": [], 
+      "import_errors": [
         {
-          "name": "growcut_parakeet", 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
-          "error_type": "NameNotFound", 
-          "error_message": "d", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 726, in visit_For\n    body, merge, _ = self.visit_loop_body(stmt.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 703, in visit_loop_body\n    scope_after, body = self.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 726, in visit_For\n    body, merge, _ = self.visit_loop_body(stmt.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 703, in visit_loop_body\n    scope_after, body = self.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 726, in visit_For\n    body, merge, _ = self.visit_loop_body(stmt.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 703, in visit_loop_body\n    scope_after, body = self.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 726, in visit_For\n    body, merge, _ = self.visit_loop_body(stmt.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 703, in visit_loop_body\n    scope_after, body = self.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 695, in visit_If\n    merge = self.create_phi_nodes(true_scope, false_scope)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 362, in create_phi_nodes\n    right = self.lookup(name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 281, in lookup\n    raise NameNotFound(name)\nNameNotFound: d\n"
+          "name": "growcut_pythran", 
+          "error_type": "EnvironmentError", 
+          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/growcut/growcut_pythran.py\", line 23, in <module>\n    modname, '\\n'.join([imports, exports, source]))\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
         }
-      ], 
-      "import_errors": []
+      ]
     }, 
     {
       "group_name": "julia", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia", 
       "records": [
         {
-          "name": "julia_pythran_for_loops", 
-          "cold_time": null, 
-          "warm_time": 0.0026810169219970703, 
+          "name": "julia_pyopencl", 
+          "cold_time": 0.6411550045013428, 
+          "warm_time": 0.002315998077392578, 
           "all_warm_times": [
-            0.0030128955841064453, 
-            0.0026810169219970703, 
-            0.003086090087890625, 
-            0.0032749176025390625, 
-            0.0028429031372070312
+            0.0024759769439697266, 
+            0.0023610591888427734, 
+            0.002674102783203125, 
+            0.002315998077392578, 
+            0.002405881881713867
           ], 
-          "std_warm_times": 0.00020371504688378416, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py", 
+          "std_warm_times": 0.00012542135292673996, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pyopencl.py", 
           "rank": 1, 
-          "speedup": 1622.616718541574
+          "speedup": 1916.7830965616636
         }, 
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.00392603874206543, 
+          "warm_time": 0.003779172897338867, 
           "all_warm_times": [
-            0.006016969680786133, 
-            0.004091978073120117, 
-            0.00392603874206543, 
-            0.0039958953857421875, 
-            0.003936052322387695
+            0.006151914596557617, 
+            0.003877878189086914, 
+            0.003779172897338867, 
+            0.0038330554962158203, 
+            0.003885984420776367
           ], 
-          "std_warm_times": 0.00081393329548531826, 
+          "std_warm_times": 0.00092393988698250614, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx", 
           "rank": 2, 
-          "speedup": 1108.0539867614016
+          "speedup": 1174.6660147624755
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.1801140308380127, 
+          "warm_time": 0.16804003715515137, 
           "all_warm_times": [
-            0.1836719512939453, 
-            0.2232198715209961, 
-            0.1801140308380127, 
-            0.186845064163208, 
-            0.2108919620513916
+            0.19313287734985352, 
+            0.19598388671875, 
+            0.18004298210144043, 
+            0.16804003715515137, 
+            0.1756448745727539
           ], 
-          "std_warm_times": 0.017007942901845943, 
+          "std_warm_times": 0.010554333053483843, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
           "rank": 3, 
-          "speedup": 24.15282618508365
+          "speedup": 26.417906360712305
         }, 
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 4.350262880325317, 
+          "warm_time": 4.439265966415405, 
           "all_warm_times": [
-            4.350262880325317
+            4.439265966415405
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
@@ -266,17 +264,24 @@
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py", 
           "error_type": "AssertionError", 
           "error_message": "Unsupported primitive: <type 'numpy.uint32'>", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 517, in visit_Call\n    keywords_dict[kwd.arg] = self.visit(kwd.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 631, in visit_Attribute\n    return value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <type 'numpy.uint32'>\n"
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/decorators.py\", line 19, in __call__\n    return run_python_fn(self.f, args, kwargs, backend = backend_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 144, in run_python_fn\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 879, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 825, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 769, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 731, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 662, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 501, in visit_Call\n    keywords_dict[kwd.arg] = self.visit(kwd.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 616, in visit_Attribute\n    return value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 111, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 841, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <type 'numpy.uint32'>\n"
         }, 
         {
           "name": "julia_parakeet_numpy", 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py", 
           "error_type": "AssertionError", 
           "error_message": "Unsupported primitive: <built-in function geterrobj>", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/decorators.py\", line 115, in __call__\n    return run_function.run(self.f, *args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 134, in run\n    untyped, _, compiled, all_args = specialize_and_compile(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 116, in specialize_and_compile\n    untyped, arg_values, arg_types = prepare_args(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/run_function.py\", line 98, in prepare_args\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 497, in translate_value_call\n    return syntax.Call(translate_function_value(value),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 893, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 840, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 784, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 746, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 677, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 487, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 553, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 500, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 482, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 135, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet-0.13-py2.7.egg/parakeet/ast_conversion.py\", line 855, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function geterrobj>\n"
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/decorators.py\", line 19, in __call__\n    return run_python_fn(self.f, args, kwargs, backend = backend_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 144, in run_python_fn\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 879, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 825, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 769, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 731, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 662, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 537, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 481, in translate_value_call\n    return syntax.Call(translate_function_value(value),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 879, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 825, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 769, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 731, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 662, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 537, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 484, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 465, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 111, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 841, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function geterrobj>\n"
         }
       ], 
-      "import_errors": []
+      "import_errors": [
+        {
+          "name": "julia_pythran", 
+          "error_type": "EnvironmentError", 
+          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py\", line 29, in <module>\n    cxxflags=['-O2', '-fopenmp'])\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        }
+      ]
     }, 
     {
       "group_name": "pairwise", 
@@ -284,198 +289,198 @@
       "records": [
         {
           "name": "pairwise_theano_blas_float32", 
-          "cold_time": 0.004115104675292969, 
-          "warm_time": 0.0006930828094482422, 
+          "cold_time": 0.003612995147705078, 
+          "warm_time": 0.0008840560913085938, 
           "all_warm_times": [
-            0.0009219646453857422, 
-            0.0007028579711914062, 
-            0.0007159709930419922, 
-            0.0006930828094482422, 
-            0.0006930828094482422
+            0.0010831356048583984, 
+            0.0008840560913085938, 
+            0.00092315673828125, 
+            0.0009169578552246094, 
+            0.0009169578552246094
           ], 
-          "std_warm_times": 8.8684994432963309e-05, 
+          "std_warm_times": 7.0491629133333849e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 1, 
-          "speedup": 32104.72514619883
+          "speedup": 24946.626483279397
         }, 
         {
           "name": "pairwise_theano_blas_float64", 
           "cold_time": null, 
-          "warm_time": 0.0013349056243896484, 
+          "warm_time": 0.0013680458068847656, 
           "all_warm_times": [
-            0.001363992691040039, 
-            0.0014319419860839844, 
-            0.0013349056243896484, 
-            0.0013778209686279297, 
-            0.0013561248779296875
+            0.0019237995147705078, 
+            0.002804994583129883, 
+            0.0013849735260009766, 
+            0.001394033432006836, 
+            0.0013680458068847656
           ], 
-          "std_warm_times": 3.2602064745157773e-05, 
+          "std_warm_times": 0.00055603918658313895, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 2, 
-          "speedup": 16668.768708697982
+          "speedup": 16120.963924712443
         }, 
         {
           "name": "pairwise_python_numpy_dot", 
           "cold_time": null, 
-          "warm_time": 0.0016698837280273438, 
+          "warm_time": 0.0015749931335449219, 
           "all_warm_times": [
-            0.0025191307067871094, 
-            0.0016698837280273438, 
-            0.0020508766174316406, 
-            0.002089977264404297, 
-            0.0020689964294433594
+            0.0025119781494140625, 
+            0.0017230510711669922, 
+            0.001683950424194336, 
+            0.0015749931335449219, 
+            0.0016100406646728516
           ], 
-          "std_warm_times": 0.00026910952127415369, 
+          "std_warm_times": 0.00034952836986473697, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 3, 
-          "speedup": 13325.019417475729
+          "speedup": 14002.738570996064
         }, 
         {
-          "name": "pairwise_parakeet_inner_numpy", 
-          "cold_time": 0.1569819450378418, 
-          "warm_time": 0.014576911926269531, 
+          "name": "pairwise_pyopencl_cpu", 
+          "cold_time": 0.10491108894348145, 
+          "warm_time": 0.002042055130004883, 
           "all_warm_times": [
-            0.015426874160766602, 
-            0.014576911926269531, 
-            0.015570878982543945, 
-            0.01642608642578125, 
-            0.014522075653076172
+            0.002079010009765625, 
+            0.002042055130004883, 
+            0.0024399757385253906, 
+            0.0025839805603027344, 
+            0.002579927444458008
           ], 
-          "std_warm_times": 0.00070504773602218026, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
+          "std_warm_times": 0.00023826425326064989, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pyopencl.py", 
           "rank": 4, 
-          "speedup": 1526.4709846254498
+          "speedup": 10800.010624635142
+        }, 
+        {
+          "name": "pairwise_numba_nested_for_loops", 
+          "cold_time": 0.22542405128479004, 
+          "warm_time": 0.012491941452026367, 
+          "all_warm_times": [
+            0.01273202896118164, 
+            0.01335000991821289, 
+            0.012491941452026367, 
+            0.012624025344848633, 
+            0.012612104415893555
+          ], 
+          "std_warm_times": 0.00030367457436963771, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
+          "rank": 5, 
+          "speedup": 1765.475541559309
         }, 
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.014854192733764648, 
+          "warm_time": 0.012761116027832031, 
           "all_warm_times": [
-            0.015406131744384766, 
-            0.016390085220336914, 
-            0.015537023544311523, 
-            0.015711069107055664, 
-            0.014854192733764648
+            0.01458287239074707, 
+            0.012997865676879883, 
+            0.013466119766235352, 
+            0.01285409927368164, 
+            0.012761116027832031
           ], 
-          "std_warm_times": 0.00049644537669631811, 
+          "std_warm_times": 0.00067061350267215642, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx", 
-          "rank": 5, 
-          "speedup": 1497.976598237645
-        }, 
-        {
-          "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.3295450210571289, 
-          "warm_time": 0.015256881713867188, 
-          "all_warm_times": [
-            0.01827383041381836, 
-            0.019268035888671875, 
-            0.015256881713867188, 
-            0.017287015914916992, 
-            0.017708778381347656
-          ], 
-          "std_warm_times": 0.0013287545790549352, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
           "rank": 6, 
-          "speedup": 1458.4391173896738
+          "speedup": 1728.2357633958597
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.16233205795288086, 
-          "warm_time": 0.015399932861328125, 
+          "cold_time": 0.1280360221862793, 
+          "warm_time": 0.014158964157104492, 
           "all_warm_times": [
-            0.018687009811401367, 
-            0.01789093017578125, 
-            0.015399932861328125, 
-            0.015644073486328125, 
-            0.018041133880615234
+            0.0571131706237793, 
+            0.014158964157104492, 
+            0.01432490348815918, 
+            0.014358043670654297, 
+            0.014583110809326172
           ], 
-          "std_warm_times": 0.0013442124031236775, 
+          "std_warm_times": 0.017103300289307812, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 7, 
-          "speedup": 1444.8915655189496
+          "speedup": 1557.6151514641251
         }, 
         {
-          "name": "pairwise_pythran_nested_for_loops", 
-          "cold_time": null, 
-          "warm_time": 0.01578998565673828, 
+          "name": "pairwise_parakeet_inner_numpy", 
+          "cold_time": 0.21443891525268555, 
+          "warm_time": 0.015486001968383789, 
           "all_warm_times": [
-            0.020771026611328125, 
-            0.019830942153930664, 
-            0.01578998565673828, 
-            0.016011953353881836, 
-            0.015856027603149414
+            0.07711386680603027, 
+            0.08027195930480957, 
+            0.015486001968383789, 
+            0.015501976013183594, 
+            0.015503168106079102
           ], 
-          "std_warm_times": 0.0021844213502764929, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py", 
+          "std_warm_times": 0.030975628111307645, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 8, 
-          "speedup": 1409.199069879809
+          "speedup": 1424.1388542484565
         }, 
         {
           "name": "pairwise_theano_broadcast_float32", 
           "cold_time": null, 
-          "warm_time": 0.03681182861328125, 
+          "warm_time": 0.03640890121459961, 
           "all_warm_times": [
-            0.05460095405578613, 
-            0.037420034408569336, 
-            0.03681182861328125, 
-            0.03994607925415039, 
-            0.04021716117858887
+            0.05952310562133789, 
+            0.03640890121459961, 
+            0.03679609298706055, 
+            0.03659796714782715, 
+            0.03673505783081055
           ], 
-          "std_warm_times": 0.0065402259114124874, 
+          "std_warm_times": 0.0091564064114607324, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 9, 
-          "speedup": 604.4587823834197
+          "speedup": 605.7369589417851
         }, 
         {
           "name": "pairwise_theano_broadcast_float64", 
           "cold_time": null, 
-          "warm_time": 0.05004620552062988, 
+          "warm_time": 0.05067586898803711, 
           "all_warm_times": [
-            0.05372118949890137, 
-            0.0546259880065918, 
-            0.055848121643066406, 
-            0.052690982818603516, 
-            0.05004620552062988
+            0.05210399627685547, 
+            0.05072593688964844, 
+            0.05067586898803711, 
+            0.05135798454284668, 
+            0.0554049015045166
           ], 
-          "std_warm_times": 0.001967192926546331, 
+          "std_warm_times": 0.0017537659139300805, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 10, 
-          "speedup": 444.61378978509737
+          "speedup": 435.20155728063986
         }, 
         {
           "name": "pairwise_python_broadcast_numpy", 
           "cold_time": null, 
-          "warm_time": 0.10441708564758301, 
+          "warm_time": 0.10027217864990234, 
           "all_warm_times": [
-            0.17074298858642578, 
-            0.10441708564758301, 
-            0.10463094711303711, 
-            0.10488009452819824, 
-            0.10457587242126465
+            0.1942131519317627, 
+            0.10027217864990234, 
+            0.1037759780883789, 
+            0.10120511054992676, 
+            0.10114812850952148
           ], 
-          "std_warm_times": 0.02644721421224324, 
+          "std_warm_times": 0.037063629439677517, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 11, 
-          "speedup": 213.0995417358325
+          "speedup": 219.9435316663972
         }, 
         {
           "name": "pairwise_python_inner_numpy", 
           "cold_time": null, 
-          "warm_time": 2.2365059852600098, 
+          "warm_time": 1.8791909217834473, 
           "all_warm_times": [
-            2.2365059852600098
+            1.8791909217834473
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 12, 
-          "speedup": 9.949105098551412
+          "speedup": 11.73601726386208
         }, 
         {
           "name": "pairwise_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 22.251233100891113, 
+          "warm_time": 22.054217100143433, 
           "all_warm_times": [
-            22.251233100891113
+            22.054217100143433
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
@@ -484,107 +489,137 @@
         }
       ], 
       "runtime_errors": [], 
-      "import_errors": []
+      "import_errors": [
+        {
+          "name": "pairwise_pythran", 
+          "error_type": "EnvironmentError", 
+          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py\", line 25, in <module>\n    cxxflags=['-O2', '-fopenmp']\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        }
+      ]
     }, 
     {
       "group_name": "rosen_der", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der", 
       "records": [
         {
-          "name": "rosen_der_pythran", 
-          "cold_time": null, 
-          "warm_time": 0.004601955413818359, 
-          "all_warm_times": [
-            0.004621028900146484, 
-            0.004739999771118164, 
-            0.004631996154785156, 
-            0.004601955413818359, 
-            0.006726980209350586
-          ], 
-          "std_warm_times": 0.00083268415062862588, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py", 
-          "rank": 1, 
-          "speedup": 2084.461092114807
-        }, 
-        {
           "name": "rosen_der_cython", 
           "cold_time": null, 
-          "warm_time": 0.006919145584106445, 
+          "warm_time": 0.006677150726318359, 
           "all_warm_times": [
-            0.006919145584106445, 
-            0.010335922241210938, 
-            0.011586189270019531, 
-            0.011744976043701172, 
-            0.011101961135864258
+            0.0071489810943603516, 
+            0.006677150726318359, 
+            0.006685018539428711, 
+            0.01131892204284668, 
+            0.007403850555419922
           ], 
-          "std_warm_times": 0.0017781880575731982, 
+          "std_warm_times": 0.0017582151461244884, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_cython.pyx", 
-          "rank": 2, 
-          "speedup": 1386.384618035216
+          "rank": 1, 
+          "speedup": 1561.2509462258088
         }, 
         {
           "name": "rosen_der_theano_float32", 
           "cold_time": null, 
-          "warm_time": 0.006948947906494141, 
+          "warm_time": 0.0074880123138427734, 
           "all_warm_times": [
-            0.010832071304321289, 
-            0.006948947906494141, 
-            0.0069730281829833984, 
-            0.007010936737060547, 
-            0.007091999053955078
+            0.012454986572265625, 
+            0.009068965911865234, 
+            0.0074880123138427734, 
+            0.011595010757446289, 
+            0.0106048583984375
           ], 
-          "std_warm_times": 0.0015311057348939064, 
+          "std_warm_times": 0.0017787675717116282, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
-          "rank": 3, 
-          "speedup": 1380.4387566046798
+          "rank": 2, 
+          "speedup": 1392.186264208616
         }, 
         {
           "name": "rosen_der_theano_float64", 
           "cold_time": null, 
-          "warm_time": 0.008795022964477539, 
+          "warm_time": 0.009441852569580078, 
           "all_warm_times": [
-            0.012418985366821289, 
-            0.008844137191772461, 
-            0.008795022964477539, 
-            0.008929014205932617, 
-            0.008891105651855469
+            0.009441852569580078, 
+            0.011906147003173828, 
+            0.011201858520507812, 
+            0.012555122375488281, 
+            0.01157999038696289
           ], 
-          "std_warm_times": 0.0014223771918942417, 
+          "std_warm_times": 0.0010465793580402808, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
+          "rank": 3, 
+          "speedup": 1104.095601232261
+        }, 
+        {
+          "name": "rosen_der_loops_parakeet", 
+          "cold_time": 0.2917931079864502, 
+          "warm_time": 0.012340068817138672, 
+          "all_warm_times": [
+            0.1342029571533203, 
+            0.13878607749938965, 
+            0.012541055679321289, 
+            0.012340068817138672, 
+            0.014846086502075195
+          ], 
+          "std_warm_times": 0.060404769046675771, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py", 
           "rank": 4, 
-          "speedup": 1090.6847027569195
+          "speedup": 844.7852312685961
+        }, 
+        {
+          "name": "rosen_der_numpy_parakeet", 
+          "cold_time": 0.5165719985961914, 
+          "warm_time": 0.014848947525024414, 
+          "all_warm_times": [
+            0.1734151840209961, 
+            0.015077829360961914, 
+            0.015135049819946289, 
+            0.014848947525024414, 
+            0.014651060104370117
+          ], 
+          "std_warm_times": 0.063395018799909914, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py", 
+          "rank": 5, 
+          "speedup": 702.0502882098874
         }, 
         {
           "name": "rosen_der_numpy", 
           "cold_time": null, 
-          "warm_time": 0.04089188575744629, 
+          "warm_time": 0.0424189567565918, 
           "all_warm_times": [
-            0.05058598518371582, 
-            0.042207956314086914, 
-            0.04120802879333496, 
-            0.041165828704833984, 
-            0.04089188575744629
+            0.05023312568664551, 
+            0.04294610023498535, 
+            0.04265403747558594, 
+            0.0424189567565918, 
+            0.044087886810302734
           ], 
-          "std_warm_times": 0.003714011547042114, 
+          "std_warm_times": 0.0029389242033642342, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
-          "rank": 5, 
-          "speedup": 234.58436386746195
+          "rank": 6, 
+          "speedup": 245.75587630256635
         }, 
         {
           "name": "rosen_der_python", 
           "cold_time": null, 
-          "warm_time": 9.592597007751465, 
+          "warm_time": 10.424707889556885, 
           "all_warm_times": [
-            9.592597007751465
+            10.424707889556885
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
-          "rank": 6, 
+          "rank": 7, 
           "speedup": 1.0
         }
       ], 
       "runtime_errors": [], 
-      "import_errors": []
+      "import_errors": [
+        {
+          "name": "rosen_der_pythran", 
+          "error_type": "EnvironmentError", 
+          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
+          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/rosen_der/rosen_der_pythran.py\", line 27, in <module>\n    cxxflags=['-O2', '-fopenmp'])\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
+        }
+      ]
     }
   ], 
   "benchmark_environment": {}
