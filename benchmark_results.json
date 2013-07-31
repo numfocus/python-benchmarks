@@ -5,91 +5,107 @@
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance", 
       "records": [
         {
+          "name": "arc_distance_pythran_nested_for_loops", 
+          "cold_time": null, 
+          "warm_time": 0.10692000389099121, 
+          "all_warm_times": [
+            0.10775494575500488, 
+            0.10710906982421875, 
+            0.10692000389099121, 
+            0.10804986953735352, 
+            0.10749983787536621
+          ], 
+          "std_warm_times": 0.0004125642765191236, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_pythran.py", 
+          "rank": 1, 
+          "speedup": 59.87967577571886
+        }, 
+        {
           "name": "arc_distance_theano_broadcast", 
           "cold_time": null, 
-          "warm_time": 0.11752700805664062, 
+          "warm_time": 0.11812305450439453, 
           "all_warm_times": [
-            0.12619709968566895, 
-            0.11752700805664062, 
-            0.12017512321472168, 
-            0.1379680633544922, 
-            0.12259697914123535
+            0.11812305450439453, 
+            0.11903595924377441, 
+            0.12226200103759766, 
+            0.12069988250732422, 
+            0.12007689476013184
           ], 
-          "std_warm_times": 0.0071336648093831521, 
+          "std_warm_times": 0.001418229294307595, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
-          "rank": 1, 
-          "speedup": 51.63922879678016
+          "rank": 2, 
+          "speedup": 54.20055546136395
         }, 
         {
           "name": "arc_distance_numpy_broadcast", 
           "cold_time": null, 
-          "warm_time": 0.12985610961914062, 
+          "warm_time": 0.13182783126831055, 
           "all_warm_times": [
-            0.13052821159362793, 
-            0.1322331428527832, 
-            0.13106608390808105, 
-            0.12985610961914062, 
-            0.12991595268249512
+            0.13376593589782715, 
+            0.13227105140686035, 
+            0.1328439712524414, 
+            0.13182783126831055, 
+            0.13290190696716309
           ], 
-          "std_warm_times": 0.0008762370439829143, 
+          "std_warm_times": 0.00065420759997265193, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 2, 
-          "speedup": 46.73637672218795
+          "rank": 3, 
+          "speedup": 48.565884042349246
         }, 
         {
           "name": "arc_distance_theano_alloc", 
           "cold_time": null, 
-          "warm_time": 0.14884495735168457, 
+          "warm_time": 0.15376615524291992, 
           "all_warm_times": [
-            0.14884495735168457, 
-            0.14983510971069336, 
-            0.14977002143859863, 
-            0.1567399501800537, 
-            0.1677839756011963
+            0.15643596649169922, 
+            0.15376615524291992, 
+            0.1580212116241455, 
+            0.1633310317993164, 
+            0.15409302711486816
           ], 
-          "std_warm_times": 0.0071770446930641352, 
+          "std_warm_times": 0.0034718119344371943, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py", 
-          "rank": 3, 
-          "speedup": 40.773998439855134
+          "rank": 4, 
+          "speedup": 41.63682935829888
         }, 
         {
           "name": "arc_distance_numpy_tile", 
           "cold_time": null, 
-          "warm_time": 0.19122791290283203, 
+          "warm_time": 0.19675517082214355, 
           "all_warm_times": [
-            0.20965099334716797, 
-            0.19305801391601562, 
-            0.19122791290283203, 
-            0.19562888145446777, 
-            0.19601011276245117
+            0.21239686012268066, 
+            0.2019948959350586, 
+            0.20080995559692383, 
+            0.19675517082214355, 
+            0.19780397415161133
           ], 
-          "std_warm_times": 0.0065068791866359083, 
+          "std_warm_times": 0.0055608337550796302, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 4, 
-          "speedup": 31.737019803807158
+          "rank": 5, 
+          "speedup": 32.53960310257122
         }, 
         {
           "name": "arc_distance_numba_for_loops", 
           "cold_time": null, 
-          "warm_time": 1.8413431644439697, 
+          "warm_time": 1.8216149806976318, 
           "all_warm_times": [
-            1.8413431644439697
+            1.8216149806976318
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_numba.py", 
-          "rank": 5, 
-          "speedup": 3.2959657797793205
+          "rank": 6, 
+          "speedup": 3.5146478453307526
         }, 
         {
           "name": "arc_distance_python_nested_for_loops", 
           "cold_time": null, 
-          "warm_time": 6.069004058837891, 
+          "warm_time": 6.402335166931152, 
           "all_warm_times": [
-            6.069004058837891
+            6.402335166931152
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py", 
-          "rank": 6, 
+          "rank": 7, 
           "speedup": 1.0
         }
       ], 
@@ -102,89 +118,91 @@
           "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/decorators.py\", line 19, in __call__\n    return run_python_fn(self.f, args, kwargs, backend = backend_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 145, in run_python_fn\n    return run_untyped_fn(untyped, args, kwargs, backend)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 133, in run_untyped_fn\n    typed_fn, linear_args = specialize(fn, args, kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 54, in specialize\n    typed_fn = type_inference.specialize(untyped, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 532, in specialize\n    typed =  _specialize(fundef, full_arg_types, return_type)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 502, in _specialize\n    typed_fundef = infer_types(fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 431, in infer_types\n    body = annotator.transform_block(untyped_fn.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 422, in transform_block\n    new_stmt = self.transform_stmt(old_stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 399, in transform_stmt\n    return self.transform_Assign(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 283, in transform_Assign\n    rhs = self.transform_expr(stmt.rhs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 39, in transform_expr\n    result = Transform.transform_expr(self, expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 271, in transform_expr\n    result = self.transform_Call(expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 88, in transform_Call\n    typed_fn = specialize(untyped_fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 532, in specialize\n    typed =  _specialize(fundef, full_arg_types, return_type)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 502, in _specialize\n    typed_fundef = infer_types(fn, arg_types)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 431, in infer_types\n    body = annotator.transform_block(untyped_fn.body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 422, in transform_block\n    new_stmt = self.transform_stmt(old_stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 407, in transform_stmt\n    return self.transform_Return(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 318, in transform_Return\n    ret_val = self.transform_expr(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/local_inference.py\", line 39, in transform_expr\n    result = Transform.transform_expr(self, expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/transforms/transform.py\", line 281, in transform_expr\n    result = method(expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/type_inference/type_inference.py\", line 149, in transform_IndexMap\n    assert isinstance(shape.type, ScalarT), \"Invalid shape for IndexMap: %s : %s\" % (shape, shape.type)\nAssertionError: Invalid shape for IndexMap: shape.2 : array1(int64)\n"
         }
       ], 
-      "import_errors": [
-        {
-          "name": "arc_distance_pythran", 
-          "error_type": "EnvironmentError", 
-          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/arc_distance/arc_distance_pythran.py\", line 32, in <module>\n    native = compile_pythrancode(modname, source)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
-        }
-      ]
+      "import_errors": []
     }, 
     {
       "group_name": "growcut", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut", 
       "records": [
         {
-          "name": "growcut_parakeet", 
-          "cold_time": 0.3933980464935303, 
-          "warm_time": 0.005945920944213867, 
-          "all_warm_times": [
-            0.006263017654418945, 
-            0.005945920944213867, 
-            0.006265163421630859, 
-            0.006066083908081055, 
-            0.005944967269897461
-          ], 
-          "std_warm_times": 0.0001433425478485909, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
-          "rank": 1, 
-          "speedup": 1883.3289626689123
-        }, 
-        {
           "name": "growcut_cython", 
           "cold_time": null, 
-          "warm_time": 0.006018161773681641, 
+          "warm_time": 0.00605010986328125, 
           "all_warm_times": [
-            0.008247852325439453, 
-            0.006411075592041016, 
-            0.006018877029418945, 
-            0.006044864654541016, 
-            0.006018161773681641
+            0.006086111068725586, 
+            0.006084918975830078, 
+            0.006505012512207031, 
+            0.00605010986328125, 
+            0.006103038787841797
           ], 
-          "std_warm_times": 0.00086279672269599537, 
+          "std_warm_times": 0.00017045841982707573, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx", 
+          "rank": 1, 
+          "speedup": 1844.6321327238336
+        }, 
+        {
+          "name": "growcut_parakeet", 
+          "cold_time": 0.38634395599365234, 
+          "warm_time": 0.006074190139770508, 
+          "all_warm_times": [
+            0.006598949432373047, 
+            0.006074190139770508, 
+            0.006345987319946289, 
+            0.006242036819458008, 
+            0.0061550140380859375
+          ], 
+          "std_warm_times": 0.00018190718249056056, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py", 
           "rank": 2, 
-          "speedup": 1860.7218524681086
+          "speedup": 1837.3193468618754
+        }, 
+        {
+          "name": "growcut_pythran", 
+          "cold_time": null, 
+          "warm_time": 0.009858846664428711, 
+          "all_warm_times": [
+            0.014767169952392578, 
+            0.010904073715209961, 
+            0.014066934585571289, 
+            0.010432004928588867, 
+            0.009858846664428711
+          ], 
+          "std_warm_times": 0.0020086552791433615, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py", 
+          "rank": 3, 
+          "speedup": 1132.0012817102368
         }, 
         {
           "name": "growcut_numba", 
-          "cold_time": 0.7733209133148193, 
-          "warm_time": 0.044857025146484375, 
+          "cold_time": 0.745354175567627, 
+          "warm_time": 0.044801950454711914, 
           "all_warm_times": [
-            0.04496598243713379, 
-            0.045320987701416016, 
-            0.04532790184020996, 
-            0.044857025146484375, 
-            0.04479408264160156
+            0.045385122299194336, 
+            0.04609107971191406, 
+            0.04546213150024414, 
+            0.044801950454711914, 
+            0.05261802673339844
           ], 
-          "std_warm_times": 0.00022821246057571818, 
+          "std_warm_times": 0.0029020785223777411, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py", 
-          "rank": 3, 
-          "speedup": 249.64038715026788
+          "rank": 4, 
+          "speedup": 249.1013660576969
         }, 
         {
           "name": "growcut_python", 
           "cold_time": null, 
-          "warm_time": 11.198125123977661, 
+          "warm_time": 11.160227060317993, 
           "all_warm_times": [
-            11.198125123977661
+            11.160227060317993
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py", 
-          "rank": 4, 
+          "rank": 5, 
           "speedup": 1.0
         }
       ], 
       "runtime_errors": [], 
-      "import_errors": [
-        {
-          "name": "growcut_pythran", 
-          "error_type": "EnvironmentError", 
-          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/growcut/growcut_pythran.py\", line 23, in <module>\n    modname, '\\n'.join([imports, exports, source]))\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
-        }
-      ]
+      "import_errors": []
     }, 
     {
       "group_name": "julia", 
@@ -192,62 +210,78 @@
       "records": [
         {
           "name": "julia_pyopencl", 
-          "cold_time": 0.6411550045013428, 
-          "warm_time": 0.002315998077392578, 
+          "cold_time": 0.011639833450317383, 
+          "warm_time": 0.0024008750915527344, 
           "all_warm_times": [
-            0.0024759769439697266, 
-            0.0023610591888427734, 
-            0.002674102783203125, 
-            0.002315998077392578, 
-            0.002405881881713867
+            0.0024008750915527344, 
+            0.0030210018157958984, 
+            0.002566099166870117, 
+            0.0024220943450927734, 
+            0.0024449825286865234
           ], 
-          "std_warm_times": 0.00012542135292673996, 
+          "std_warm_times": 0.00023217296717665387, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pyopencl.py", 
           "rank": 1, 
-          "speedup": 1916.7830965616636
+          "speedup": 1999.5200595829197
+        }, 
+        {
+          "name": "julia_pythran_for_loops", 
+          "cold_time": 0.005201101303100586, 
+          "warm_time": 0.002444028854370117, 
+          "all_warm_times": [
+            0.0027670860290527344, 
+            0.002444028854370117, 
+            0.002521991729736328, 
+            0.002454996109008789, 
+            0.0028231143951416016
+          ], 
+          "std_warm_times": 0.00016069289130579844, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py", 
+          "rank": 2, 
+          "speedup": 1964.2149058628427
         }, 
         {
           "name": "julia_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.003779172897338867, 
+          "warm_time": 0.003847837448120117, 
           "all_warm_times": [
-            0.006151914596557617, 
-            0.003877878189086914, 
-            0.003779172897338867, 
-            0.0038330554962158203, 
-            0.003885984420776367
+            0.004011869430541992, 
+            0.0038712024688720703, 
+            0.003901958465576172, 
+            0.003847837448120117, 
+            0.003854990005493164
           ], 
-          "std_warm_times": 0.00092393988698250614, 
+          "std_warm_times": 6.0108647941174965e-05, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx", 
-          "rank": 2, 
-          "speedup": 1174.6660147624755
+          "rank": 3, 
+          "speedup": 1247.6093314331742
         }, 
         {
           "name": "julia_python_numpy", 
           "cold_time": null, 
-          "warm_time": 0.16804003715515137, 
+          "warm_time": 0.17354607582092285, 
           "all_warm_times": [
-            0.19313287734985352, 
-            0.19598388671875, 
-            0.18004298210144043, 
-            0.16804003715515137, 
-            0.1756448745727539
+            0.17763996124267578, 
+            0.17354607582092285, 
+            0.17838287353515625, 
+            0.2263031005859375, 
+            0.20789408683776855
           ], 
-          "std_warm_times": 0.010554333053483843, 
+          "std_warm_times": 0.020778220189568913, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
-          "rank": 3, 
-          "speedup": 26.417906360712305
+          "rank": 4, 
+          "speedup": 27.66180614228505
         }, 
         {
           "name": "julia_python_for_loops", 
           "cold_time": null, 
-          "warm_time": 4.439265966415405, 
+          "warm_time": 4.800597906112671, 
           "all_warm_times": [
-            4.439265966415405
+            4.800597906112671
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_python.py", 
-          "rank": 4, 
+          "rank": 5, 
           "speedup": 1.0
         }
       ], 
@@ -274,14 +308,7 @@
           "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 184, in run_benchmarks\n    record = run_benchmark(name, func, args, kwargs, memory=memory)\n  File \"run_benchmarks.py\", line 130, in run_benchmark\n    first_timing = time_once()\n  File \"run_benchmarks.py\", line 126, in time_once\n    func(*args, **kwargs)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/decorators.py\", line 19, in __call__\n    return run_python_fn(self.f, args, kwargs, backend = backend_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/run_function.py\", line 144, in run_python_fn\n    untyped = ast_conversion.translate_function_value(fn)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 879, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 825, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 769, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 731, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 662, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 537, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 481, in translate_value_call\n    return syntax.Call(translate_function_value(value),\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 879, in translate_function_value\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 825, in translate_function_source\n    filename = filename)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 769, in translate_function_ast\n    _, body = translator.visit_block(body)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 731, in visit_block\n    parakeet_stmt = self.visit(stmt)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 662, in visit_Assign\n    ssa_rhs = self.visit(stmt.value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 470, in visit\n    res = ast.NodeVisitor.visit(self, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py\", line 241, in visit\n    return visitor(node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 537, in visit_Call\n    positional, keywords_dict, starargs_expr)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 484, in translate_value_call\n    return self.translate_builtin_call(value, positional, keywords_dict)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 465, in translate_builtin_call\n    fn = value_to_syntax(value)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 111, in value_to_syntax\n    return translate_function_value(v)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/parakeet/frontend/ast_conversion.py\", line 841, in translate_function_value\n    \"Unsupported primitive: %s\" % (fn,)\nAssertionError: Unsupported primitive: <built-in function geterrobj>\n"
         }
       ], 
-      "import_errors": [
-        {
-          "name": "julia_pythran", 
-          "error_type": "EnvironmentError", 
-          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/julia/julia_pythran.py\", line 29, in <module>\n    cxxflags=['-O2', '-fopenmp'])\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
-        }
-      ]
+      "import_errors": []
     }, 
     {
       "group_name": "pairwise", 
@@ -289,337 +316,355 @@
       "records": [
         {
           "name": "pairwise_theano_blas_float32", 
-          "cold_time": 0.003612995147705078, 
-          "warm_time": 0.0008840560913085938, 
+          "cold_time": null, 
+          "warm_time": 0.0008141994476318359, 
           "all_warm_times": [
-            0.0010831356048583984, 
-            0.0008840560913085938, 
-            0.00092315673828125, 
-            0.0009169578552246094, 
-            0.0009169578552246094
+            0.001344919204711914, 
+            0.0009400844573974609, 
+            0.0008141994476318359, 
+            0.0008900165557861328, 
+            0.0008721351623535156
           ], 
-          "std_warm_times": 7.0491629133333849e-05, 
+          "std_warm_times": 0.00019062122297471929, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 1, 
-          "speedup": 24946.626483279397
+          "speedup": 31745.113909224012
         }, 
         {
           "name": "pairwise_theano_blas_float64", 
           "cold_time": null, 
-          "warm_time": 0.0013680458068847656, 
+          "warm_time": 0.001516103744506836, 
           "all_warm_times": [
-            0.0019237995147705078, 
-            0.002804994583129883, 
-            0.0013849735260009766, 
-            0.001394033432006836, 
-            0.0013680458068847656
+            0.0017421245574951172, 
+            0.0022079944610595703, 
+            0.001516103744506836, 
+            0.0019598007202148438, 
+            0.0016510486602783203
           ], 
-          "std_warm_times": 0.00055603918658313895, 
+          "std_warm_times": 0.0002436968935818051, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
           "rank": 2, 
-          "speedup": 16120.963924712443
+          "speedup": 17048.20946689731
         }, 
         {
           "name": "pairwise_python_numpy_dot", 
           "cold_time": null, 
-          "warm_time": 0.0015749931335449219, 
+          "warm_time": 0.0018911361694335938, 
           "all_warm_times": [
-            0.0025119781494140625, 
-            0.0017230510711669922, 
-            0.001683950424194336, 
-            0.0015749931335449219, 
-            0.0016100406646728516
+            0.0022101402282714844, 
+            0.0023050308227539062, 
+            0.002296924591064453, 
+            0.0018911361694335938, 
+            0.002031087875366211
           ], 
-          "std_warm_times": 0.00034952836986473697, 
+          "std_warm_times": 0.00016145565350048495, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 3, 
-          "speedup": 14002.738570996064
+          "speedup": 13667.368129097327
         }, 
         {
           "name": "pairwise_pyopencl_cpu", 
-          "cold_time": 0.10491108894348145, 
-          "warm_time": 0.002042055130004883, 
+          "cold_time": null, 
+          "warm_time": 0.0020339488983154297, 
           "all_warm_times": [
-            0.002079010009765625, 
-            0.002042055130004883, 
-            0.0024399757385253906, 
-            0.0025839805603027344, 
-            0.002579927444458008
+            0.0035750865936279297, 
+            0.0020401477813720703, 
+            0.0020339488983154297, 
+            0.002187967300415039, 
+            0.002811908721923828
           ], 
-          "std_warm_times": 0.00023826425326064989, 
+          "std_warm_times": 0.00059576616182109229, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pyopencl.py", 
           "rank": 4, 
-          "speedup": 10800.010624635142
-        }, 
-        {
-          "name": "pairwise_numba_nested_for_loops", 
-          "cold_time": 0.22542405128479004, 
-          "warm_time": 0.012491941452026367, 
-          "all_warm_times": [
-            0.01273202896118164, 
-            0.01335000991821289, 
-            0.012491941452026367, 
-            0.012624025344848633, 
-            0.012612104415893555
-          ], 
-          "std_warm_times": 0.00030367457436963771, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
-          "rank": 5, 
-          "speedup": 1765.475541559309
+          "speedup": 12707.720548587504
         }, 
         {
           "name": "pairwise_cython_for_loops", 
           "cold_time": null, 
-          "warm_time": 0.012761116027832031, 
+          "warm_time": 0.012613058090209961, 
           "all_warm_times": [
-            0.01458287239074707, 
-            0.012997865676879883, 
-            0.013466119766235352, 
-            0.01285409927368164, 
-            0.012761116027832031
+            0.013516902923583984, 
+            0.012784957885742188, 
+            0.012974977493286133, 
+            0.012613058090209961, 
+            0.012985944747924805
           ], 
-          "std_warm_times": 0.00067061350267215642, 
+          "std_warm_times": 0.00030361040046515149, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx", 
+          "rank": 5, 
+          "speedup": 2049.2139198155114
+        }, 
+        {
+          "name": "pairwise_numba_nested_for_loops", 
+          "cold_time": 0.2756321430206299, 
+          "warm_time": 0.01361989974975586, 
+          "all_warm_times": [
+            0.01361989974975586, 
+            0.014117002487182617, 
+            0.013648033142089844, 
+            0.013911962509155273, 
+            0.013967037200927734
+          ], 
+          "std_warm_times": 0.00019106296690794326, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py", 
           "rank": 6, 
-          "speedup": 1728.2357633958597
+          "speedup": 1897.7271995238596
         }, 
         {
           "name": "pairwise_parakeet_nested_for_loops", 
-          "cold_time": 0.1280360221862793, 
-          "warm_time": 0.014158964157104492, 
+          "cold_time": 0.17906999588012695, 
+          "warm_time": 0.015487909317016602, 
           "all_warm_times": [
-            0.0571131706237793, 
-            0.014158964157104492, 
-            0.01432490348815918, 
-            0.014358043670654297, 
-            0.014583110809326172
+            0.08546090126037598, 
+            0.015487909317016602, 
+            0.015588998794555664, 
+            0.0171511173248291, 
+            0.01622915267944336
           ], 
-          "std_warm_times": 0.017103300289307812, 
+          "std_warm_times": 0.027744974247875212, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
           "rank": 7, 
-          "speedup": 1557.6151514641251
+          "speedup": 1668.8407506042088
+        }, 
+        {
+          "name": "pairwise_pythran_nested_for_loops", 
+          "cold_time": null, 
+          "warm_time": 0.015964984893798828, 
+          "all_warm_times": [
+            0.016126155853271484, 
+            0.016094207763671875, 
+            0.017147064208984375, 
+            0.015964984893798828, 
+            0.016312837600708008
+          ], 
+          "std_warm_times": 0.00042385620209799292, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py", 
+          "rank": 8, 
+          "speedup": 1618.971416624354
         }, 
         {
           "name": "pairwise_parakeet_inner_numpy", 
-          "cold_time": 0.21443891525268555, 
-          "warm_time": 0.015486001968383789, 
+          "cold_time": 0.281688928604126, 
+          "warm_time": 0.01669788360595703, 
           "all_warm_times": [
-            0.07711386680603027, 
-            0.08027195930480957, 
-            0.015486001968383789, 
-            0.015501976013183594, 
-            0.015503168106079102
+            0.07736611366271973, 
+            0.08200597763061523, 
+            0.01685500144958496, 
+            0.01669788360595703, 
+            0.015780925750732422
           ], 
-          "std_warm_times": 0.030975628111307645, 
+          "std_warm_times": 0.031018746604326929, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py", 
-          "rank": 8, 
-          "speedup": 1424.1388542484565
+          "rank": 9, 
+          "speedup": 1547.9119881203953
         }, 
         {
           "name": "pairwise_theano_broadcast_float32", 
           "cold_time": null, 
-          "warm_time": 0.03640890121459961, 
+          "warm_time": 0.03778886795043945, 
           "all_warm_times": [
-            0.05952310562133789, 
-            0.03640890121459961, 
-            0.03679609298706055, 
-            0.03659796714782715, 
-            0.03673505783081055
+            0.05676603317260742, 
+            0.03778886795043945, 
+            0.04010891914367676, 
+            0.038970947265625, 
+            0.038333892822265625
           ], 
-          "std_warm_times": 0.0091564064114607324, 
+          "std_warm_times": 0.0072275297742233511, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
-          "rank": 9, 
-          "speedup": 605.7369589417851
+          "rank": 10, 
+          "speedup": 683.9806432888743
         }, 
         {
           "name": "pairwise_theano_broadcast_float64", 
           "cold_time": null, 
-          "warm_time": 0.05067586898803711, 
+          "warm_time": 0.05193209648132324, 
           "all_warm_times": [
-            0.05210399627685547, 
-            0.05072593688964844, 
-            0.05067586898803711, 
-            0.05135798454284668, 
-            0.0554049015045166
+            0.05447196960449219, 
+            0.05333995819091797, 
+            0.05193209648132324, 
+            0.05452299118041992, 
+            0.05573296546936035
           ], 
-          "std_warm_times": 0.0017537659139300805, 
+          "std_warm_times": 0.0012815088413722408, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py", 
-          "rank": 10, 
-          "speedup": 435.20155728063986
+          "rank": 11, 
+          "speedup": 497.7048099568908
         }, 
         {
           "name": "pairwise_python_broadcast_numpy", 
           "cold_time": null, 
-          "warm_time": 0.10027217864990234, 
+          "warm_time": 0.10322713851928711, 
           "all_warm_times": [
-            0.1942131519317627, 
-            0.10027217864990234, 
-            0.1037759780883789, 
-            0.10120511054992676, 
-            0.10114812850952148
+            0.17538905143737793, 
+            0.11033415794372559, 
+            0.11216592788696289, 
+            0.10322713851928711, 
+            0.11186099052429199
           ], 
-          "std_warm_times": 0.037063629439677517, 
+          "std_warm_times": 0.026595633765615662, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 11, 
-          "speedup": 219.9435316663972
+          "rank": 12, 
+          "speedup": 250.388169047916
         }, 
         {
           "name": "pairwise_python_inner_numpy", 
           "cold_time": null, 
-          "warm_time": 1.8791909217834473, 
+          "warm_time": 1.9391920566558838, 
           "all_warm_times": [
-            1.8791909217834473
-          ], 
-          "std_warm_times": 0.0, 
-          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
-          "rank": 12, 
-          "speedup": 11.73601726386208
-        }, 
-        {
-          "name": "pairwise_python_nested_for_loops", 
-          "cold_time": null, 
-          "warm_time": 22.054217100143433, 
-          "all_warm_times": [
-            22.054217100143433
+            1.9391920566558838
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
           "rank": 13, 
+          "speedup": 13.328671660543273
+        }, 
+        {
+          "name": "pairwise_python_nested_for_loops", 
+          "cold_time": null, 
+          "warm_time": 25.846854209899902, 
+          "all_warm_times": [
+            25.846854209899902
+          ], 
+          "std_warm_times": 0.0, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py", 
+          "rank": 14, 
           "speedup": 1.0
         }
       ], 
       "runtime_errors": [], 
-      "import_errors": [
-        {
-          "name": "pairwise_pythran", 
-          "error_type": "EnvironmentError", 
-          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_pythran.py\", line 25, in <module>\n    cxxflags=['-O2', '-fopenmp']\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
-        }
-      ]
+      "import_errors": []
     }, 
     {
       "group_name": "rosen_der", 
       "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der", 
       "records": [
         {
+          "name": "rosen_der_pythran", 
+          "cold_time": null, 
+          "warm_time": 0.00475311279296875, 
+          "all_warm_times": [
+            0.00475311279296875, 
+            0.004909038543701172, 
+            0.005269050598144531, 
+            0.008346080780029297, 
+            0.010488033294677734
+          ], 
+          "std_warm_times": 0.0022843042084848379, 
+          "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py", 
+          "rank": 1, 
+          "speedup": 2212.466342295345
+        }, 
+        {
           "name": "rosen_der_cython", 
           "cold_time": null, 
-          "warm_time": 0.006677150726318359, 
+          "warm_time": 0.006011009216308594, 
           "all_warm_times": [
-            0.0071489810943603516, 
-            0.006677150726318359, 
-            0.006685018539428711, 
-            0.01131892204284668, 
-            0.007403850555419922
+            0.006828784942626953, 
+            0.006011009216308594, 
+            0.0061910152435302734, 
+            0.0060350894927978516, 
+            0.006215095520019531
           ], 
-          "std_warm_times": 0.0017582151461244884, 
+          "std_warm_times": 0.00029759049852767577, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_cython.pyx", 
-          "rank": 1, 
-          "speedup": 1561.2509462258088
+          "rank": 2, 
+          "speedup": 1749.4736236712677
         }, 
         {
           "name": "rosen_der_theano_float32", 
-          "cold_time": null, 
-          "warm_time": 0.0074880123138427734, 
+          "cold_time": 0.014698028564453125, 
+          "warm_time": 0.007063865661621094, 
           "all_warm_times": [
-            0.012454986572265625, 
-            0.009068965911865234, 
-            0.0074880123138427734, 
-            0.011595010757446289, 
-            0.0106048583984375
+            0.007608890533447266, 
+            0.007063865661621094, 
+            0.0074269771575927734, 
+            0.007135868072509766, 
+            0.007194042205810547
           ], 
-          "std_warm_times": 0.0017787675717116282, 
+          "std_warm_times": 0.00020222379978834299, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
-          "rank": 2, 
-          "speedup": 1392.186264208616
+          "rank": 3, 
+          "speedup": 1488.7177332253275
         }, 
         {
           "name": "rosen_der_theano_float64", 
           "cold_time": null, 
-          "warm_time": 0.009441852569580078, 
+          "warm_time": 0.009051084518432617, 
           "all_warm_times": [
-            0.009441852569580078, 
-            0.011906147003173828, 
-            0.011201858520507812, 
-            0.012555122375488281, 
-            0.01157999038696289
+            0.01320505142211914, 
+            0.00905299186706543, 
+            0.009051084518432617, 
+            0.009057998657226562, 
+            0.00927114486694336
           ], 
-          "std_warm_times": 0.0010465793580402808, 
+          "std_warm_times": 0.0016408562656319999, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py", 
-          "rank": 3, 
-          "speedup": 1104.095601232261
+          "rank": 4, 
+          "speedup": 1161.8609962331743
         }, 
         {
           "name": "rosen_der_loops_parakeet", 
-          "cold_time": 0.2917931079864502, 
-          "warm_time": 0.012340068817138672, 
+          "cold_time": 0.2964208126068115, 
+          "warm_time": 0.011566162109375, 
           "all_warm_times": [
-            0.1342029571533203, 
-            0.13878607749938965, 
-            0.012541055679321289, 
-            0.012340068817138672, 
-            0.014846086502075195
+            0.13219499588012695, 
+            0.14278888702392578, 
+            0.011566162109375, 
+            0.013947010040283203, 
+            0.014223098754882812
           ], 
-          "std_warm_times": 0.060404769046675771, 
+          "std_warm_times": 0.060967236912644315, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py", 
-          "rank": 4, 
-          "speedup": 844.7852312685961
+          "rank": 5, 
+          "speedup": 909.2127514841688
         }, 
         {
           "name": "rosen_der_numpy_parakeet", 
-          "cold_time": 0.5165719985961914, 
-          "warm_time": 0.014848947525024414, 
+          "cold_time": 0.5553438663482666, 
+          "warm_time": 0.016228914260864258, 
           "all_warm_times": [
-            0.1734151840209961, 
-            0.015077829360961914, 
-            0.015135049819946289, 
-            0.014848947525024414, 
-            0.014651060104370117
+            0.19855308532714844, 
+            0.016228914260864258, 
+            0.02042698860168457, 
+            0.01912689208984375, 
+            0.020821094512939453
           ], 
-          "std_warm_times": 0.063395018799909914, 
+          "std_warm_times": 0.071778898064393623, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py", 
-          "rank": 5, 
-          "speedup": 702.0502882098874
+          "rank": 6, 
+          "speedup": 647.9855587712468
         }, 
         {
           "name": "rosen_der_numpy", 
           "cold_time": null, 
-          "warm_time": 0.0424189567565918, 
+          "warm_time": 0.04386401176452637, 
           "all_warm_times": [
-            0.05023312568664551, 
-            0.04294610023498535, 
-            0.04265403747558594, 
-            0.0424189567565918, 
-            0.044087886810302734
+            0.058882951736450195, 
+            0.047991037368774414, 
+            0.04386401176452637, 
+            0.04518485069274902, 
+            0.0448307991027832
           ], 
-          "std_warm_times": 0.0029389242033642342, 
+          "std_warm_times": 0.0055389605449870849, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
-          "rank": 6, 
-          "speedup": 245.75587630256635
+          "rank": 7, 
+          "speedup": 239.7432804830986
         }, 
         {
           "name": "rosen_der_python", 
           "cold_time": null, 
-          "warm_time": 10.424707889556885, 
+          "warm_time": 10.516102075576782, 
           "all_warm_times": [
-            10.424707889556885
+            10.516102075576782
           ], 
           "std_warm_times": 0.0, 
           "source_url": "https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_python.py", 
-          "rank": 7, 
+          "rank": 8, 
           "speedup": 1.0
         }
       ], 
       "runtime_errors": [], 
-      "import_errors": [
-        {
-          "name": "rosen_der_pythran", 
-          "error_type": "EnvironmentError", 
-          "error_message": "I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.", 
-          "traceback": "Traceback (most recent call last):\n  File \"run_benchmarks.py\", line 91, in find_benchmarks\n    module = __import__(abs_module_name, fromlist=\"dummy\")\n  File \"/Users/ogrisel/code/python-benchmarks/rosen_der/rosen_der_pythran.py\", line 27, in <module>\n    cxxflags=['-O2', '-fopenmp'])\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 289, in compile_pythrancode\n    module = generate_cxx(module_name, pythrancode, specs, opts)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/toolchain.py\", line 149, in generate_cxx\n    refine(pm, ir, optimizations)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/middlend.py\", line 45, in refine\n    pm.apply(optimization, node)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 165, in apply\n    return a.apply(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 132, in apply\n    return self.run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 127, in run\n    n = super(Transformation, self).run(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/passmanager.py\", line 75, in run\n    self.prepare(node, ctx)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pythran/optimizations.py\", line 55, in prepare\n    self.env[module_name] = __import__(import_name)\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 49, in <module>\n    sys.modules[__name__] = omp()\n  File \"/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/omp/__init__.py\", line 35, in __init__\n    raise EnvironmentError(\"I can't find a shared library for libgomp,\"\nEnvironmentError: I can't find a shared library for libgomp, you may need to install it or adjust the LD_LIBRARY_PATH environment variable.\n"
-        }
-      ]
+      "import_errors": []
     }
   ], 
   "benchmark_environment": {}
