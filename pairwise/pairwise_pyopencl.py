@@ -2,6 +2,8 @@
 # License: MIT
 
 import numpy as np
+
+# -- https://github.com/jaberg/python-benchmarks-pyopencl
 from pybench_pyopencl import pairwise_pyopencl
 
 def pairwise_pyopencl_cpu(data):
