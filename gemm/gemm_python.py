@@ -4,8 +4,8 @@
 import numpy as np
 
 
+# -- too slow to run directly, but good for JIT by other systems
 def gemm_python_nested_for_loops(alpha, A, B, beta, C):
-
     M, N = C.shape
     K = A.shape[1]
     #"omp parallel for private(j, d, k, tmp)"
@@ -39,7 +39,6 @@ def gemm_python_numpy_dot(alpha, A, B, beta, C):
 
 
 benchmarks = (
-    gemm_python_nested_for_loops,
     gemm_python_inner_numpy,
     gemm_python_broadcast_numpy,
     gemm_python_numpy_dot,
