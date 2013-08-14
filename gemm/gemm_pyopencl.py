@@ -1,5 +1,5 @@
 # Authors: James Bergstra
-# License: MIT
+# License: BSD-3
 
 import sys
 import time
@@ -10,7 +10,7 @@ import pyopencl as cl
 
 mf = cl.mem_flags
 
-PROFILING = 1
+PROFILING = 0
 
 ctx = cl.create_some_context()
 if PROFILING:
@@ -257,8 +257,8 @@ benchmarks = (
     gemm_pyopencl_cpu,
 )
 
-NNN = 1024 #* 2
-def main(shape=(NNN, NNN, NNN), seed=0, dtype=np.float64):
+NNN = 1024 * 2
+def main(shape=(NNN, NNN, NNN), seed=0, dtype=np.float32):
     rng = np.random.RandomState(seed)
     A = np.asarray(rng.normal(size=(shape[0], shape[1])), dtype=dtype)
     B = np.asarray(rng.normal(size=(shape[1], shape[2])), dtype=dtype)
@@ -276,6 +276,7 @@ def main(shape=(NNN, NNN, NNN), seed=0, dtype=np.float64):
         gemm_pyopencl_cpu(alpha, A, B, beta, C)
         t1 = time.time()
         print 'pyopencl time: ', (t1 - t0), 'GFlops', FLOPS / (t1 - t0) / (1000 ** 3)
+        continue
 
         rng.seed(i)
         C2[:] = np.asarray(rng.normal(size=(shape[0], shape[2])), dtype=dtype)
