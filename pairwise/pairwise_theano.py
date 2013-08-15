@@ -19,6 +19,9 @@ def pairwise_theano_tensor_prepare(dtype):
 
 
 benchmarks = (
-    #pairwise_theano_tensor_prepare('float32'),
+    # -- disabling float32 to match the precision of the other
+    #    implementations (assuming that the benchmark problem is
+    #    to carry out computations in double precision).
+    # pairwise_theano_tensor_prepare('float32'),
     pairwise_theano_tensor_prepare('float64'),
 )
