@@ -1,5 +1,7 @@
 numpy
+cython
 numba
+treelike
 parakeet
 Theano
 networkx
