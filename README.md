@@ -41,7 +41,7 @@ For each benchmark, we would like to gather:
 
   - JIT compiler packaged as a library for CPython such as:
       - [Numba](http://numba.pydata.org/) or
-      - [Parakeet](http://iskandr.github.io/parakeet/)
+      - [Parakeet](http://www.parakeetpython.com)
 
   - JIT compiler implemented in an alternative Python interpreter such as:
       - [PyPy](http://pypy.org/) optionally with
