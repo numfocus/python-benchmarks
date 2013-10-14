@@ -17,6 +17,10 @@ from jinja2 import Template
 import numpy as np
 import matplotlib.pyplot as plt
 
+# imports for machine stats 
+import multiprocessing 
+import platform
+
 try:
     # Use automated Cython support when available
     import pyximport
@@ -307,6 +311,12 @@ def build_report(bench_data, report_filename=REPORT_FILENAME,
             about_url=ABOUT_URL,
             github_repo_url=GITHUB_REPO_URL,
             json_data_url=os.path.basename(bench_data_filename),
+            sysinfo = {
+              'platform': platform.platform(),
+              'python_version': platform.python_version(), 
+              'processor' : platform.processor(), 
+              'cpu_count' : multiprocessing.cpu_count()
+            }
         )
     report_filename = 'report/index.html'
     log.info("Writing report to: %s", report_filename)
