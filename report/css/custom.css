@@ -58,3 +58,5 @@ p.errors-summary {
 p.errors-summary a {
     font-weight: bold;
 }
+
+.body-container { padding-bottom: 2em; } 
