@@ -20,6 +20,8 @@ import matplotlib.pyplot as plt
 # imports for machine stats 
 import multiprocessing 
 import platform
+
+# use this to check whether benchmark needs warmup
 from types import FunctionType 
 
 try:
