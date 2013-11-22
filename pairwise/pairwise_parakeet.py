@@ -6,7 +6,7 @@ from parakeet import jit
 import numpy as np 
 
 def pairwise_parakeet_comprehensions(data):
-  return np.array([[np.sqrt((a-b)**2) for b in data] for a in data])
+  return np.array([[np.sqrt(np.sum((a-b)**2)) for b in data] for a in data])
 
 benchmarks = (
     ("pairwise_parakeet_nested_for_loops",
