@@ -21,6 +21,9 @@ import matplotlib.pyplot as plt
 import multiprocessing 
 import platform
 
+# use this to check whether benchmark needs warmup
+from types import FunctionType 
+
 try:
     # Use automated Cython support when available
     import pyximport
@@ -121,6 +124,7 @@ def find_benchmarks(folders=None, platforms=None):
     return benchmark_groups
 
 
+
 def run_benchmark(name, func, args, kwargs, memory=False, n_runs=5,
                   slow_threshold=1):
     """Call a function with the provided arguments"""
@@ -132,33 +136,24 @@ def run_benchmark(name, func, args, kwargs, memory=False, n_runs=5,
         return toc - tic
 
     first_timing = time_once()
-    if first_timing > slow_threshold or n_runs <= 1:
-        # Slow executions are not repeated as we assume that they are less
-        # prone to variation (probably a slow naive Python variant)
-        # XXX: how to deal with slow JIT compiler if any?
-        cold = None
+    # if we're running a user-defined pure Python function, assume there's no warmup
+    if isinstance(func, FunctionType):
+        cold = None 
         warm = first_timing
         all_warm_timings = [first_timing]
     else:
+        # Give a warm/cold time for every benchmark, even if there's no JIT
         # Take the best time of several runs for fast executions
-        other_timings = []
-        for i in range(n_runs - 1):
-            other_timings.append(time_once())
+      other_timings = []
+      for i in range(n_runs - 1):
+        t = time_once()
+        other_timings.append(t)
 
-        all_timings = [first_timing] + other_timings
-        best_timing = min(all_timings)
+      all_warm_timings = other_timings
+      best_warm_timing = np.min(all_warm_timings)
+      cold = first_timing
+      warm = best_warm_timing
 
-        if first_timing > 2 * best_timing:
-            # The cold time is much slower, let's report it as cold time
-            cold = first_timing
-            warm = best_timing
-            all_warm_timings = other_timings + [time_once()]
-        else:
-            # The first run is not significantly slower, their is no warm-up
-            # for this execution
-            cold = None
-            warm = best_timing
-            all_warm_timings = all_timings
     return OrderedDict([
         ('name', name),
         ('cold_time', cold),
