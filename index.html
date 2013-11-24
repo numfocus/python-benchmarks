@@ -49,7 +49,13 @@
   <li><ul class="nav nav-list">
     
     
+    <li><a href="#errors-arc_distance">
+        arc_distance</a></li>
+    
   
+    
+    <li><a href="#errors-growcut">
+        growcut</a></li>
     
   
     
@@ -58,7 +64,13 @@
     
   
     
+    <li><a href="#errors-pairwise">
+        pairwise</a></li>
+    
   
+    
+    <li><a href="#errors-rosen_der">
+        rosen_der</a></li>
     
   
   </ul></li>
@@ -120,12 +132,12 @@
   <td>#1</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_pythran.py">arc_distance_pythran_nested_for_loops</a></td>
   <td>
-    N/A
+    0.084
     
   </td>
-  <td>0.105 
-      (0.002)</td>
-  <td>56.5</td>
+  <td>0.079 
+      (0.003)</td>
+  <td>86.9</td>
 </tr>
 
 <tr>
@@ -133,12 +145,12 @@
   <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_parakeet.py">arc_distance_parakeet_for_loops</a></td>
   <td>
-    0.514
+    0.378
     
   </td>
-  <td>0.107 
-      (0.002)</td>
-  <td>55.3</td>
+  <td>0.082 
+      (0.001)</td>
+  <td>84.0</td>
 </tr>
 
 <tr>
@@ -146,64 +158,64 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py">arc_distance_theano_broadcast</a></td>
   <td>
-    N/A
+    0.090
     
   </td>
-  <td>0.119 
-      (0.009)</td>
-  <td>50.0</td>
+  <td>0.086 
+      (0.000)</td>
+  <td>79.6</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_numpy_broadcast</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_parakeet.py">arc_distance_parakeet_comprehensions</a></td>
   <td>
-    N/A
+    0.446
     
   </td>
-  <td>0.133 
-      (0.008)</td>
-  <td>44.8</td>
+  <td>0.092 
+      (0.002)</td>
+  <td>74.9</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#5</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py">arc_distance_theano_alloc</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_numpy_broadcast</a></td>
   <td>
     N/A
     
   </td>
-  <td>0.147 
-      (0.004)</td>
-  <td>40.5</td>
+  <td>0.093 
+      (0.000)</td>
+  <td>73.4</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#6</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_numpy_tile</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_theano.py">arc_distance_theano_alloc</a></td>
   <td>
-    N/A
+    0.116
     
   </td>
-  <td>0.193 
-      (0.009)</td>
-  <td>30.8</td>
+  <td>0.107 
+      (0.001)</td>
+  <td>64.1</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#7</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_numba.py">arc_distance_numba_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/arc_distance/arc_distance_python.py">arc_distance_numpy_tile</a></td>
   <td>
     N/A
     
   </td>
-  <td>1.959 
+  <td>0.174 
       (0.000)</td>
-  <td>3.0</td>
+  <td>39.3</td>
 </tr>
 
 <tr>
@@ -214,7 +226,7 @@
     N/A
     
   </td>
-  <td>5.943 
+  <td>6.857 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -223,11 +235,21 @@
 </table>
 
 
-
 <p class="errors-summary">
-  All methods were benchmarked without any error.
-</p>
+There were
 
+
+<a href="#import-errors-arc_distance">
+1 import error(s)
+</a>
+
+
+
+
+
+
+while running this benchmark.
+</p>
 
 
 </section>
@@ -276,27 +298,27 @@
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#1</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx">growcut_cython</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a></td>
   <td>
-    N/A
+    0.421
     
   </td>
-  <td>0.006 
-      (0.001)</td>
-  <td>1881.4</td>
+  <td>0.005 
+      (0.000)</td>
+  <td>2147.5</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#2</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_parakeet.py">growcut_parakeet</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_cython.pyx">growcut_cython</a></td>
   <td>
-    0.368
+    0.009
     
   </td>
-  <td>0.009 
-      (0.000)</td>
-  <td>1287.1</td>
+  <td>0.006 
+      (0.001)</td>
+  <td>1615.0</td>
 </tr>
 
 <tr>
@@ -304,36 +326,23 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_pythran.py">growcut_pythran</a></td>
   <td>
-    N/A
+    0.012
     
   </td>
   <td>0.010 
-      (0.000)</td>
-  <td>1174.9</td>
+      (0.002)</td>
+  <td>1027.8</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_numba.py">growcut_numba</a></td>
-  <td>
-    0.745
-    
-  </td>
-  <td>0.045 
-      (0.000)</td>
-  <td>252.1</td>
-</tr>
-
-<tr>
-  <td><i class="icon-tasks"></i></td>
-  <td>#5</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/growcut/growcut_python.py">growcut_python</a></td>
   <td>
     N/A
     
   </td>
-  <td>11.313 
+  <td>10.016 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -342,11 +351,21 @@
 </table>
 
 
-
 <p class="errors-summary">
-  All methods were benchmarked without any error.
-</p>
+There were
 
+
+<a href="#import-errors-growcut">
+1 import error(s)
+</a>
+
+
+
+
+
+
+while running this benchmark.
+</p>
 
 
 </section>
@@ -397,25 +416,25 @@
   <td>#1</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pythran.py">julia_pythran_for_loops</a></td>
   <td>
-    N/A
+    0.003
     
   </td>
   <td>0.002 
-      (0.001)</td>
-  <td>1876.1</td>
+      (0.000)</td>
+  <td>1865.0</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#2</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pyopencl.py">julia_pyopencl</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_for_loops</a></td>
   <td>
-    0.207
+    0.433
     
   </td>
   <td>0.003 
       (0.000)</td>
-  <td>1541.8</td>
+  <td>1341.1</td>
 </tr>
 
 <tr>
@@ -423,25 +442,25 @@
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_cython.pyx">julia_cython_for_loops</a></td>
   <td>
-    N/A
+    0.004
     
   </td>
   <td>0.004 
-      (0.001)</td>
-  <td>1204.0</td>
+      (0.000)</td>
+  <td>1194.4</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#4</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_pyopencl.py">julia_pyopencl</a></td>
   <td>
-    0.410
+    N/A
     
   </td>
-  <td>0.004 
+  <td>0.010 
       (0.000)</td>
-  <td>1168.9</td>
+  <td>433.0</td>
 </tr>
 
 <tr>
@@ -452,9 +471,9 @@
     N/A
     
   </td>
-  <td>0.168 
-      (0.003)</td>
-  <td>27.0</td>
+  <td>0.187 
+      (0.000)</td>
+  <td>24.1</td>
 </tr>
 
 <tr>
@@ -465,7 +484,7 @@
     N/A
     
   </td>
-  <td>4.527 
+  <td>4.497 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -478,13 +497,13 @@
 There were
 
 
-
-
-
-
-<a href="#runtime-errors-julia">
-2 execution error(s)
+<a href="#import-errors-julia">
+1 import error(s)
 </a>
+
+
+
+
 
 
 while running this benchmark.
@@ -539,12 +558,12 @@ while running this benchmark.
   <td>#1</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float32</a></td>
   <td>
-    0.005
+    0.001
     
   </td>
   <td>0.001 
       (0.000)</td>
-  <td>25005.9</td>
+  <td>25834.8</td>
 </tr>
 
 <tr>
@@ -552,12 +571,12 @@ while running this benchmark.
   <td>#2</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_blas_float64</a></td>
   <td>
-    N/A
+    0.001
     
   </td>
   <td>0.001 
-      (0.001)</td>
-  <td>16312.6</td>
+      (0.000)</td>
+  <td>20523.4</td>
 </tr>
 
 <tr>
@@ -565,12 +584,12 @@ while running this benchmark.
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_python.py">pairwise_python_numpy_dot</a></td>
   <td>
-    0.005
+    N/A
     
   </td>
   <td>0.002 
       (0.000)</td>
-  <td>14292.9</td>
+  <td>9637.2</td>
 </tr>
 
 <tr>
@@ -578,38 +597,38 @@ while running this benchmark.
   <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pyopencl.py">pairwise_pyopencl_cpu</a></td>
   <td>
-    0.101
+    N/A
     
   </td>
-  <td>0.002 
+  <td>0.004 
       (0.000)</td>
-  <td>10019.1</td>
+  <td>5671.6</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#5</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_numpy</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
   <td>
-    0.265
+    0.013
     
   </td>
-  <td>0.013 
+  <td>0.012 
       (0.000)</td>
-  <td>1693.1</td>
+  <td>1697.3</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#6</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_cython.pyx">pairwise_cython_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_inner_numpy</a></td>
   <td>
-    N/A
+    0.246
     
   </td>
   <td>0.013 
-      (0.001)</td>
-  <td>1664.6</td>
+      (0.002)</td>
+  <td>1624.9</td>
 </tr>
 
 <tr>
@@ -617,25 +636,25 @@ while running this benchmark.
   <td>#7</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_nested_for_loops</a></td>
   <td>
-    0.240
+    0.183
     
   </td>
-  <td>0.014 
-      (0.001)</td>
-  <td>1568.5</td>
+  <td>0.013 
+      (0.000)</td>
+  <td>1610.8</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#8</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_numba.py">pairwise_numba_nested_for_loops</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_parakeet.py">pairwise_parakeet_comprehensions</a></td>
   <td>
-    0.437
+    0.299
     
   </td>
   <td>0.014 
-      (0.002)</td>
-  <td>1564.2</td>
+      (0.001)</td>
+  <td>1565.5</td>
 </tr>
 
 <tr>
@@ -643,12 +662,12 @@ while running this benchmark.
   <td>#9</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_pythran.py">pairwise_pythran_nested_for_loops</a></td>
   <td>
-    N/A
+    0.018
     
   </td>
   <td>0.016 
-      (0.001)</td>
-  <td>1398.7</td>
+      (0.002)</td>
+  <td>1353.4</td>
 </tr>
 
 <tr>
@@ -656,12 +675,12 @@ while running this benchmark.
   <td>#10</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_broadcast_float32</a></td>
   <td>
-    N/A
+    0.053
     
   </td>
-  <td>0.036 
-      (0.008)</td>
-  <td>610.9</td>
+  <td>0.034 
+      (0.002)</td>
+  <td>631.5</td>
 </tr>
 
 <tr>
@@ -669,12 +688,12 @@ while running this benchmark.
   <td>#11</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/pairwise/pairwise_theano.py">pairwise_theano_broadcast_float64</a></td>
   <td>
-    N/A
+    0.045
     
   </td>
-  <td>0.052 
-      (0.004)</td>
-  <td>426.5</td>
+  <td>0.042 
+      (0.001)</td>
+  <td>501.1</td>
 </tr>
 
 <tr>
@@ -685,9 +704,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.100 
-      (0.031)</td>
-  <td>221.1</td>
+  <td>0.159 
+      (0.000)</td>
+  <td>133.0</td>
 </tr>
 
 <tr>
@@ -698,9 +717,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>1.854 
+  <td>1.843 
       (0.000)</td>
-  <td>12.0</td>
+  <td>11.5</td>
 </tr>
 
 <tr>
@@ -711,7 +730,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>22.184 
+  <td>21.182 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -720,11 +739,21 @@ while running this benchmark.
 </table>
 
 
-
 <p class="errors-summary">
-  All methods were benchmarked without any error.
-</p>
+There were
 
+
+<a href="#import-errors-pairwise">
+1 import error(s)
+</a>
+
+
+
+
+
+
+while running this benchmark.
+</p>
 
 
 </section>
@@ -773,27 +802,27 @@ while running this benchmark.
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#1</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py">rosen_der_pythran</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py">rosen_der_loops_parakeet</a></td>
   <td>
-    N/A
+    0.261
     
   </td>
-  <td>0.005 
-      (0.001)</td>
-  <td>2151.7</td>
+  <td>0.004 
+      (0.000)</td>
+  <td>2459.3</td>
 </tr>
 
 <tr>
   <td><i class="icon-tasks"></i></td>
   <td>#2</td>
-  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py">rosen_der_loops_parakeet</a></td>
+  <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_pythran.py">rosen_der_pythran</a></td>
   <td>
-    0.276
+    0.005
     
   </td>
-  <td>0.006 
-      (0.000)</td>
-  <td>1811.8</td>
+  <td>0.005 
+      (0.001)</td>
+  <td>1990.5</td>
 </tr>
 
 <tr>
@@ -801,12 +830,12 @@ while running this benchmark.
   <td>#3</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_cython.pyx">rosen_der_cython</a></td>
   <td>
-    N/A
+    0.008
     
   </td>
-  <td>0.006 
-      (0.002)</td>
-  <td>1607.6</td>
+  <td>0.005 
+      (0.000)</td>
+  <td>1888.2</td>
 </tr>
 
 <tr>
@@ -814,12 +843,12 @@ while running this benchmark.
   <td>#4</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py">rosen_der_theano_float32</a></td>
   <td>
-    0.015
+    0.012
     
   </td>
-  <td>0.007 
+  <td>0.006 
       (0.001)</td>
-  <td>1430.7</td>
+  <td>1587.4</td>
 </tr>
 
 <tr>
@@ -827,12 +856,12 @@ while running this benchmark.
   <td>#5</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_theano.py">rosen_der_theano_float64</a></td>
   <td>
-    N/A
+    0.015
     
   </td>
-  <td>0.009 
+  <td>0.008 
       (0.001)</td>
-  <td>1105.9</td>
+  <td>1285.0</td>
 </tr>
 
 <tr>
@@ -840,12 +869,12 @@ while running this benchmark.
   <td>#6</td>
   <td><a href="https://github.com/numfocus/python-benchmarks/tree/master/rosen_der/rosen_der_parakeet.py">rosen_der_numpy_parakeet</a></td>
   <td>
-    0.404
+    0.374
     
   </td>
-  <td>0.011 
-      (0.001)</td>
-  <td>916.0</td>
+  <td>0.009 
+      (0.000)</td>
+  <td>1124.9</td>
 </tr>
 
 <tr>
@@ -856,9 +885,9 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>0.042 
-      (0.005)</td>
-  <td>242.0</td>
+  <td>0.045 
+      (0.000)</td>
+  <td>227.3</td>
 </tr>
 
 <tr>
@@ -869,7 +898,7 @@ while running this benchmark.
     N/A
     
   </td>
-  <td>10.108 
+  <td>10.181 
       (0.000)</td>
   <td>1.0</td>
 </tr>
@@ -878,11 +907,21 @@ while running this benchmark.
 </table>
 
 
-
 <p class="errors-summary">
-  All methods were benchmarked without any error.
-</p>
+There were
 
+
+<a href="#import-errors-rosen_der">
+1 import error(s)
+</a>
+
+
+
+
+
+
+while running this benchmark.
+</p>
 
 
 </section>
@@ -896,6 +935,98 @@ while running this benchmark.
 
 
 
+<section id="errors-arc_distance">
+<h3>arc_distance
+    <a title="Permalink to this headline"
+       href="#errors-arc_distance"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-arc_distance">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-arc_distance"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="import-errors-arc_distance-arc_distance_numba">
+    <h5><a href="">arc_distance_numba</a>
+    <a title="Permalink to this headline"
+       href="#import-errors-arc_distance-arc_distance_numba"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable"
+>AttributeError: 'NoneType' object has no attribute 'core'
+
+Traceback (most recent call last):
+  File "run_benchmarks.py", line 98, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/arc_distance/arc_distance_numba.py", line 5, in <module>
+    from numba import autojit
+  File "/usr/local/lib/python2.7/site-packages/numba/__init__.py", line 18, in <module>
+    from numba import utils, typesystem
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 102, in <module>
+    context = get_minivect_context()
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 100, in get_minivect_context
+    return NumbaContext()
+  File "/usr/local/lib/python2.7/site-packages/numba/minivect/miniast.py", line 140, in __init__
+    self.llvm_module = llvm.core.Module.new('default_module')
+AttributeError: 'NoneType' object has no attribute 'core'
+</pre>
+    </div>
+  
+</div>
+
+
+
+
+</section>
+
+
+
+
+<section id="errors-growcut">
+<h3>growcut
+    <a title="Permalink to this headline"
+       href="#errors-growcut"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-growcut">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-growcut"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="import-errors-growcut-growcut_numba">
+    <h5><a href="">growcut_numba</a>
+    <a title="Permalink to this headline"
+       href="#import-errors-growcut-growcut_numba"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable"
+>AttributeError: 'NoneType' object has no attribute 'core'
+
+Traceback (most recent call last):
+  File "run_benchmarks.py", line 98, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/growcut/growcut_numba.py", line 2, in <module>
+    from numba import autojit
+  File "/usr/local/lib/python2.7/site-packages/numba/__init__.py", line 18, in <module>
+    from numba import utils, typesystem
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 102, in <module>
+    context = get_minivect_context()
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 100, in get_minivect_context
+    return NumbaContext()
+  File "/usr/local/lib/python2.7/site-packages/numba/minivect/miniast.py", line 140, in __init__
+    self.llvm_module = llvm.core.Module.new('default_module')
+AttributeError: 'NoneType' object has no attribute 'core'
+</pre>
+    </div>
+  
+</div>
+
+
+
+
+</section>
 
 
 
@@ -907,134 +1038,40 @@ while running this benchmark.
        class="headerlink">&para;</a></h3>
 
 
-
-
-<div id="runtime-errors-julia">
-<h4>Benchmark execution errors
+<div id="import-errors-julia">
+<h4>Benchmark loading errors
     <a title="Permalink to this headline"
-       href="#runtime-errors-julia"
+       href="#import-errors-julia"
        class="headerlink">&para;</a></h4>
   
-    <div id="runtime-errors-julia-julia_numba_for_loops">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_numba.py">julia_numba_for_loops</a>
+    <div id="import-errors-julia-julia_numba">
+    <h5><a href="">julia_numba</a>
     <a title="Permalink to this headline"
-       href="#runtime-errors-julia-julia_numba_for_loops"
+       href="#import-errors-julia-julia_numba"
        class="headerlink">&para;</a></h5>
     <pre class="pre-scrollable"
->NumbaError: (see below)
---------------------- Numba Encountered Errors or Warnings ---------------------
-    for i, x in enumerate(grid_x):
---------^
-Error 23:8: Only a single target iteration variable is supported at the moment
---------------------------------------------------------------------------------
+>AttributeError: 'NoneType' object has no attribute 'core'
 
 Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
-    record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
-    first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 126, in time_once
-    func(*args, **kwargs)
-  File &#34;numbawrapper.pyx&#34;, line 189, in numba.numbawrapper._NumbaSpecializingWrapper.__call__ (numba/numbawrapper.c:3726)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 68, in compile_from_args
-    return self.compile(signature)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/wrapping/compiler.py&#34;, line 83, in compile
-    compiled_function = dec(self.py_func)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/decorators.py&#34;, line 222, in _jit_decorator
-    env, func, argtys, restype=return_type, nopython=nopython, **kwargs)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/decorators.py&#34;, line 133, in compile_function
-    func_env = pipeline.compile2(env, func, restype, argtypes, **kwds)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 134, in compile2
-    post_ast = pipeline(func_ast, env)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 181, in __call__
-    ast = self.transform(ast, env)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 602, in transform
-    ast = stage(ast, env)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 587, in _stage
-    return _check_stage_object(stage_obj)(ast, env)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/pipeline.py&#34;, line 192, in __call__
-    reporting.report(env, exc=e)
-  File &#34;/usr/local/lib/python2.7/site-packages/numba/reporting.py&#34;, line 181, in report
-    raise exc
-NumbaError: (see below)
---------------------- Numba Encountered Errors or Warnings ---------------------
-    for i, x in enumerate(grid_x):
---------^
-Error 23:8: Only a single target iteration variable is supported at the moment
---------------------------------------------------------------------------------
-</pre>
-    </div>
-  
-    <div id="runtime-errors-julia-julia_parakeet_numpy">
-    <h5><a href="https://github.com/numfocus/python-benchmarks/tree/master/julia/julia_parakeet.py">julia_parakeet_numpy</a>
-    <a title="Permalink to this headline"
-       href="#runtime-errors-julia-julia_parakeet_numpy"
-       class="headerlink">&para;</a></h5>
-    <pre class="pre-scrollable"
->AssertionError: Unsupported function: &lt;built-in function geterrobj&gt;
-
-Traceback (most recent call last):
-  File &#34;run_benchmarks.py&#34;, line 184, in run_benchmarks
-    record = run_benchmark(name, func, args, kwargs, memory=memory)
-  File &#34;run_benchmarks.py&#34;, line 130, in run_benchmark
-    first_timing = time_once()
-  File &#34;run_benchmarks.py&#34;, line 126, in time_once
-    func(*args, **kwargs)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/decorators.py&#34;, line 20, in __call__
-    return run_python_fn(self.f, args, kwargs, backend = backend_name)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/run_function.py&#34;, line 144, in run_python_fn
-    untyped = ast_conversion.translate_function_value(fn)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 1064, in translate_function_value
-    filename = filename)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 977, in translate_function_source
-    filename = filename)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 921, in translate_function_ast
-    _, body = translator.visit_block(body)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 873, in visit_block
-    parakeet_stmt = self.visit(stmt)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 455, in visit
-    res = ast.NodeVisitor.visit(self, node)
-  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
-    return visitor(node)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 682, in visit_Assign
-    ssa_rhs = self.visit(stmt.value)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 455, in visit
-    res = ast.NodeVisitor.visit(self, node)
-  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
-    return visitor(node)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 561, in visit_Call
-    positional, keywords_dict, starargs_expr)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 507, in translate_value_call
-    fn = translate_function_value(value)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 1064, in translate_function_value
-    filename = filename)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 977, in translate_function_source
-    filename = filename)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 921, in translate_function_ast
-    _, body = translator.visit_block(body)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 873, in visit_block
-    parakeet_stmt = self.visit(stmt)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 455, in visit
-    res = ast.NodeVisitor.visit(self, node)
-  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
-    return visitor(node)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 682, in visit_Assign
-    ssa_rhs = self.visit(stmt.value)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 455, in visit
-    res = ast.NodeVisitor.visit(self, node)
-  File &#34;/usr/local/Cellar/python/2.7.5/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ast.py&#34;, line 241, in visit
-    return visitor(node)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 561, in visit_Call
-    positional, keywords_dict, starargs_expr)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 507, in translate_value_call
-    fn = translate_function_value(value)
-  File &#34;/Users/ogrisel/code/parakeet/parakeet/frontend/ast_conversion.py&#34;, line 1040, in translate_function_value
-    &#34;Unsupported function: %s&#34; % (fn,)
-AssertionError: Unsupported function: &lt;built-in function geterrobj&gt;
+  File "run_benchmarks.py", line 98, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/julia/julia_numba.py", line 2, in <module>
+    from numba import autojit
+  File "/usr/local/lib/python2.7/site-packages/numba/__init__.py", line 18, in <module>
+    from numba import utils, typesystem
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 102, in <module>
+    context = get_minivect_context()
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 100, in get_minivect_context
+    return NumbaContext()
+  File "/usr/local/lib/python2.7/site-packages/numba/minivect/miniast.py", line 140, in __init__
+    self.llvm_module = llvm.core.Module.new('default_module')
+AttributeError: 'NoneType' object has no attribute 'core'
 </pre>
     </div>
   
 </div>
+
+
 
 
 </section>
@@ -1042,6 +1079,98 @@ AssertionError: Unsupported function: &lt;built-in function geterrobj&gt;
 
 
 
+<section id="errors-pairwise">
+<h3>pairwise
+    <a title="Permalink to this headline"
+       href="#errors-pairwise"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-pairwise">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-pairwise"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="import-errors-pairwise-pairwise_numba">
+    <h5><a href="">pairwise_numba</a>
+    <a title="Permalink to this headline"
+       href="#import-errors-pairwise-pairwise_numba"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable"
+>AttributeError: 'NoneType' object has no attribute 'core'
+
+Traceback (most recent call last):
+  File "run_benchmarks.py", line 98, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/pairwise/pairwise_numba.py", line 5, in <module>
+    from numba import autojit
+  File "/usr/local/lib/python2.7/site-packages/numba/__init__.py", line 18, in <module>
+    from numba import utils, typesystem
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 102, in <module>
+    context = get_minivect_context()
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 100, in get_minivect_context
+    return NumbaContext()
+  File "/usr/local/lib/python2.7/site-packages/numba/minivect/miniast.py", line 140, in __init__
+    self.llvm_module = llvm.core.Module.new('default_module')
+AttributeError: 'NoneType' object has no attribute 'core'
+</pre>
+    </div>
+  
+</div>
+
+
+
+
+</section>
+
+
+
+
+<section id="errors-rosen_der">
+<h3>rosen_der
+    <a title="Permalink to this headline"
+       href="#errors-rosen_der"
+       class="headerlink">&para;</a></h3>
+
+
+<div id="import-errors-rosen_der">
+<h4>Benchmark loading errors
+    <a title="Permalink to this headline"
+       href="#import-errors-rosen_der"
+       class="headerlink">&para;</a></h4>
+  
+    <div id="import-errors-rosen_der-rosen_der_numba">
+    <h5><a href="">rosen_der_numba</a>
+    <a title="Permalink to this headline"
+       href="#import-errors-rosen_der-rosen_der_numba"
+       class="headerlink">&para;</a></h5>
+    <pre class="pre-scrollable"
+>AttributeError: 'NoneType' object has no attribute 'core'
+
+Traceback (most recent call last):
+  File "run_benchmarks.py", line 98, in find_benchmarks
+    module = __import__(abs_module_name, fromlist="dummy")
+  File "/Users/ogrisel/code/python-benchmarks/rosen_der/rosen_der_numba.py", line 5, in <module>
+    from numba import autojit
+  File "/usr/local/lib/python2.7/site-packages/numba/__init__.py", line 18, in <module>
+    from numba import utils, typesystem
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 102, in <module>
+    context = get_minivect_context()
+  File "/usr/local/lib/python2.7/site-packages/numba/utils.py", line 100, in get_minivect_context
+    return NumbaContext()
+  File "/usr/local/lib/python2.7/site-packages/numba/minivect/miniast.py", line 140, in __init__
+    self.llvm_module = llvm.core.Module.new('default_module')
+AttributeError: 'NoneType' object has no attribute 'core'
+</pre>
+    </div>
+  
+</div>
+
+
+
+
+</section>
 
 
 
@@ -1052,11 +1181,19 @@ AssertionError: Unsupported function: &lt;built-in function geterrobj&gt;
 
 <h3>Hardware</h3>
 
-TODO: describe host machine (CPU, RAM, ...) with psutil
+<ul>	 
+  <li> Platform: <i>Darwin-13.0.0-x86_64-i386-64bit</i> </li>
+  <li> CPU type: <i>i386</i></li>
+  <li> CPU count: <i>4</i></li>
+</ul>
 
 <h3>Software</h3>
+<ul>
+  <li>Python version: <i>2.7.5</i></li>
+</ul>
 
-TODO: list version numbers for all the libraries and compilers.
+<!-- TODO: list version numbers for all the libraries and compilers. --> 
+
 </div>
 </div>
 </div>
