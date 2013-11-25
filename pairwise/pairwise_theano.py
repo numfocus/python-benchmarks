@@ -18,21 +18,10 @@ def pairwise_theano_tensor_prepare(dtype):
     return rval
 
 
-def pairwise_theano_blas_prepare(dtype):
-    X = TT.matrix(dtype=str(dtype))
-    X_norm_2 = (X ** 2).sum(axis=1)
-    dists = TT.sqrt(2 * X_norm_2 - TT.dot(X, X.T))
-    name = 'pairwise_theano_blas_' + dtype
-    rval = theano.function([X],
-                           theano.Out(dists, borrow=True),
-                           allow_input_downcast=True, name=name)
-    rval.__name__ = name
-    return rval
-
-
 benchmarks = (
-    pairwise_theano_tensor_prepare('float32'),
+    # -- disabling float32 to match the precision of the other
+    #    implementations (assuming that the benchmark problem is
+    #    to carry out computations in double precision).
+    # pairwise_theano_tensor_prepare('float32'),
     pairwise_theano_tensor_prepare('float64'),
-    pairwise_theano_blas_prepare('float32'),
-    pairwise_theano_blas_prepare('float64'),
 )
