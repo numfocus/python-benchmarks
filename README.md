@@ -14,7 +14,7 @@ Results
 Motivation
 ----------
 
-This repository is the result of a discussion of started by
+This repository is the result of a discussion started by
 [@aterrel](https://github.com/aterrel) at SciPy 2013 where people interested in
 the development of compiler technologies for the Python programming language
 shared design decisions.
@@ -49,6 +49,7 @@ For each benchmark, we would like to gather:
 
   - Python to C/C++ code translation + compiled extension for the CPython
     interpreter such as done by:
+      - [Cython](http://cython.org/)
       - [Pythran](https://github.com/serge-sans-paille/pythran)
       - [Shed Skin](http://code.google.com/p/shedskin/)
 
