@@ -1,0 +1,6 @@
+ round.py:6:40 - error: Argument of type "DataFrame" cannot be assigned to parameter "decimals" of type "int | Dict[Unknown, Unknown] | Series[Unknown]" in function "round"
+    Type "DataFrame" cannot be assigned to type "int | Dict[Unknown, Unknown] | Series[Unknown]"
+      "DataFrame" is incompatible with "int"
+      "DataFrame" is incompatible with "Dict[Unknown, Unknown]"
+      "DataFrame" is incompatible with "Series[Unknown]" (reportGeneralTypeIssues)round.py:6pyright round.pyround.pyround.py:6: error: Argument "decimals" to "round" of "DataFrame" has incompatible type "DataFrame"; expected "Union[int, Dict[Any, Any], Series[Any]]"  [arg-type]
+Found 1 error in 1 file (checked 1 source file)
